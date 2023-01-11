@@ -1,37 +1,42 @@
 # moveOS
 
-The ***moveOS*** comprises of a *lightweight Kernel* with supporting libraries that greatly help in developing and deploying *movable smart-objects* covering a variety of domains. Presently, the target domains include:
+The ***moveOS*** comprises of a *lightweight Kernel* with supporting libraries that greatly help in developing and deploying *movable smart-objects* covering a variety of domains. The main desirable features of the OS include:
 
-  * Electric Vehicles
-  * Smart Carriers - Ground, Over the Surface, and Submerged Vehicles, and Flying Objects
-  * Robots
-  * 3D Printers
-  * Other IoT and IIoT devices
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Ease of use*
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Lightweight deployments*
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Energy efficiency*
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Real-time responsiveness*
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Task and event-based software designs*
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Natively supporting the State Machines*
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Graphical and headless deployments*
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Remote interfacing through stand-alone graphical or cloud-based services*
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Ready-to-use security and other modules*
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Low-code or no-code capabilities*
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *ROS integration*
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *High configurability*
+
 
 
 &nbsp;
 
-Main purposes of the OS are:
+## Run-time Environments
 
-  * Lightweight Deployments
-  * Energy Efficiency
-  * Real-time Responsiveness
-  * Graphical and Headless Deployments
-  * Remote Graphical / Cloud Interfaces
-  * Ready-to-use Modules
-  * ROS Integration
+From the beginning, the ***moveOS*** is intended to be deployed on bare-metal devices, Windows and Linux distributions; though, its behavior can change depending on deployed environments and underlying hardware features.
 
 
 
 &nbsp;
-
-## Run-time Environment
-
-***moveOS*** can be run on bare-metal, Windows and Linux environments; though, its behavior can change depending on deployed environment.
-
-
-
-
 
 ## Modules
 
