@@ -17,3 +17,11 @@ Main purposes of yet another OS include:
   * Remote Graphical Interfaces
   * Ready-to-use Modules
 
+
+
+
+
+## Run-time Environment
+
+
+***moveOS*** can be run on bare-metal, Windows and Linux environments; though, its behavior can change depending on deployed environment.
