@@ -1,5 +1,6 @@
 # moveOS
 
+
 ***moveOS*** is a lightweight Kernel with libraries to help build movable smart objects in a variety of domains. Currently, the target domains are:
 
   * Smart Vehicles - EVs
@@ -7,7 +8,8 @@
   * Robotic Vehicles
   * 3D Printers
 
-The main purposes include:
+
+Main purposes of yet another OS include:
 
   * Real-time Responsiveness
   * ROS Integration
