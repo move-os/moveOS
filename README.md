@@ -35,4 +35,6 @@ Main purposes of yet another OS include:
 
 
 
-##
+## Architecture
+
+***
