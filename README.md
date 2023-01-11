@@ -1,23 +1,29 @@
 # moveOS
 
-***moveOS*** is a lightweight Kernel with libraries to help build movable smart objects in a variety of domains. Currently, the target domains are:
+The ***moveOS*** comprises of a *lightweight Kernel* with supporting libraries that greatly help in developing and deploying *movable smart-objects* covering a variety of domains. Presently, the target domains include:
 
-  * Smart Vehicles - EVs
-  * Robotic Arms
-  * Robotic Vehicles
+  * Electric Vehicles
+  * Smart Carriers - Ground, Over the Surface, and Submerged Vehicles, and Flying Objects
+  * Robots
   * 3D Printers
+  * Other IoT and IIoT devices
 
-Main purposes of yet another OS include:
 
+&nbsp;
+
+Main purposes of the OS are:
+
+  * Lightweight Deployments
+  * Energy Efficiency
   * Real-time Responsiveness
-  * ROS Integration
   * Graphical and Headless Deployments
-  * Remote Graphical Interfaces
+  * Remote Graphical / Cloud Interfaces
   * Ready-to-use Modules
+  * ROS Integration
 
 
 
-
+&nbsp;
 
 ## Run-time Environment
 
