@@ -1,6 +1,6 @@
 # moveOS
 
-The ***moveOS*** comprises of a *lightweight Kernel* with supporting libraries that greatly help in developing and deploying *movable smart-objects* covering a variety of domains. The main desirable features of the OS include:
+The ***moveOS*** comprises of a *lightweight Kernel* with supporting libraries that greatly help in developing and deploying *movable and immovable smart-objects* covering a variety of domains. The main desirable features of the OS include:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Ease of use*
 
@@ -10,21 +10,21 @@ The ***moveOS*** comprises of a *lightweight Kernel* with supporting libraries t
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Real-time responsiveness*
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Task and event-based software designs*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Encouraging the task and event-based designs*
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Natively supporting the State Machines*
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Graphical and headless deployments*
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Remote interfacing through stand-alone graphical or cloud-based services*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Remote interfacing through stand-alone graphical and cloud-based services*
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Ready-to-use security and other modules*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Ready-to-use security and extensible modules*
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Low-code or no-code capabilities*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *Low-code and no-code facilities*
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *ROS integration*
   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *High configurability*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:star:&nbsp;&nbsp; *High configurability, extensibility and agility*
 
 
 
