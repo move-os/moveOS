@@ -5,12 +5,15 @@
 
 namespace moveOS
 {
-  namespace kernel
+  namespace utilities
   {
-
-    class StateMachine : public moveOS::base::Task
+    namespace statemachine
     {
-    };
 
+      class StateMachine : public moveOS::base::Task
+      {
+      };
+
+    }
   }
 }
