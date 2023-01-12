@@ -1,5 +1,14 @@
 #pragma once
-class ThreadTask
-{
-};
 
+
+namespace moveOS
+{
+  namespace base
+  {
+
+    class ThreadTask
+    {
+    };
+
+  }
+}
