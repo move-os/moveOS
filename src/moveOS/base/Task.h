@@ -1,5 +1,13 @@
 #pragma once
-class Task
-{
-};
 
+namespace moveOS
+{
+  namespace base
+  {
+
+    class Task
+    {
+    };
+
+  }
+}
