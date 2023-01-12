@@ -46,6 +46,22 @@ From the beginning, the ***moveOS*** is intended to be deployed on bare-metal de
 
 
 
-## Architecture
+## Technical Documentation
 
-***
+Documentation is kept in docs folder.
+
+
+&nbsp;
+
+For using the OS and libraries:
+
+  * Defining [tasks](./docs/usage/Tasks.md)
+  * Defining the [State Machines](./docs/usage/StateMachine.md)
+
+
+&nbsp;
+
+How it is arranged?
+
+  * Overall [Architecture](./docs/contrib/Architecture.md)
+  * Conditional Compilation [Definitions](./docs/contrib/Defines.md)
