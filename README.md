@@ -44,9 +44,9 @@ From the beginning, the ***moveOS*** is intended to be deployed on bare-metal de
 
 
 
+&nbsp;
 
-
-## Technical Documentation
+## Documentation
 
 Documentation is kept in docs folder.
 
