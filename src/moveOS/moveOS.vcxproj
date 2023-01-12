@@ -22,6 +22,7 @@
     <ClInclude Include="base\Task.h" />
     <ClInclude Include="base\ThreadTask.h" />
     <ClInclude Include="base\Event.h" />
+    <ClInclude Include="kernel\EventsDispatcher.h" />
     <ClInclude Include="kernel\ExecutionManager.h" />
     <ClInclude Include="utilities\statemachine\StateMachine.h" />
   </ItemGroup>
@@ -29,6 +30,7 @@
     <ClCompile Include="base\Task.cpp" />
     <ClCompile Include="base\ThreadTask.cpp" />
     <ClCompile Include="base\Event.cpp" />
+    <ClCompile Include="kernel\EventsDispatcher.cpp" />
     <ClCompile Include="kernel\ExecutionManager.cpp" />
     <ClCompile Include="utilities\statemachine\StateMachine.cpp" />
   </ItemGroup>
