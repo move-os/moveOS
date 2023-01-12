@@ -15,31 +15,61 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\base\Task.h">
+    <ClInclude Include="moveOS\Task.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\base\ThreadTask.h">
+    <ClInclude Include="moveOS\ThreadTask.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\kernel\ExecutionManager.h">
+    <ClInclude Include="moveOS\ExecutionManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\utilities\statemachine\StateMachine.h">
+    <ClInclude Include="moveOS\StateMachine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\base\Event.h">
+    <ClInclude Include="moveOS\Event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\kernel\EventsDispatcher.h">
+    <ClInclude Include="moveOS\EventsDispatcher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\utilities\statemachine\State.h">
+    <ClInclude Include="moveOS\State.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\utilities\vars\VarsUpdater.h">
+    <ClInclude Include="moveOS\VarsUpdater.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\utilities\config\ConfigurationProvider.h">
+    <ClInclude Include="moveOS\ConfigurationProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\ConfigurationProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\EventsDispatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\ExecutionManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\moveOS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\State.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\StateMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\ThreadTask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\VarsUpdater.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

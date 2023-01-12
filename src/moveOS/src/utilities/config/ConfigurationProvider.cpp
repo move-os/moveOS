@@ -1,1 +1,1 @@
-#include "inc/utilities/config/ConfigurationProvider.h"
+#include "inc/ConfigurationProvider.h"

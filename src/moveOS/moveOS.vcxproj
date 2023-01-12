@@ -19,15 +19,25 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\base\Task.h" />
-    <ClInclude Include="inc\base\ThreadTask.h" />
-    <ClInclude Include="inc\base\Event.h" />
-    <ClInclude Include="inc\utilities\config\ConfigurationProvider.h" />
-    <ClInclude Include="inc\kernel\EventsDispatcher.h" />
-    <ClInclude Include="inc\kernel\ExecutionManager.h" />
-    <ClInclude Include="inc\utilities\statemachine\State.h" />
-    <ClInclude Include="inc\utilities\statemachine\StateMachine.h" />
-    <ClInclude Include="inc\utilities\vars\VarsUpdater.h" />
+    <ClInclude Include="inc\ConfigurationProvider.h" />
+    <ClInclude Include="inc\Event.h" />
+    <ClInclude Include="inc\EventsDispatcher.h" />
+    <ClInclude Include="inc\ExecutionManager.h" />
+    <ClInclude Include="inc\moveOS.h" />
+    <ClInclude Include="inc\State.h" />
+    <ClInclude Include="inc\StateMachine.h" />
+    <ClInclude Include="inc\Task.h" />
+    <ClInclude Include="inc\ThreadTask.h" />
+    <ClInclude Include="inc\VarsUpdater.h" />
+    <ClInclude Include="moveOS\Task.h" />
+    <ClInclude Include="moveOS\ThreadTask.h" />
+    <ClInclude Include="moveOS\Event.h" />
+    <ClInclude Include="moveOS\ConfigurationProvider.h" />
+    <ClInclude Include="moveOS\EventsDispatcher.h" />
+    <ClInclude Include="moveOS\ExecutionManager.h" />
+    <ClInclude Include="moveOS\State.h" />
+    <ClInclude Include="moveOS\StateMachine.h" />
+    <ClInclude Include="moveOS\VarsUpdater.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\base\Task.cpp" />
