@@ -142,6 +142,11 @@
     <Image Include="small.ico" />
     <Image Include="WindowsTestApplication.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\moveOS\moveOS.vcxproj">
+      <Project>{4c300821-02f3-4d7c-8adb-eda4721bbcd8}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
