@@ -26,6 +26,7 @@
     <ClInclude Include="kernel\ExecutionManager.h" />
     <ClInclude Include="utilities\statemachine\State.h" />
     <ClInclude Include="utilities\statemachine\StateMachine.h" />
+    <ClInclude Include="utilities\vars\VarsUpdater.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="base\Task.cpp" />
@@ -35,6 +36,7 @@
     <ClCompile Include="kernel\ExecutionManager.cpp" />
     <ClCompile Include="utilities\statemachine\State.cpp" />
     <ClCompile Include="utilities\statemachine\StateMachine.cpp" />
+    <ClCompile Include="utilities\vars\VarsUpdater.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
