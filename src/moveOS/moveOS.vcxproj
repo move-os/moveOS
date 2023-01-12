@@ -38,6 +38,7 @@
     <ClInclude Include="moveOS\State.h" />
     <ClInclude Include="moveOS\StateMachine.h" />
     <ClInclude Include="moveOS\VarsUpdater.h" />
+    <ClInclude Include="src\_internal_inc\macros.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\base\Task.cpp" />
