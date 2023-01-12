@@ -22,11 +22,13 @@
     <ClInclude Include="base\Task.h" />
     <ClInclude Include="base\ThreadTask.h" />
     <ClInclude Include="kernel\ExecutionManager.h" />
+    <ClInclude Include="utilities\statemachine\StateMachine.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="base\Task.cpp" />
     <ClCompile Include="base\ThreadTask.cpp" />
     <ClCompile Include="kernel\ExecutionManager.cpp" />
+    <ClCompile Include="utilities\statemachine\StateMachine.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -24,6 +24,9 @@
     <ClInclude Include="kernel\ExecutionManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="utilities\statemachine\StateMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="base\Task.cpp">
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="kernel\ExecutionManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utilities\statemachine\StateMachine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
