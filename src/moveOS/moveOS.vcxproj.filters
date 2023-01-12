@@ -39,6 +39,9 @@
     <ClInclude Include="utilities\vars\VarsUpdater.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="utilities\config\ConfigurationProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="base\Task.cpp">
@@ -63,6 +66,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="utilities\vars\VarsUpdater.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utilities\config\ConfigurationProvider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
