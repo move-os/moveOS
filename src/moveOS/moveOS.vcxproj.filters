@@ -18,9 +18,15 @@
     <ClInclude Include="base\Task.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="base\ThreadTask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="base\Task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base\ThreadTask.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
