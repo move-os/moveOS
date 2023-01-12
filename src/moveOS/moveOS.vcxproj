@@ -23,7 +23,7 @@
     <ClInclude Include="inc\Event.h" />
     <ClInclude Include="inc\EventsDispatcher.h" />
     <ClInclude Include="inc\ExecutionManager.h" />
-    <ClInclude Include="inc\moveOS.h" />
+    <ClInclude Include="inc\_config.h" />
     <ClInclude Include="inc\State.h" />
     <ClInclude Include="inc\StateMachine.h" />
     <ClInclude Include="inc\Task.h" />

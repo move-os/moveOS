@@ -54,7 +54,7 @@
     <ClInclude Include="inc\ExecutionManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\moveOS.h">
+    <ClInclude Include="inc\_config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="inc\State.h">
