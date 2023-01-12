@@ -19,26 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="base\Task.h" />
-    <ClInclude Include="base\ThreadTask.h" />
-    <ClInclude Include="base\Event.h" />
-    <ClInclude Include="utilities\config\ConfigurationProvider.h" />
-    <ClInclude Include="kernel\EventsDispatcher.h" />
-    <ClInclude Include="kernel\ExecutionManager.h" />
-    <ClInclude Include="utilities\statemachine\State.h" />
-    <ClInclude Include="utilities\statemachine\StateMachine.h" />
-    <ClInclude Include="utilities\vars\VarsUpdater.h" />
+    <ClInclude Include="inc\base\Task.h" />
+    <ClInclude Include="inc\base\ThreadTask.h" />
+    <ClInclude Include="inc\base\Event.h" />
+    <ClInclude Include="inc\utilities\config\ConfigurationProvider.h" />
+    <ClInclude Include="inc\kernel\EventsDispatcher.h" />
+    <ClInclude Include="inc\kernel\ExecutionManager.h" />
+    <ClInclude Include="inc\utilities\statemachine\State.h" />
+    <ClInclude Include="inc\utilities\statemachine\StateMachine.h" />
+    <ClInclude Include="inc\utilities\vars\VarsUpdater.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="base\Task.cpp" />
-    <ClCompile Include="base\ThreadTask.cpp" />
-    <ClCompile Include="base\Event.cpp" />
-    <ClCompile Include="utilities\config\ConfigurationProvider.cpp" />
-    <ClCompile Include="kernel\EventsDispatcher.cpp" />
-    <ClCompile Include="kernel\ExecutionManager.cpp" />
-    <ClCompile Include="utilities\statemachine\State.cpp" />
-    <ClCompile Include="utilities\statemachine\StateMachine.cpp" />
-    <ClCompile Include="utilities\vars\VarsUpdater.cpp" />
+    <ClCompile Include="src\base\Task.cpp" />
+    <ClCompile Include="src\base\ThreadTask.cpp" />
+    <ClCompile Include="src\base\Event.cpp" />
+    <ClCompile Include="src\utilities\config\ConfigurationProvider.cpp" />
+    <ClCompile Include="src\kernel\EventsDispatcher.cpp" />
+    <ClCompile Include="src\kernel\ExecutionManager.cpp" />
+    <ClCompile Include="src\utilities\statemachine\State.cpp" />
+    <ClCompile Include="src\utilities\statemachine\StateMachine.cpp" />
+    <ClCompile Include="src\utilities\vars\VarsUpdater.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
