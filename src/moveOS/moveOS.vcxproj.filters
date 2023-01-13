@@ -75,6 +75,9 @@
     <ClInclude Include="src\_internal_inc\macros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="inc\moveOS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\base\Task.cpp">
