@@ -3,5 +3,5 @@
 
 
 int main() {
-  std::cout << "moveOS Test Application\n";
+  std::cout << "moveOS Test Application" << std::endl;
 }
