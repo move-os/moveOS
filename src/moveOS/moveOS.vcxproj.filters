@@ -42,34 +42,34 @@
     <ClInclude Include="moveOS\ConfigurationProvider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\MConfigurationProvider.h">
+    <ClInclude Include="inc\utilities\MConfigurationProvider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\MEvent.h">
+    <ClInclude Include="inc\base\MEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\MEventsDispatcher.h">
+    <ClInclude Include="inc\kernel\MEventsDispatcher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\MExecutionManager.h">
+    <ClInclude Include="inc\kernel\MExecutionManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="inc\_config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\MState.h">
+    <ClInclude Include="inc\utilities\MState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\MStateMachine.h">
+    <ClInclude Include="inc\utilities\MStateMachine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\MTask.h">
+    <ClInclude Include="inc\base\MTask.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\MThreadTask.h">
+    <ClInclude Include="inc\base\MThreadTask.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\MVarsUpdater.h">
+    <ClInclude Include="inc\utilities\MVarsUpdater.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\_internal_inc\macros.h">

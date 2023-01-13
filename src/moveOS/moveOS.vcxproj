@@ -19,17 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\MConfigurationProvider.h" />
-    <ClInclude Include="inc\MEvent.h" />
-    <ClInclude Include="inc\MEventsDispatcher.h" />
-    <ClInclude Include="inc\MExecutionManager.h" />
+    <ClInclude Include="inc\utilities\MConfigurationProvider.h" />
+    <ClInclude Include="inc\base\MEvent.h" />
+    <ClInclude Include="inc\kernel\MEventsDispatcher.h" />
+    <ClInclude Include="inc\kernel\MExecutionManager.h" />
     <ClInclude Include="inc\moveOS.h" />
     <ClInclude Include="inc\_config.h" />
-    <ClInclude Include="inc\MState.h" />
-    <ClInclude Include="inc\MStateMachine.h" />
-    <ClInclude Include="inc\MTask.h" />
-    <ClInclude Include="inc\MThreadTask.h" />
-    <ClInclude Include="inc\MVarsUpdater.h" />
+    <ClInclude Include="inc\utilities\MState.h" />
+    <ClInclude Include="inc\utilities\MStateMachine.h" />
+    <ClInclude Include="inc\base\MTask.h" />
+    <ClInclude Include="inc\base\MThreadTask.h" />
+    <ClInclude Include="inc\utilities\MVarsUpdater.h" />
     <ClInclude Include="moveOS\Task.h" />
     <ClInclude Include="moveOS\ThreadTask.h" />
     <ClInclude Include="moveOS\Event.h" />

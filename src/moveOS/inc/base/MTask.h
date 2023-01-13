@@ -1,5 +1,5 @@
-#ifndef _MOVE_OS_INC_M_EVENT_H_
-#define _MOVE_OS_INC_M_EVENT_H_
+#ifndef _MOVE_OS_INC_BASE_M_TASK_H_
+#define _MOVE_OS_INC_BASE_M_TASK_H_
 
 #include "_config.h"
 
@@ -9,7 +9,7 @@ namespace moveOS
   namespace base
   {
 
-    class MEvent
+    class MTask
     {
     };
 

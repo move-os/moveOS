@@ -3,15 +3,17 @@
 
 
 
-#include "MConfigurationProvider.h"
-#include "MEvent.h"
-#include "MEventsDispatcher.h"
-#include "MExecutionManager.h"
-#include "MState.h"
-#include "MStateMachine.h"
-#include "MTask.h"
-#include "MThreadTask.h"
-#include "MVarsUpdater.h"
+#include "base/MEvent.h"
+#include "base/MTask.h"
+#include "base/MThreadTask.h"
+
+#include "kernel/MEventsDispatcher.h"
+#include "kernel/MExecutionManager.h"
+
+#include "utilities/MConfigurationProvider.h"
+#include "utilities/MState.h"
+#include "utilities/MStateMachine.h"
+#include "utilities/MVarsUpdater.h"
 
 
 
