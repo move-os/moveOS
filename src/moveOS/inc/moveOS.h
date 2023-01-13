@@ -1,17 +1,17 @@
-#ifndef _MOVE_OS_INC_M_EXECUTION_MANAGER_H_
-#define _MOVE_OS_INC_M_EXECUTION_MANAGER_H_
+#ifndef _MOVE_OS_INC_MOVE_OS_H_
+#define _MOVE_OS_INC_MOVE_OS_H_
 
 
 
-#include "inc/MConfigurationProvider.h"
-#include "inc/MEvent.h"
-#include "inc/MEventsDispatcher.h"
-#include "inc/MExecutionManager.h"
-#include "inc/MState.h"
-#include "inc/MStateMachine.h"
-#include "inc/MTask.h"
-#include "inc/MThreadTask.h"
-#include "inc/MVarsUpdater.h"
+#include "MConfigurationProvider.h"
+#include "MEvent.h"
+#include "MEventsDispatcher.h"
+#include "MExecutionManager.h"
+#include "MState.h"
+#include "MStateMachine.h"
+#include "MTask.h"
+#include "MThreadTask.h"
+#include "MVarsUpdater.h"
 
 
 

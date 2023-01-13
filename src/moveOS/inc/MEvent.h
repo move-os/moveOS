@@ -1,7 +1,7 @@
 #ifndef _MOVE_OS_INC_M_EVENT_H_
 #define _MOVE_OS_INC_M_EVENT_H_
 
-#include "inc/_config.h"
+#include "_config.h"
 
 
 namespace moveOS
