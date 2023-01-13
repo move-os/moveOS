@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _MOVE_OS_INC_M_VARS_UPDATER_H_
+#define _MOVE_OS_INC_M_VARS_UPDATER_H_
 
 #include "inc/_config.h"
 
@@ -17,3 +18,7 @@ namespace moveOS
     }
   }
 }
+
+
+
+#endif
