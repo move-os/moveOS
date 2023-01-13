@@ -7,10 +7,10 @@ namespace moveOS
 {
   namespace utilities
   {
-    namespace vars
+    namespace statemachine
     {
 
-      class VarsUpdater
+      class MState
       {
       };
 

@@ -1,3 +1,3 @@
-#include "inc/ConfigurationProvider.h"
+#include "inc/MConfigurationProvider.h"
 
 #include "src/_internal_inc/macros.h"

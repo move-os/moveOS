@@ -1,17 +1,16 @@
 #pragma once
 
 #include "inc/_config.h"
-#include "inc/Task.h"
 
 
 namespace moveOS
 {
   namespace utilities
   {
-    namespace statemachine
+    namespace config
     {
 
-      class StateMachine : public moveOS::base::Task
+      class MConfigurationProvider
       {
       };
 

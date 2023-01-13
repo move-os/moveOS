@@ -8,7 +8,7 @@ namespace moveOS
   namespace base
   {
 
-    class ThreadTask
+    class MTask
     {
     };
 

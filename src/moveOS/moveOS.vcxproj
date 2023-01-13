@@ -19,16 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\ConfigurationProvider.h" />
-    <ClInclude Include="inc\Event.h" />
-    <ClInclude Include="inc\EventsDispatcher.h" />
-    <ClInclude Include="inc\ExecutionManager.h" />
+    <ClInclude Include="inc\MConfigurationProvider.h" />
+    <ClInclude Include="inc\MEvent.h" />
+    <ClInclude Include="inc\MEventsDispatcher.h" />
+    <ClInclude Include="inc\MExecutionManager.h" />
     <ClInclude Include="inc\_config.h" />
-    <ClInclude Include="inc\State.h" />
-    <ClInclude Include="inc\StateMachine.h" />
-    <ClInclude Include="inc\Task.h" />
-    <ClInclude Include="inc\ThreadTask.h" />
-    <ClInclude Include="inc\VarsUpdater.h" />
+    <ClInclude Include="inc\MState.h" />
+    <ClInclude Include="inc\MStateMachine.h" />
+    <ClInclude Include="inc\MTask.h" />
+    <ClInclude Include="inc\MThreadTask.h" />
+    <ClInclude Include="inc\MVarsUpdater.h" />
     <ClInclude Include="moveOS\Task.h" />
     <ClInclude Include="moveOS\ThreadTask.h" />
     <ClInclude Include="moveOS\Event.h" />

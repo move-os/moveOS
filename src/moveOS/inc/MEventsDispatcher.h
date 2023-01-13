@@ -5,10 +5,10 @@
 
 namespace moveOS
 {
-  namespace base
+  namespace kernel
   {
 
-    class Task
+    class MEventsDispatcher
     {
     };
 
