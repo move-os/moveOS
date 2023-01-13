@@ -1,1 +1,9 @@
-#pragma once
+#ifndef _MOVE_OS_SRC_INTERNAL_INC_MACROS_H_
+#define _MOVE_OS_SRC_INTERNAL_INC_MACROS_H_
+
+
+
+
+
+
+#endif
