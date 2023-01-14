@@ -18,10 +18,10 @@
 /* Target platform                                                            */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
-#define PLATFORM_WINDOWS
-#define PLATFORM_LINUX
-#define PLATFORM_ARDUINO
-#define PLATFORM_STM32F4
+#define PLATFORM_LINUX        0x00010000
+#define PLATFORM_WINDOWS      0x00020000
+#define PLATFORM_ARDUINO      0x00030000
+#define PLATFORM_STM32F4      0x00040000
 
 #ifndef TARGET_PLATFORM
 #define TARGET_PLATFORM PLATFORM_LINUX
