@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="inc\_types.h" />
     <ClInclude Include="inc\base\MEventWorkItem.h" />
     <ClInclude Include="inc\utilities\MConfigurationProvider.h" />
     <ClInclude Include="inc\base\MEvent.h" />
