@@ -3,7 +3,7 @@
 #include "src/_internal_inc/macros.h"
 
 
-#if   TARGET_PLATFORM == PLATFORM_LINUX
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
 //-
 
 #elif TARGET_PLATFORM == PLATFORM_WINDOWS
