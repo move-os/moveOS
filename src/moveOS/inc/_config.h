@@ -7,7 +7,7 @@
 /* Version info                                                               */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
-#define MOVE_OS_VERSION   1
+#define MOVE_OS_VERSION   0 /* TODO: Version update only upon getting ready for public use */
 
 
 
