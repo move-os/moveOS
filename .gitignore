@@ -297,3 +297,4 @@ healthchecksdb
 ## 
 #####
 build/moveOS/
+**/applications/LinuxTestApplication/app
