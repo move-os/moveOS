@@ -8,27 +8,27 @@
 /* Simple datatypes                                                           */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
-typedef    char                              int8   ;
-typedef    unsigned char                    uint8   ;
-typedef    short                             int16  ;
-typedef    unsigned short                   uint16  ;
-typedef    long                              int32  ;
-typedef    unsigned long                    uint32  ;
-typedef    long long                         int64  ;
-typedef    unsigned long long               uint64  ;
+typedef             char                     int8      ;
+typedef    unsigned char                    uint8      ;
+typedef             short                    int16     ;
+typedef    unsigned short                   uint16     ;
+typedef             long                     int32     ;
+typedef    unsigned long                    uint32     ;
+typedef             long long                int64     ;
+typedef    unsigned long long               uint64     ;
 
-typedef    int8                              INT8   ;
-typedef    uint8                            UINT8   ;
-typedef    int16                             INT16  ;
-typedef    uint16                           UINT16  ;
-typedef    int32                             INT32  ;
-typedef    uint32                           UINT32  ;
-typedef    int64                             INT64  ;
-typedef    uint64                           UINT64  ;
+typedef    int8                              INT8      ;
+typedef    uint8                            UINT8      ;
+typedef    int16                             INT16     ;
+typedef    uint16                           UINT16     ;
+typedef    int32                             INT32     ;
+typedef    uint32                           UINT32     ;
+typedef    int64                             INT64     ;
+typedef    uint64                           UINT64     ;
 
-typedef    float                            single;
-typedef    single                           SINGLE;
-typedef    double                           DOUBLE;
+typedef    float                            single     ;
+typedef    single                           SINGLE     ;
+typedef    double                           DOUBLE     ;
 
 
 
