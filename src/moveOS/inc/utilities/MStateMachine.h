@@ -2,7 +2,7 @@
 #define _MOVE_OS_INC_UTILITIES_M_STATE_MACHINE_H_
 
 #include "_config.h"
-#include "base/MTask.h"
+#include "base/MWork.h"
 
 
 namespace moveOS
@@ -12,7 +12,7 @@ namespace moveOS
     namespace statemachine
     {
 
-      class MStateMachine : public moveOS::base::MTask
+      class MStateMachine : public moveOS::base::MWork
       {
       };
 
