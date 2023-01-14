@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="inc\base\MEventWorkItem.h" />
     <ClInclude Include="inc\utilities\MConfigurationProvider.h" />
     <ClInclude Include="inc\base\MEvent.h" />
     <ClInclude Include="inc\kernel\MEventsDispatcher.h" />
@@ -42,6 +43,7 @@
     <ClInclude Include="src\_internal_inc\macros.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\base\EventWorkItem.cpp" />
     <ClCompile Include="src\base\Work.cpp" />
     <ClCompile Include="src\base\ContinuousWork.cpp" />
     <ClCompile Include="src\base\Event.cpp" />
