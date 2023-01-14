@@ -99,8 +99,8 @@ MOVEOS_OBJECTS = $(OBJS_C) $(OBJS_CPP)
 ################################################################################
 # Compilation flags
 ###########################################################################
-COMPILATION_C_FLAGS          = -fPIC -Wall -DLINUX_TARGET $(INCLUDE_DIRS)
-COMPILATION_CPP_FLAGS        = -fPIC -Wall -DLINUX_TARGET -std=c++11 $(INCLUDE_DIRS) -lpthread
+COMPILATION_C_FLAGS          = -fPIC -Wall -DTARGET_PLATFORM=PLATFORM_GNU_LINUX $(INCLUDE_DIRS)
+COMPILATION_CPP_FLAGS        = -fPIC -Wall -DTARGET_PLATFORM=PLATFORM_GNU_LINUX -std=c++11 $(INCLUDE_DIRS) -lpthread
 
 
 default: library
