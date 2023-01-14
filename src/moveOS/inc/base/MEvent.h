@@ -12,6 +12,9 @@ namespace moveOS
 
     class MEvent
     {
+    public:
+
+      virtual MEvent* thenPassTo(MEventWorkItem) = 0;
     };
 
   }
