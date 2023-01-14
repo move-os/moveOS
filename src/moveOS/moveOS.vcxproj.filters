@@ -63,10 +63,10 @@
     <ClInclude Include="inc\utilities\MStateMachine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\base\MTask.h">
+    <ClInclude Include="inc\base\MWork.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\base\MThreadTask.h">
+    <ClInclude Include="inc\base\MContinuousWork.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="inc\utilities\MVarsUpdater.h">
@@ -80,10 +80,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\base\Task.cpp">
+    <ClCompile Include="src\base\Work.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base\ThreadTask.cpp">
+    <ClCompile Include="src\base\ContinuousWork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\kernel\ExecutionManager.cpp">

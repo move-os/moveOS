@@ -4,8 +4,8 @@
 
 
 #include "base/MEvent.h"
-#include "base/MTask.h"
-#include "base/MThreadTask.h"
+#include "base/MWork.h"
+#include "base/MContinuousWork.h"
 
 #include "kernel/MEventsDispatcher.h"
 #include "kernel/MExecutionManager.h"

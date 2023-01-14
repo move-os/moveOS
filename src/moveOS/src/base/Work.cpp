@@ -1,3 +1,3 @@
-#include "inc/base/MThreadTask.h"
+#include "inc/base/MWork.h"
 
 #include "src/_internal_inc/macros.h"

@@ -27,8 +27,8 @@
     <ClInclude Include="inc\_config.h" />
     <ClInclude Include="inc\utilities\MState.h" />
     <ClInclude Include="inc\utilities\MStateMachine.h" />
-    <ClInclude Include="inc\base\MTask.h" />
-    <ClInclude Include="inc\base\MThreadTask.h" />
+    <ClInclude Include="inc\base\MWork.h" />
+    <ClInclude Include="inc\base\MContinuousWork.h" />
     <ClInclude Include="inc\utilities\MVarsUpdater.h" />
     <ClInclude Include="moveOS\Task.h" />
     <ClInclude Include="moveOS\ThreadTask.h" />
@@ -42,8 +42,8 @@
     <ClInclude Include="src\_internal_inc\macros.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\base\Task.cpp" />
-    <ClCompile Include="src\base\ThreadTask.cpp" />
+    <ClCompile Include="src\base\Work.cpp" />
+    <ClCompile Include="src\base\ContinuousWork.cpp" />
     <ClCompile Include="src\base\Event.cpp" />
     <ClCompile Include="src\utilities\config\ConfigurationProvider.cpp" />
     <ClCompile Include="src\kernel\EventsDispatcher.cpp" />
