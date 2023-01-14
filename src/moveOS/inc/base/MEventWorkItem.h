@@ -12,6 +12,20 @@ namespace moveOS
     
     class MEventWorkItem
     {
+    public:
+
+      MEventWorkItem(simple_func workFunc);
+
+      virtual void execute();
+
+
+
+    protected:
+
+      void* funcPtr;
+      MEventWorkItem* nextWorkItem;
+
+      friend class MEvent;
     };
 
   }
