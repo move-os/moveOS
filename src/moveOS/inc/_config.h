@@ -36,7 +36,7 @@
 /* Target architecture                                                        */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
-#define ARCHITECTURE_x86          0x00010000
+#define ARCHITECTURE_X86          0x00010000
 #define ARCHITECTURE_ARM          0x00020000
 
 #ifndef TARGET_ARCHITECTURE
