@@ -47,7 +47,7 @@ typedef    double                           DOUBLE     ;
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
 typedef    void(*simplest_func)();
-typedef    byte(*error_code_func)();
+typedef    byte(*code_ret_simple_func)();
 typedef    void(*nret_vptr1_func)(void*);
 typedef    void(*nret_vptr2_func)(void*, void*);
 
