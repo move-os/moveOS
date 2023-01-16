@@ -10,20 +10,17 @@ namespace moveOS
   namespace base
   {
     
-    class MEventWorkItem
+    class MSimplestEventWorkItem
     {
     public:
-
-      MEventWorkItem(simple_func workFunc);
-
-      virtual void execute();
+      MSimplestEventWorkItem(simplest_func workFunc);
+      void execute();
 
 
 
     protected:
-
-      void* funcPtr;
-      MEventWorkItem* nextWorkItem;
+      simplest_func workFunc;
+      MSimplestEventWorkItem* nextWorkItem;
 
       friend class MEvent;
     };

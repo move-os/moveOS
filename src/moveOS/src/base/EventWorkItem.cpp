@@ -3,16 +3,24 @@
 #include "src/_internal_inc/macros.h"
 
 
-moveOS::base::MEventWorkItem::MEventWorkItem(simple_func workFunc)
+moveOS::base::MSimplestEventWorkItem::MSimplestEventWorkItem(simplest_func workFunc)
 {
-  this->funcPtr = (void*)workFunc;
+  this->workFunc = workFunc;
   this->nextWorkItem = nullptr;
 }
 
-void moveOS::base::MEventWorkItem::execute()
+void moveOS::base::MSimplestEventWorkItem::execute()
 {
-  if (this->funcPtr != nullptr)
+  if (this->workFunc != nullptr)
   {
-    ((simple_func)this->funcPtr)();
+    this->workFunc();
+  }
+
+  MSimplestEventWorkItem* nwi = this->nextWorkItem;
+
+  while (nwi != nullptr)
+  {
+    nwi->execute();
+    nwi = nwi->nextWorkItem;
   }
 }
