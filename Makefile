@@ -115,73 +115,86 @@ COMPILATION_CPP_FLAGS        = -fPIC                                      \
 
 default: library
 
+
+
+
+
+################################################################################
+# Rules
+###########################################################################
+
 #######################################
-# Rules for ".c"
+# - ROOT Directory
 ##################################
 $(BUILD_ROOT_DIR)/%.o: $(SRC_ROOT_DIR)/%.c
 	@echo [Compiling] $<
 	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
 
-
-$(BUILD_ROOT_DIR)/$(MOVEOS_BASE_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_BASE_DIR)/%.c
-	@echo [Compiling] $<
-	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
-
-
-$(BUILD_ROOT_DIR)/$(MOVEOS_KERNEL_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_KERNEL_DIR)/%.c
-	@echo [Compiling] $<
-	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
-
-
-$(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_DIR)/%.c
-	@echo [Compiling] $<
-	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
-
-$(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_CONFIG_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_CONFIG_DIR)/%.c
-	@echo [Compiling] $<
-	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
-
-$(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_STATEMACHINE_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_STATEMACHINE_DIR)/%.c
-	@echo [Compiling] $<
-	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
-
-$(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_VARS_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_VARS_DIR)/%.c
-	@echo [Compiling] $<
-	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
-
-
-
-
-
-#######################################
-# Rules for ".cpp"
-##################################
 $(BUILD_ROOT_DIR)/%.O: $(SRC_ROOT_DIR)/%.cpp
 	@echo [Compiling] $<
 	@$(GXX) -c $(COMPILATION_CPP_FLAGS) $< -o $@
 
+#######################################
+# - ROOT/base Directory
+##################################
+$(BUILD_ROOT_DIR)/$(MOVEOS_BASE_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_BASE_DIR)/%.c
+	@echo [Compiling] $<
+	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
 
 $(BUILD_ROOT_DIR)/$(MOVEOS_BASE_DIR)/%.O: $(SRC_ROOT_DIR)/$(MOVEOS_BASE_DIR)/%.cpp
 	@echo [Compiling] $<
 	@$(GXX) -c $(COMPILATION_CPP_FLAGS) $< -o $@
 
+#######################################
+# - ROOT/kernel Directory
+##################################
+$(BUILD_ROOT_DIR)/$(MOVEOS_KERNEL_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_KERNEL_DIR)/%.c
+	@echo [Compiling] $<
+	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
 
 $(BUILD_ROOT_DIR)/$(MOVEOS_KERNEL_DIR)/%.O: $(SRC_ROOT_DIR)/$(MOVEOS_KERNEL_DIR)/%.cpp
 	@echo [Compiling] $<
 	@$(GXX) -c $(COMPILATION_CPP_FLAGS) $< -o $@
 
+#######################################
+# - ROOT/utilities Directory
+##################################
+$(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_DIR)/%.c
+	@echo [Compiling] $<
+	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
 
 $(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_DIR)/%.O: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_DIR)/%.cpp
 	@echo [Compiling] $<
 	@$(GXX) -c $(COMPILATION_CPP_FLAGS) $< -o $@
 
+#######################################
+# - ROOT/utilities/config Directory
+##################################
+$(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_CONFIG_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_CONFIG_DIR)/%.c
+	@echo [Compiling] $<
+	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
+
 $(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_CONFIG_DIR)/%.O: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_CONFIG_DIR)/%.cpp
 	@echo [Compiling] $<
 	@$(GXX) -c $(COMPILATION_CPP_FLAGS) $< -o $@
 
+#######################################
+# - ROOT/utilities/statemachine Directory
+##################################
+$(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_STATEMACHINE_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_STATEMACHINE_DIR)/%.c
+	@echo [Compiling] $<
+	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
+
 $(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_STATEMACHINE_DIR)/%.O: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_STATEMACHINE_DIR)/%.cpp
 	@echo [Compiling] $<
 	@$(GXX) -c $(COMPILATION_CPP_FLAGS) $< -o $@
+
+#######################################
+# - ROOT/utilities/vars Directory
+##################################
+$(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_VARS_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_VARS_DIR)/%.c
+	@echo [Compiling] $<
+	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
 
 $(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_VARS_DIR)/%.O: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_VARS_DIR)/%.cpp
 	@echo [Compiling] $<
@@ -198,10 +211,8 @@ library: $(MOVEOS_OBJECTS)
 	@$(GXX) -shared -o $(BUILD_ROOT_DIR)/$(OUTPUT_LIB_NAME) $(MOVEOS_OBJECTS) $(COMPILATION_CPP_FLAGS)
 	@echo ""
 	@echo ""
-	@echo "*****************************************************************"
 	@echo "*** moveOS built successfully"
-	@echo "*****************************************************************"
-	@echo "**********************************************************"
+
 
 
 
@@ -214,6 +225,7 @@ clean:
 	$(foreach dir, $(MOVEOS_SRCS_DIRS), $(shell rm -f $(BUILD_ROOT_DIR)/$(dir)/*.O 2> /dev/null))
 	@rm -f $(BUILD_ROOT_DIR)/$(OUTPUT_LIB_NAME)
 	@echo Project cleaned ...
+
 
 
 
