@@ -27,6 +27,8 @@ namespace moveOS
     protected:
       simplest_func workFunc;
       MSimplestEventWorkItem* nextWorkItem;
+
+      friend class Event;
     };
 
 
@@ -58,6 +60,8 @@ namespace moveOS
     protected:
       code_ret_simple_func workFunc;
       MSimpleEventWorkItem* nextWorkItem;
+
+      friend class Event;
     };
 
   }
