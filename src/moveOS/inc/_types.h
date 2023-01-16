@@ -46,7 +46,7 @@ typedef    double                           DOUBLE     ;
 /* Function types                                                             */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
-typedef    void(*simple_func)();
+typedef    void(*simplest_func)();
 typedef    void(*nret_vptr1_func)(void*);
 typedef    void(*nret_vptr2_func)(void*, void*);
 
