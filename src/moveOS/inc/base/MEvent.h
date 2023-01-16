@@ -15,13 +15,13 @@ namespace moveOS
     {
     public:
 
-      virtual MEvent* thenPassTo(MEventWorkItem) = 0;
+      virtual MEvent* thenPassTo(MSimplestEventWorkItem) = 0;
 
 
 
     private:
 
-      MEventWorkItem* firstWorkItem;
+      MSimplestEventWorkItem* firstWorkItem;
     };
 
   }
