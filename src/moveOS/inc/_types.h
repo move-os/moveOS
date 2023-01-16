@@ -19,14 +19,21 @@ typedef    unsigned long long               uint64     ;
 
 typedef    int8                              INT8      ;
 typedef    uint8                            UINT8      ;
-typedef    uint8                             byte      ;
-typedef    uint8                             BYTE      ;
 typedef    int16                             INT16     ;
 typedef    uint16                           UINT16     ;
 typedef    int32                             INT32     ;
 typedef    uint32                           UINT32     ;
 typedef    int64                             INT64     ;
 typedef    uint64                           UINT64     ;
+
+typedef    uint8                             byte      ;
+typedef    uint8                             BYTE      ;
+typedef    uint16                            word      ;
+typedef    uint16                            WORD      ;
+typedef    uint32                            dword     ;
+typedef    uint32                            DWORD     ;
+typedef    uint64                            qword     ;
+typedef    uint64                            QWORD     ;
 
 typedef    float                            single     ;
 typedef    single                           SINGLE     ;
