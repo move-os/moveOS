@@ -48,6 +48,8 @@ typedef    double                           DOUBLE     ;
 /*----------------------------------------------------------------------------*/
 typedef    void(*simplest_func)();
 typedef    byte(*code_ret_simple_func)();
+typedef    byte(*data_handler_func)(byte*, uint16);
+
 typedef    void(*nret_vptr1_func)(void*);
 typedef    void(*nret_vptr2_func)(void*, void*);
 
