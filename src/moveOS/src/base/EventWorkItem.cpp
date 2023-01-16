@@ -9,18 +9,15 @@ moveOS::base::MSimplestEventWorkItem::MSimplestEventWorkItem(simplest_func workF
   this->nextWorkItem = nullptr;
 }
 
-void moveOS::base::MSimplestEventWorkItem::execute()
+void moveOS::base::MSimplestEventWorkItem::executeChain()
 {
   if (this->workFunc != nullptr)
   {
     this->workFunc();
   }
 
-  MSimplestEventWorkItem* nwi = this->nextWorkItem;
-
-  while (nwi != nullptr)
+  if (this->nextWorkItem != nullptr)
   {
-    nwi->execute();
-    nwi = nwi->nextWorkItem;
+    this->nextWorkItem->executeChain();
   }
 }
