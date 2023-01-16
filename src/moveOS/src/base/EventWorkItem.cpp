@@ -5,7 +5,7 @@
 
 moveOS::base::MEventWorkItem::MEventWorkItem(simple_func workFunc)
 {
-  this->funcPtr = workFunc;
+  this->funcPtr = (void*)workFunc;
   this->nextWorkItem = nullptr;
 }
 
