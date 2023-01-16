@@ -19,6 +19,8 @@ typedef    unsigned long long               uint64     ;
 
 typedef    int8                              INT8      ;
 typedef    uint8                            UINT8      ;
+typedef    uint8                             byte      ;
+typedef    uint8                             BYTE      ;
 typedef    int16                             INT16     ;
 typedef    uint16                           UINT16     ;
 typedef    int32                             INT32     ;
