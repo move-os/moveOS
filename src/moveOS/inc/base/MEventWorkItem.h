@@ -64,6 +64,23 @@ namespace moveOS
       friend class Event;
     };
 
+
+
+    class MDataEventWorkItem
+    {
+    public:
+      MDataEventWorkItem(data_handler_func workFunc);
+      void executeChain(byte* data, uint16 length);
+
+
+
+    protected:
+      data_handler_func workFunc;
+      MDataEventWorkItem* nextWorkItem;
+
+      friend class Event;
+    };
+
   }
 }
 

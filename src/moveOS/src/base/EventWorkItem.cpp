@@ -45,3 +45,28 @@ void moveOS::base::MSimpleEventWorkItem::executeChain()
     }
   }
 }
+
+
+
+
+
+moveOS::base::MDataEventWorkItem::MDataEventWorkItem(data_handler_func workFunc)
+{
+  this->workFunc = workFunc;
+  this->nextWorkItem = nullptr;
+}
+
+void moveOS::base::MDataEventWorkItem::executeChain(byte* data, uint16 length)
+{
+  if (this->workFunc != nullptr)
+  {
+    if (this->workFunc(data, length) == MEventWorkItemReturn::KEEP_CHAINING)
+    {
+      if (this->nextWorkItem != nullptr)
+      {
+        this->nextWorkItem->executeChain(data, length);
+      }
+    }
+  }
+}
+
