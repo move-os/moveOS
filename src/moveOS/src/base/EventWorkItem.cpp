@@ -21,3 +21,27 @@ void moveOS::base::MSimplestEventWorkItem::executeChain()
     this->nextWorkItem->executeChain();
   }
 }
+
+
+
+
+
+moveOS::base::MSimpleEventWorkItem::MSimpleEventWorkItem(code_ret_simple_func workFunc)
+{
+  this->workFunc = workFunc;
+  this->nextWorkItem = nullptr;
+}
+
+void moveOS::base::MSimpleEventWorkItem::executeChain()
+{
+  if (this->workFunc != nullptr)
+  {
+    if (this->workFunc() == MEventWorkItemReturn::KEEP_CHAINING)
+    {
+      if (this->nextWorkItem != nullptr)
+      {
+        this->nextWorkItem->executeChain();
+      }
+    }
+  }
+}

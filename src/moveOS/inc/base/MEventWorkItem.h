@@ -9,20 +9,55 @@ namespace moveOS
 {
   namespace base
   {
-    
+
+    /*********************************************************************************/
+    /*                                                                               */
+    /* Event's working without data                                                  */
+    /*                                                                               */
+    /*********************************************************************************/
+
     class MSimplestEventWorkItem
     {
     public:
       MSimplestEventWorkItem(simplest_func workFunc);
-      void execute();
+      void executeChain();
 
 
 
     protected:
       simplest_func workFunc;
       MSimplestEventWorkItem* nextWorkItem;
+    };
 
-      friend class MEvent;
+
+    /*********************************************************************************/
+    /*                                                                               */
+    /* Events working with data                                                      */
+    /*                                                                               */
+    /*********************************************************************************/
+
+    class MEventWorkItemReturn
+    {
+    public:
+      enum {
+        KEEP_CHAINING,
+        BREAK_FURTHER_CHAIN
+      };
+    };
+
+
+
+    class MSimpleEventWorkItem
+    {
+    public:
+      MSimpleEventWorkItem(code_ret_simple_func workFunc);
+      void executeChain();
+
+
+
+    protected:
+      code_ret_simple_func workFunc;
+      MSimpleEventWorkItem* nextWorkItem;
     };
 
   }
