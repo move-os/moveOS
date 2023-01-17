@@ -18,6 +18,8 @@ namespace moveOS
     /*     - helpful in chaining all the functions whenever relevant event is raised */
     /*                                                                               */
     /*                                                                               */
+    /*                                                                               */
+    /*                                                                               */
     /*********************************************************************************/
 
     class MSimplestEventWorkItem
@@ -52,6 +54,8 @@ namespace moveOS
     /*                 - To stop the chains of further calls                         */
     /*                                                                               */
     /*     - input data can be NONE, and other types of commonly required data       */
+    /*                                                                               */
+    /*                                                                               */
     /*                                                                               */
     /*                                                                               */
     /*********************************************************************************/
