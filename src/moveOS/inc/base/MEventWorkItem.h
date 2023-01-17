@@ -24,7 +24,6 @@ namespace moveOS
       void executeChain();
 
 
-
     protected:
       simplest_func workFunc;
       MSimplestEventWorkItem* nextWorkItem;
@@ -50,13 +49,14 @@ namespace moveOS
       void executeChain();
 
 
-
     protected:
       code_ret_simple_func workFunc;
       MSimpleEventWorkItem* nextWorkItem;
 
       friend class Event;
     };
+
+
 
 
 
@@ -68,7 +68,6 @@ namespace moveOS
       void executeChain(byte* data, uint16 length);
 
 
-
     protected:
       data_handler_func workFunc;
       MDataEventWorkItem* nextWorkItem;
@@ -78,13 +77,14 @@ namespace moveOS
 
 
 
+
+
     class MIntegralDataEventWorkItem
     {
     public:
       MIntegralDataEventWorkItem(integral_data_handler_func workFunc);
       void executeSelf(uint16 data);
       void executeChain(uint16 data);
-
 
 
     protected:
