@@ -50,6 +50,14 @@ typedef    double                           DOUBLE     ;
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
 
+struct MEventPollResult
+{
+  enum {
+    NONE,
+    RAISE_EVENT
+  };
+};
+
 struct MEventWorkItemResult
 {
   enum {
