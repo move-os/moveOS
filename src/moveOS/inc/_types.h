@@ -77,6 +77,7 @@ struct MEventWorkItemResult
 /*----------------------------------------------------------------------------*/
 
 typedef    void(*simplest_func)();
+typedef    byte(*event_poll_func)();
 typedef    byte(*code_ret_simple_func)();
 typedef    byte(*data_handler_func)(byte*, uint16);
 typedef    byte(*integral_data_handler_func)(uint16);
