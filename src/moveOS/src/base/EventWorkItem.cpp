@@ -36,7 +36,7 @@ void moveOS::base::MSimpleEventWorkItem::executeChain()
 {
   if (this->workFunc != nullptr)
   {
-    if (this->workFunc() == MEventWorkItemReturn::KEEP_CHAINING)
+    if (this->workFunc() == MEventWorkItemResult::KEEP_CHAINING)
     {
       if (this->nextWorkItem != nullptr)
       {
@@ -60,7 +60,7 @@ void moveOS::base::MDataEventWorkItem::executeChain(byte* data, uint16 length)
 {
   if (this->workFunc != nullptr)
   {
-    if (this->workFunc(data, length) == MEventWorkItemReturn::KEEP_CHAINING)
+    if (this->workFunc(data, length) == MEventWorkItemResult::KEEP_CHAINING)
     {
       if (this->nextWorkItem != nullptr)
       {

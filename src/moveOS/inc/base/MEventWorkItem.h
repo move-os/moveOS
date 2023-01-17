@@ -32,13 +32,16 @@ namespace moveOS
     };
 
 
+
+
+
     /*********************************************************************************/
     /*                                                                               */
     /* Events working with data                                                      */
     /*                                                                               */
     /*********************************************************************************/
 
-    class MEventWorkItemReturn
+    class MEventWorkItemResult
     {
     public:
       enum {
