@@ -73,6 +73,23 @@ namespace moveOS
       friend class Event;
     };
 
+
+
+    class MIntegralDataEventWorkItem
+    {
+    public:
+      MIntegralDataEventWorkItem(integral_data_handler_func workFunc);
+      void executeChain(uint16 data);
+
+
+
+    protected:
+      integral_data_handler_func workFunc;
+      MIntegralDataEventWorkItem* nextWorkItem;
+
+      friend class Event;
+    };
+
   }
 }
 
