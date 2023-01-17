@@ -12,7 +12,11 @@ namespace moveOS
 
     /*********************************************************************************/
     /*                                                                               */
-    /* Event's without data                                                          */
+    /* Events without data                                                           */
+    /*                                                                               */
+    /*     - no outputs and no inputs to/from event handler functions                */
+    /*     - helpful in chaining all the functions whenever relevant event is raised */
+    /*                                                                               */
     /*                                                                               */
     /*********************************************************************************/
 
