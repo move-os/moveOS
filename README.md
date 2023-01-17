@@ -55,7 +55,7 @@ Documentation is kept in docs folder.
 
 For using the OS and libraries:
 
-  * Defining [tasks](./docs/usage/Tasks.md)
+  * Defining the [tasks](./docs/usage/Tasks.md)
   * Defining the [State Machines](./docs/usage/StateMachine.md)
 
 
