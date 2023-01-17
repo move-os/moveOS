@@ -20,6 +20,7 @@ namespace moveOS
     {
     public:
       MSimplestEventWorkItem(simplest_func workFunc);
+      void executeSelf();
       void executeChain();
 
 
@@ -45,6 +46,7 @@ namespace moveOS
     {
     public:
       MSimpleEventWorkItem(code_ret_simple_func workFunc);
+      void executeSelf();
       void executeChain();
 
 
@@ -62,6 +64,7 @@ namespace moveOS
     {
     public:
       MDataEventWorkItem(data_handler_func workFunc);
+      void executeSelf(byte* data, uint16 length);
       void executeChain(byte* data, uint16 length);
 
 
@@ -79,6 +82,7 @@ namespace moveOS
     {
     public:
       MIntegralDataEventWorkItem(integral_data_handler_func workFunc);
+      void executeSelf(uint16 data);
       void executeChain(uint16 data);
 
 

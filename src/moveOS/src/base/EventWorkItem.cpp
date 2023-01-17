@@ -9,6 +9,14 @@ moveOS::base::MSimplestEventWorkItem::MSimplestEventWorkItem(simplest_func workF
   this->nextWorkItem = nullptr;
 }
 
+void moveOS::base::MSimplestEventWorkItem::executeSelf()
+{
+  if (this->workFunc != nullptr)
+  {
+    this->workFunc();
+  }
+}
+
 void moveOS::base::MSimplestEventWorkItem::executeChain()
 {
   if (this->workFunc != nullptr)
@@ -30,6 +38,14 @@ moveOS::base::MSimpleEventWorkItem::MSimpleEventWorkItem(code_ret_simple_func wo
 {
   this->workFunc = workFunc;
   this->nextWorkItem = nullptr;
+}
+
+void moveOS::base::MSimpleEventWorkItem::executeSelf()
+{
+  if (this->workFunc != nullptr)
+  {
+    this->workFunc();
+  }
 }
 
 void moveOS::base::MSimpleEventWorkItem::executeChain()
@@ -56,6 +72,14 @@ moveOS::base::MDataEventWorkItem::MDataEventWorkItem(data_handler_func workFunc)
   this->nextWorkItem = nullptr;
 }
 
+void moveOS::base::MDataEventWorkItem::executeSelf(byte* data, uint16 length)
+{
+  if (this->workFunc != nullptr)
+  {
+    this->workFunc(data, length);
+  }
+}
+
 void moveOS::base::MDataEventWorkItem::executeChain(byte* data, uint16 length)
 {
   if (this->workFunc != nullptr)
@@ -78,6 +102,14 @@ moveOS::base::MIntegralDataEventWorkItem::MIntegralDataEventWorkItem(integral_da
 {
   this->workFunc = workFunc;
   this->nextWorkItem = nullptr;
+}
+
+void moveOS::base::MIntegralDataEventWorkItem::executeSelf(uint16 data)
+{
+  if (this->workFunc != nullptr)
+  {
+    this->workFunc(data);
+  }
 }
 
 void moveOS::base::MIntegralDataEventWorkItem::executeChain(uint16 data)
