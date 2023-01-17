@@ -41,17 +41,6 @@ namespace moveOS
     /*                                                                               */
     /*********************************************************************************/
 
-    class MEventWorkItemResult
-    {
-    public:
-      enum {
-        KEEP_CHAINING,
-        BREAK_FURTHER_CHAIN
-      };
-    };
-
-
-
     class MSimpleEventWorkItem
     {
     public:

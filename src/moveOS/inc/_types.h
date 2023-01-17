@@ -8,6 +8,7 @@
 /* Simple datatypes                                                           */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
+
 typedef             char                     int8      ;
 typedef    unsigned char                    uint8      ;
 typedef             short                    int16     ;
@@ -41,11 +42,33 @@ typedef    double                           DOUBLE     ;
 
 
 
+
+
+/*----------------------------------------------------------------------------*/
+/*                                                                            */
+/* Compound types                                                             */
+/*                                                                            */
+/*----------------------------------------------------------------------------*/
+
+class MEventWorkItemResult
+{
+public:
+  enum {
+    KEEP_CHAINING,
+    BREAK_FURTHER_CHAIN
+  };
+};
+
+
+
+
+
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /* Function types                                                             */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
+
 typedef    void(*simplest_func)();
 typedef    byte(*code_ret_simple_func)();
 typedef    byte(*data_handler_func)(byte*, uint16);
@@ -76,6 +99,10 @@ typedef    UINT16(*ui16ret_vptr2_func)(void*, void*);
 typedef    UINT32(*ui32ret_func)();
 typedef    UINT32(*ui32ret_vptr1_func)(void*);
 typedef    UINT32(*ui32ret_vptr2_func)(void*, void*);
+
+
+
+
 
 
 
