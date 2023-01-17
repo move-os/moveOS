@@ -50,14 +50,22 @@ typedef    double                           DOUBLE     ;
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
 
-class MEventWorkItemResult
-{
-public:
-  enum {
-    KEEP_CHAINING,
-    BREAK_FURTHER_CHAIN
-  };
-};
+#ifdef __cplusplus
+
+    class MEventWorkItemResult
+    {
+    public:
+      enum {
+        KEEP_CHAINING,
+        BREAK_FURTHER_CHAIN
+      };
+    };
+
+
+
+
+
+#endif
 
 
 
