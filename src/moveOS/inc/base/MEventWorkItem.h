@@ -43,6 +43,17 @@ namespace moveOS
     /*                                                                               */
     /* Events working with data                                                      */
     /*                                                                               */
+    /*     - always returning code from event handler functions                      */
+    /*         - helpful in chaining and breaking the call chains                    */
+    /*         - return values are defined in types, i.e.,                           */
+    /*             - MEventWorkItemResult::KEEP_CHAINING                             */
+    /*                 - To keep chaining the calls                                  */
+    /*             - MEventWorkItemResult::BREAK_FURTHER_CHAIN                       */
+    /*                 - To stop the chains of further calls                         */
+    /*                                                                               */
+    /*     - input data can be NONE, and other types of commonly required data       */
+    /*                                                                               */
+    /*                                                                               */
     /*********************************************************************************/
 
     class MSimpleEventWorkItem
