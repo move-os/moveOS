@@ -66,6 +66,38 @@ void moveOS::base::MSimpleEventWorkItem::executeChain()
 
 
 
+moveOS::base::MByteDataEventWorkItem::MByteDataEventWorkItem(byte_data_handler_func workFunc)
+{
+  this->workFunc = workFunc;
+  this->nextWorkItem = nullptr;
+}
+
+void moveOS::base::MByteDataEventWorkItem::executeSelf(byte data)
+{
+  if (this->workFunc != nullptr)
+  {
+    this->workFunc(data);
+  }
+}
+
+void moveOS::base::MByteDataEventWorkItem::executeChain(byte data)
+{
+  if (this->workFunc != nullptr)
+  {
+    if (this->workFunc(data) == MEventWorkItemResult::KEEP_CHAINING)
+    {
+      if (this->nextWorkItem != nullptr)
+      {
+        this->nextWorkItem->executeChain(data);
+      }
+    }
+  }
+}
+
+
+
+
+
 moveOS::base::MDataEventWorkItem::MDataEventWorkItem(data_handler_func workFunc)
 {
   this->workFunc = workFunc;
