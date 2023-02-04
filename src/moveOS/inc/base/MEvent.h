@@ -18,6 +18,10 @@ namespace moveOS
     /*   execute() is invoked periodically to check for events.                      */
     /*       It is essential for events that need to be checked through polling.     */
     /*                                                                               */
+    /*       elapsedTime_sec: time (in seconds) since last invocation                */
+    /*                                                                               */
+    /*                                                                               */
+    /*                                                                               */
     /*********************************************************************************/
     class MEvent {
     public:
@@ -28,6 +32,11 @@ namespace moveOS
 
 
 
+    /*********************************************************************************/
+    /*                                                                               */
+    /* Polling to check the presence of an event.                                    */
+    /*                                                                               */
+    /*********************************************************************************/
     class MPollingEvent : public MEvent
     {
     public:
