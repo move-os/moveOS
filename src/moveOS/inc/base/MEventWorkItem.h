@@ -79,6 +79,25 @@ namespace moveOS
 
 
 
+    class MByteDataEventWorkItem
+    {
+    public:
+      MByteDataEventWorkItem(byte_data_handler_func workFunc);
+      void executeSelf(byte data);
+      void executeChain(byte data);
+
+
+    protected:
+      byte_data_handler_func workFunc;
+      MByteDataEventWorkItem* nextWorkItem;
+
+      friend class Event;
+    };
+
+
+
+
+
     class MDataEventWorkItem
     {
     public:
