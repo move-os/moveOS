@@ -79,8 +79,8 @@ struct MEventWorkItemResult
 /**
 * Checks for the presence of an event.
 * Returns:
-*   0 => Event is not required to be raised
-*   ~ => Event should be raised
+*   -1 => Event is not required to be raised
+*   ~  => Event should be raised
 */
 typedef    byte(*event_poll_func)();
 
