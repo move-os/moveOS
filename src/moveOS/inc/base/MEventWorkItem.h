@@ -91,7 +91,7 @@ namespace moveOS
       byte_data_handler_func workFunc;
       MByteDataEventWorkItem* nextWorkItem;
 
-      friend class Event;
+      friend class MPollingEvent;
     };
 
 
