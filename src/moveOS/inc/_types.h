@@ -84,6 +84,13 @@ struct MEventWorkItemResult
 */
 typedef    byte(*event_poll_func)();
 
+/**
+* Handles the event.
+* Input:
+*   Value returned by "event_poll_func"
+*/
+typedef    void(*event_poll_handler_func)(byte);
+
 typedef    void(*simplest_func)();
 typedef    byte(*code_ret_simple_func)();
 typedef    byte(*data_handler_func)(byte*, uint16);
