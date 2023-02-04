@@ -88,8 +88,11 @@ typedef    byte(*event_poll_func)();
 * Handles the event.
 * Input:
 *   Value returned by "event_poll_func"
+* Returns:
+*   MEventWorkItemResult::KEEP_CHAINING       => Keep chaining when chained call
+*   MEventWorkItemResult::BREAK_FURTHER_CHAIN => Stop further chained calls
 */
-typedef    void(*event_poll_handler_func)(byte);
+typedef    byte(*event_poll_handler_func)(byte);
 
 typedef    void(*simplest_func)();
 typedef    byte(*code_ret_simple_func)();
