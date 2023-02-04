@@ -85,17 +85,14 @@ struct MEventWorkItemResult
 typedef    byte(*event_poll_func)();
 
 /**
-* Handles the event.
-* Input:
-*   Value returned by "event_poll_func"
-* Returns:
+* When handling an event, return:
 *   MEventWorkItemResult::KEEP_CHAINING       => Keep chaining when chained call
 *   MEventWorkItemResult::BREAK_FURTHER_CHAIN => Stop further chained calls
 */
-typedef    byte(*event_poll_handler_func)(byte);
 
 typedef    void(*simplest_func)();
 typedef    byte(*code_ret_simple_func)();
+typedef    byte(*byte_data_handler_func)(byte);
 typedef    byte(*data_handler_func)(byte*, uint16);
 typedef    byte(*integral_data_handler_func)(uint16);
 
