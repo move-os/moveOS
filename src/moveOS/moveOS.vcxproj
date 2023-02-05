@@ -32,6 +32,7 @@
     <ClInclude Include="inc\base\MWork.h" />
     <ClInclude Include="inc\base\MContinuousWork.h" />
     <ClInclude Include="inc\utilities\MVarsUpdater.h" />
+    <ClInclude Include="inc\utilities\MCommUDP.h" />
     <ClInclude Include="moveOS\Task.h" />
     <ClInclude Include="moveOS\ThreadTask.h" />
     <ClInclude Include="moveOS\Event.h" />
@@ -44,6 +45,7 @@
     <ClInclude Include="src\_internal_inc\macros.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\utilities\comm\MCommUDP.cpp" />
     <ClCompile Include="src\base\EventWorkItem.cpp" />
     <ClCompile Include="src\base\Work.cpp" />
     <ClCompile Include="src\base\ContinuousWork.cpp" />
