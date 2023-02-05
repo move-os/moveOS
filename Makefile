@@ -224,7 +224,7 @@ library: $(MOVEOS_OBJECTS)
 	@$(GXX) -shared -o $(BUILD_ROOT_DIR)/$(OUTPUT_LIB_NAME) $(MOVEOS_OBJECTS) $(COMPILATION_CPP_FLAGS)
 	@echo ""
 	@echo ""
-	@echo "*** moveOS built successfully"
+	@echo "*** moveOS built successfully ***"
 
 
 
