@@ -87,6 +87,9 @@
     <ClInclude Include="inc\utilities\MCommUDP.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="inc\utilities\MCommTCP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\base\Work.cpp">
@@ -120,6 +123,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\utilities\comm\MCommUDP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\comm\MCommTCP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
