@@ -13,7 +13,7 @@
 # -------------------------------------------------------------------------
 # On                  | By                    | Remarks
 # -------------------------------------------------------------------------
-#                     |                       |
+# 05 Feb, 2023        | usama                 | adding comm folder
 #                     |                       |
 #                     |                       |
 #                     |                       |
@@ -48,6 +48,7 @@ BUILD_ROOT_DIR        = $(PWD)/build/moveOS
 MOVEOS_BASE_DIR                        = base
 MOVEOS_KERNEL_DIR                      = kernel
 MOVEOS_UTILITIES_DIR                   = utilities
+MOVEOS_UTILITIES_COMM_DIR              = $(MOVEOS_UTILITIES_DIR)/comm
 MOVEOS_UTILITIES_CONFIG_DIR            = $(MOVEOS_UTILITIES_DIR)/config
 MOVEOS_UTILITIES_STATEMACHINE_DIR      = $(MOVEOS_UTILITIES_DIR)/statemachine
 MOVEOS_UTILITIES_VARS_DIR              = $(MOVEOS_UTILITIES_DIR)/vars
@@ -57,6 +58,7 @@ MOVEOS_SRCS_DIRS = .                                       \
                 $(MOVEOS_BASE_DIR)                         \
                 $(MOVEOS_KERNEL_DIR)                       \
                 $(MOVEOS_UTILITIES_DIR)                    \
+                $(MOVEOS_UTILITIES_COMM_DIR)               \
                 $(MOVEOS_UTILITIES_CONFIG_DIR)             \
                 $(MOVEOS_UTILITIES_STATEMACHINE_DIR)       \
                 $(MOVEOS_UTILITIES_VARS_DIR)
@@ -164,6 +166,17 @@ $(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIE
 	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
 
 $(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_DIR)/%.O: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_DIR)/%.cpp
+	@echo [Compiling] $<
+	@$(GXX) -c $(COMPILATION_CPP_FLAGS) $< -o $@
+
+#######################################
+# - ROOT/utilities/comm Directory
+##################################
+$(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_COMM_DIR)/%.o: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_COMM_DIR)/%.c
+	@echo [Compiling] $<
+	@$(GCC) -c $(COMPILATION_C_FLAGS) $< -o $@
+
+$(BUILD_ROOT_DIR)/$(MOVEOS_UTILITIES_COMM_DIR)/%.O: $(SRC_ROOT_DIR)/$(MOVEOS_UTILITIES_COMM_DIR)/%.cpp
 	@echo [Compiling] $<
 	@$(GXX) -c $(COMPILATION_CPP_FLAGS) $< -o $@
 
