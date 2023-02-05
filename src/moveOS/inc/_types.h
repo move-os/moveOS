@@ -27,6 +27,7 @@ typedef    uint32                           UINT32     ;
 typedef    int64                             INT64     ;
 typedef    uint64                           UINT64     ;
 
+typedef    uint8                             BOOL      ;
 typedef    uint8                             byte      ;
 typedef    uint8                             BYTE      ;
 typedef    uint16                            word      ;
