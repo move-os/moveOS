@@ -4,6 +4,11 @@
 
 
 #if     TARGET_PLATFORM == PLATFORM_GNU_LINUX
+
+  #include <iostream>
+
+  using namespace std;
+
   #define __COLOR_FG_BLACK             "\033[0;30m"
   #define __COLOR_FG_RED               "\033[0;31m"
   #define __COLOR_FG_GREEN             "\033[0;32m"
@@ -40,7 +45,22 @@
   #define __COLOR_BG_CYAN              "\033[46m"
   #define __COLOR_BG_WHITE             "\033[47m"
 
-  #define __PRINT_ERROR(msg) 
+  #define __PRINT_ERROR(msg)     cout << __COLOR_FG_RED       \
+                                      << "Error: "            \
+                                      << __COLOR_FG_WHITE     \
+                                      << msg                  \
+                                      << endl;
+
+  #define __PRINT_WARNING(msg)   cout << __COLOR_FG_YELLOW    \
+                                      << "Warning: "          \
+                                      << __COLOR_FG_WHITE     \
+                                      << msg                  \
+                                      << endl;
+
+  #define __PRINT_INFO(msg)      cout << __COLOR_FG_WHITE     \
+                                      << msg                  \
+                                      << endl;
+
 #elif   TARGET_PLATFORM == PLATFORM_WINDOWS
 #else
 #endif
