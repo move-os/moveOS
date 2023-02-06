@@ -3,6 +3,7 @@
 
 #include "_types.h"
 #include "_config.h"
+#include "base/MLogger.h"
 
 
 namespace moveOS
@@ -10,8 +11,10 @@ namespace moveOS
   namespace base
   {
 
-    class MLoggerConsole
+    class MLoggerConsole : public MLogger
     {
+    public:
+      void log(log_level, const char* message) override;
     };
 
   }
