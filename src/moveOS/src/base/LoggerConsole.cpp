@@ -63,6 +63,11 @@
 
 #elif   TARGET_PLATFORM == PLATFORM_WINDOWS
 #else
+
+  #define __PRINT_ERROR(msg)
+  #define __PRINT_WARNING(msg)
+  #define __PRINT_INFO(msg)
+
 #endif
 
 
