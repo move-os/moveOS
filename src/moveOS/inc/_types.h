@@ -67,6 +67,12 @@ struct MEventWorkItemResult
   };
 };
 
+typedef enum {
+  LOG_ERROR,
+  LOG_WARNING,
+  LOG_INFO
+} log_level;
+
 
 
 
