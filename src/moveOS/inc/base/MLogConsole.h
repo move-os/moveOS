@@ -1,5 +1,5 @@
-#ifndef _MOVE_OS_INC_BASE_M_DEFAULT_LOG_H_
-#define _MOVE_OS_INC_BASE_M_DEFAULT_LOG_H_
+#ifndef _MOVE_OS_INC_BASE_M_LOG_CONSOLE_H_
+#define _MOVE_OS_INC_BASE_M_LOG_CONSOLE_H_
 
 #include "_types.h"
 #include "_config.h"
