@@ -66,6 +66,14 @@
 #endif
 
 
+moveOS::base::MLoggerConsole::MLoggerConsole() : MLogger()
+{
+}
+
+moveOS::base::MLoggerConsole::MLoggerConsole(log_level minimumLogLevel) : MLogger(minimumLogLevel)
+{
+}
+
 void moveOS::base::MLoggerConsole::log(log_level logLevel, const char* message)
 {
   switch (logLevel)
