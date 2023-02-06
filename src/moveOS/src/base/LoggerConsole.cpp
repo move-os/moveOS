@@ -103,6 +103,10 @@ void moveOS::base::MLoggerConsole::logInfo(const char* message)
 
 void moveOS::base::MLoggerConsole::logWarning(const char* message)
 {
+  if (minimumLogLevel != LOG_ERROR)
+  {
+    __PRINT_WARNING(message);
+  }
 }
 
 void moveOS::base::MLoggerConsole::logError(const char* message)
