@@ -34,10 +34,10 @@
     <ClInclude Include="inc\utilities\MVarsUpdater.h" />
     <ClInclude Include="inc\utilities\MCommUDP.h" />
     <ClInclude Include="inc\utilities\MCommTCP.h" />
-    <ClInclude Include="inc\base\MLogConsole.h" />
-    <ClInclude Include="inc\base\MLog.h" />
-    <ClInclude Include="inc\base\MLogBlank.h" />
-    <ClInclude Include="inc\base\MLogFileDump.h" />
+    <ClInclude Include="inc\base\MLoggerConsole.h" />
+    <ClInclude Include="inc\base\MLogger.h" />
+    <ClInclude Include="inc\base\MLoggerBlank.h" />
+    <ClInclude Include="inc\base\MLoggerFileDump.h" />
     <ClInclude Include="inc\base\MDependencyProvider.h" />
     <ClInclude Include="moveOS\Task.h" />
     <ClInclude Include="moveOS\ThreadTask.h" />
@@ -52,10 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\base\DependencyProvider.cpp" />
-    <ClCompile Include="src\base\LogFileDump.cpp" />
-    <ClCompile Include="src\base\LogBlank.cpp" />
-    <ClCompile Include="src\base\LogConsole.cpp" />
-    <ClCompile Include="src\base\Log.cpp" />
+    <ClCompile Include="src\base\LoggerFileDump.cpp" />
+    <ClCompile Include="src\base\LoggerBlank.cpp" />
+    <ClCompile Include="src\base\LoggerConsole.cpp" />
+    <ClCompile Include="src\base\Logger.cpp" />
     <ClCompile Include="src\utilities\comm\CommTCP.cpp" />
     <ClCompile Include="src\utilities\comm\CommUDP.cpp" />
     <ClCompile Include="src\base\EventWorkItem.cpp" />

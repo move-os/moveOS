@@ -90,16 +90,16 @@
     <ClInclude Include="inc\utilities\MCommTCP.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\base\MLog.h">
+    <ClInclude Include="inc\base\MLogger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\base\MLogConsole.h">
+    <ClInclude Include="inc\base\MLoggerConsole.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\base\MLogBlank.h">
+    <ClInclude Include="inc\base\MLoggerBlank.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\base\MLogFileDump.h">
+    <ClInclude Include="inc\base\MLoggerFileDump.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="inc\base\MDependencyProvider.h">
@@ -143,16 +143,16 @@
     <ClCompile Include="src\utilities\comm\CommTCP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base\Log.cpp">
+    <ClCompile Include="src\base\Logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base\LogConsole.cpp">
+    <ClCompile Include="src\base\LoggerConsole.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base\LogBlank.cpp">
+    <ClCompile Include="src\base\LoggerBlank.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base\LogFileDump.cpp">
+    <ClCompile Include="src\base\LoggerFileDump.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\base\DependencyProvider.cpp">
