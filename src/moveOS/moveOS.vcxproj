@@ -34,7 +34,7 @@
     <ClInclude Include="inc\utilities\MVarsUpdater.h" />
     <ClInclude Include="inc\utilities\MCommUDP.h" />
     <ClInclude Include="inc\utilities\MCommTCP.h" />
-    <ClInclude Include="inc\base\MDefaultLog.h" />
+    <ClInclude Include="inc\base\MLogConsole.h" />
     <ClInclude Include="inc\base\MLog.h" />
     <ClInclude Include="moveOS\Task.h" />
     <ClInclude Include="moveOS\ThreadTask.h" />
@@ -48,7 +48,7 @@
     <ClInclude Include="src\_internal_inc\macros.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\base\MDefaultLog.cpp" />
+    <ClCompile Include="src\base\MLogConsole.cpp" />
     <ClCompile Include="src\base\MLog.cpp" />
     <ClCompile Include="src\utilities\comm\MCommTCP.cpp" />
     <ClCompile Include="src\utilities\comm\MCommUDP.cpp" />

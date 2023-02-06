@@ -93,7 +93,7 @@
     <ClInclude Include="inc\base\MLog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\base\MDefaultLog.h">
+    <ClInclude Include="inc\base\MLogConsole.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -137,7 +137,7 @@
     <ClCompile Include="src\base\MLog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base\MDefaultLog.cpp">
+    <ClCompile Include="src\base\MLogConsole.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
