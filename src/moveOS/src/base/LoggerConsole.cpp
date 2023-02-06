@@ -50,14 +50,14 @@
 
   #define __PRINT_ERROR(msg)     cout << __COLOR_FG_RED_BOLD       \
                                       << "Error: "                 \
-                                      << __COLOR_FG_WHITE_BOLD     \
+                                      << __COLOR_FG_CYAN           \
                                       << msg                       \
                                       << __COLOR_FG_WHITE          \
                                       << endl;
 
   #define __PRINT_WARNING(msg)   cout << __COLOR_FG_YELLOW_BOLD    \
                                       << "Warning: "               \
-                                       << __COLOR_FG_WHITE_BOLD    \
+                                       << __COLOR_FG_CYAN          \
                                       << msg                       \
                                       << __COLOR_FG_WHITE          \
                                       << endl;
