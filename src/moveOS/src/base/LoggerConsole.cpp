@@ -107,5 +107,6 @@ void moveOS::base::MLoggerConsole::logWarning(const char* message)
 
 void moveOS::base::MLoggerConsole::logError(const char* message)
 {
+  __PRINT_ERROR(message);
 }
 
