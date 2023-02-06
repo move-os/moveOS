@@ -36,7 +36,8 @@
     <ClInclude Include="inc\utilities\MCommTCP.h" />
     <ClInclude Include="inc\base\MLogConsole.h" />
     <ClInclude Include="inc\base\MLog.h" />
-    <ClInclude Include="MLogBlank.h" />
+    <ClInclude Include="inc\base\MLogBlank.h" />
+    <ClInclude Include="inc\base\MLogFileDump.h" />
     <ClInclude Include="moveOS\Task.h" />
     <ClInclude Include="moveOS\ThreadTask.h" />
     <ClInclude Include="moveOS\Event.h" />
@@ -49,7 +50,8 @@
     <ClInclude Include="src\_internal_inc\macros.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MLogBlank.cpp" />
+    <ClCompile Include="src\base\MLogFileDump.cpp" />
+    <ClCompile Include="src\base\MLogBlank.cpp" />
     <ClCompile Include="src\base\MLogConsole.cpp" />
     <ClCompile Include="src\base\MLog.cpp" />
     <ClCompile Include="src\utilities\comm\MCommTCP.cpp" />
