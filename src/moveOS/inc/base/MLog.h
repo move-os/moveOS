@@ -12,6 +12,16 @@ namespace moveOS
 
     class MLog
     {
+    public:
+      void setMinimumLogLevel(log_level);
+
+      virtual void log(log_level, const char* message) = 0;
+
+    protected:
+      MLog();
+      MLog(log_level);
+
+      log_level minimumLogLevel;
     };
 
   }
