@@ -16,6 +16,9 @@ namespace moveOS
       void setMinimumLogLevel(log_level);
 
       virtual void log(log_level, const char* message) = 0;
+      virtual void logInfo(const char* message) = 0;
+      virtual void logWarning(const char* message) = 0;
+      virtual void logError(const char* message) = 0;
 
     protected:
       MLogger();
