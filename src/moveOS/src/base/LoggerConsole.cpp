@@ -3,7 +3,10 @@
 #include "src/_internal_inc/macros.h"
 
 
-#if     TARGET_PLATFORM == PLATFORM_GNU_LINUX
+
+
+#if     TARGET_PLATFORM == PLATFORM_GNU_LINUX || TARGET_PLATFORM == PLATFORM_WINDOWS
+
 
   #include <iostream>
 
@@ -61,12 +64,14 @@
                                       << msg                  \
                                       << endl;
 
-#elif   TARGET_PLATFORM == PLATFORM_WINDOWS
+
 #else
+
 
   #define __PRINT_ERROR(msg)
   #define __PRINT_WARNING(msg)
   #define __PRINT_INFO(msg)
+
 
 #endif
 
