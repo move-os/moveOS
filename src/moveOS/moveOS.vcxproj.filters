@@ -134,22 +134,22 @@
     <ClCompile Include="src\base\EventWorkItem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\utilities\comm\MCommUDP.cpp">
+    <ClCompile Include="src\utilities\comm\CommUDP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\utilities\comm\MCommTCP.cpp">
+    <ClCompile Include="src\utilities\comm\CommTCP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base\MLog.cpp">
+    <ClCompile Include="src\base\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base\MLogConsole.cpp">
+    <ClCompile Include="src\base\LogConsole.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base\MLogBlank.cpp">
+    <ClCompile Include="src\base\LogBlank.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base\MLogFileDump.cpp">
+    <ClCompile Include="src\base\LogFileDump.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
