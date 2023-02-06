@@ -3,6 +3,14 @@
 #include "src/_internal_inc/macros.h"
 
 
+moveOS::base::MLoggerFileDump::MLoggerFileDump(const char* filename)
+{
+}
+
+moveOS::base::MLoggerFileDump::MLoggerFileDump(const char* filename, log_level minimumLogLevel)
+{
+}
+
 void moveOS::base::MLoggerFileDump::log(log_level logLevel, const char* message)
 {
   switch (logLevel)

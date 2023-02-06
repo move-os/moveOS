@@ -14,6 +14,9 @@ namespace moveOS
     class MLoggerFileDump : public MLogger
     {
     public:
+      MLoggerFileDump(const char* filename);
+      MLoggerFileDump(const char* filename, log_level minimumLogLevel);
+
       void log(log_level, const char* message) override;
       void logInfo(const char* message) override;
       void logWarning(const char* message) override;
