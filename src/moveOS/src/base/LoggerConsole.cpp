@@ -3,6 +3,12 @@
 #include "src/_internal_inc/macros.h"
 
 
+#if     TARGET_PLATFORM == PLATFORM_GNU_LINUX
+#elif   TARGET_PLATFORM == PLATFORM_WINDOWS
+#else
+#endif
+
+
 void moveOS::base::MLoggerConsole::log(log_level logLevel, const char* message)
 {
   switch (logLevel)
