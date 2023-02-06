@@ -38,6 +38,7 @@
     <ClInclude Include="inc\base\MLog.h" />
     <ClInclude Include="inc\base\MLogBlank.h" />
     <ClInclude Include="inc\base\MLogFileDump.h" />
+    <ClInclude Include="inc\base\MDependencyProvider.h" />
     <ClInclude Include="moveOS\Task.h" />
     <ClInclude Include="moveOS\ThreadTask.h" />
     <ClInclude Include="moveOS\Event.h" />
@@ -50,6 +51,7 @@
     <ClInclude Include="src\_internal_inc\macros.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\base\DependencyProvider.cpp" />
     <ClCompile Include="src\base\LogFileDump.cpp" />
     <ClCompile Include="src\base\LogBlank.cpp" />
     <ClCompile Include="src\base\LogConsole.cpp" />
