@@ -5,8 +5,15 @@
 #include "_config.h"
 
 
-class moveOS::base::MLogger;
-class moveOS::base::MObjectProvider;
+namespace moveOS
+{
+  namespace base
+  {
+    class MLogger;
+    class MObjectProvider;
+  }
+}
+
 
 namespace moveOS
 {
