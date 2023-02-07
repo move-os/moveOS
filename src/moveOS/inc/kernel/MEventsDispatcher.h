@@ -4,6 +4,9 @@
 #include "_types.h"
 #include "_config.h"
 
+#include "base/MObjectProvider.h"
+#include "base/MLogger.h"
+
 
 namespace moveOS
 {
@@ -12,6 +15,16 @@ namespace moveOS
 
     class MEventsDispatcher
     {
+    public:
+
+
+
+    private:
+      MEventsDispatcher(moveOS::base::MLogger*);
+
+      moveOS::base::MLogger* logger;
+
+      friend class MObjectProvider;
     };
 
   }
