@@ -57,12 +57,42 @@ void moveOS::base::MLoggerFileDump::log(log_level logLevel, const char* message)
 
 void moveOS::base::MLoggerFileDump::logInfo(const char* message)
 {
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX || TARGET_PLATFORM == PLATFORM_WINDOWS
+
+
+  if (minimumLogLevel == LOG_INFO && outFileStream.is_open())
+  {
+    outFileStream << message << std::endl;
+  }
+
+
+#endif
 }
 
 void moveOS::base::MLoggerFileDump::logWarning(const char* message)
 {
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX || TARGET_PLATFORM == PLATFORM_WINDOWS
+
+
+  if (minimumLogLevel != LOG_ERROR && outFileStream.is_open())
+  {
+    outFileStream << "Warning: " << message << std::endl;
+  }
+
+
+#endif
 }
 
 void moveOS::base::MLoggerFileDump::logError(const char* message)
 {
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX || TARGET_PLATFORM == PLATFORM_WINDOWS
+
+
+  if (outFileStream.is_open())
+  {
+    outFileStream << "Error: " << message << std::endl;
+  }
+
+
+#endif
 }
