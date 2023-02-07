@@ -3,7 +3,8 @@
 #include "src/_internal_inc/macros.h"
 
 
-moveOS::base::MLoggerFileDump::MLoggerFileDump(const char* filename) : MLogger()
+moveOS::base::MLoggerFileDump::MLoggerFileDump(const char* filename)
+  : MLogger()
 {
   this->filename = filename;
 
