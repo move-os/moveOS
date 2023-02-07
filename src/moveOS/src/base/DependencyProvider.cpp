@@ -15,7 +15,13 @@ moveOS::base::MLogger* moveOS::base::MDependencyProvider::getLogger()
 {
   if (logger == nullptr)
   {
-#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX || TARGET_PLATFORM == PLATFORM_WINDOWS
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
+
+    logger = new MLoggerSplit(
+      new MLoggerConsole(),
+      new MLoggerFileDump("log_dump.dat"));
+
+#elif   TARGET_PLATFORM == PLATFORM_WINDOWS
 
     logger = new MLoggerSplit(
       new MLoggerConsole(),
