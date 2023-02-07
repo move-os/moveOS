@@ -3,12 +3,37 @@
 #include "src/_internal_inc/macros.h"
 
 
-moveOS::base::MLoggerFileDump::MLoggerFileDump(const char* filename)
+moveOS::base::MLoggerFileDump::MLoggerFileDump(const char* filename) : MLogger()
 {
+  this->filename = filename;
+
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX || TARGET_PLATFORM == PLATFORM_WINDOWS
+
+
+  if (filename != nullptr)
+  {
+    outFileStream.open(filename, std::ios_base::app);
+  }
+
+  
+#endif
 }
 
 moveOS::base::MLoggerFileDump::MLoggerFileDump(const char* filename, log_level minimumLogLevel)
+  : MLogger(minimumLogLevel)
 {
+  this->filename = filename;
+
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX || TARGET_PLATFORM == PLATFORM_WINDOWS
+
+
+  if (filename != nullptr)
+  {
+    outFileStream.open(filename, std::ios_base::app);
+  }
+
+
+#endif
 }
 
 void moveOS::base::MLoggerFileDump::log(log_level logLevel, const char* message)
