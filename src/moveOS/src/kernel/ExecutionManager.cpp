@@ -18,3 +18,9 @@
 #else
   #error "Unknown platform"
 #endif
+
+
+moveOS::kernel::MExecutionManager::MExecutionManager(moveOS::base::MLogger* logger)
+{
+  this->logger = logger;
+}
