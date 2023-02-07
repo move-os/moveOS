@@ -5,6 +5,8 @@
 #include "inc/base/MObjectProvider.h"
 #include "inc/base/MLogger.h"
 
+using namespace moveOS::base;
+
 
 #if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
 //-
@@ -23,7 +25,7 @@
 #endif
 
 
-moveOS::kernel::MExecutionManager::MExecutionManager(moveOS::base::MLogger* logger)
+moveOS::kernel::MExecutionManager::MExecutionManager(MLogger* logger)
 {
   this->logger = logger;
 }
