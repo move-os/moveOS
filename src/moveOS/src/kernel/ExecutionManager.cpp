@@ -2,6 +2,9 @@
 
 #include "src/_internal_inc/macros.h"
 
+#include "inc/base/MObjectProvider.h"
+#include "inc/base/MLogger.h"
+
 
 #if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
 //-
