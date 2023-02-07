@@ -63,6 +63,7 @@ void moveOS::base::MLoggerFileDump::logInfo(const char* message)
   if (minimumLogLevel == LOG_INFO && outFileStream.is_open())
   {
     outFileStream << message << std::endl;
+    outFileStream.flush();
   }
 
 
@@ -77,6 +78,7 @@ void moveOS::base::MLoggerFileDump::logWarning(const char* message)
   if (minimumLogLevel != LOG_ERROR && outFileStream.is_open())
   {
     outFileStream << "Warning: " << message << std::endl;
+    outFileStream.flush();
   }
 
 
@@ -91,6 +93,7 @@ void moveOS::base::MLoggerFileDump::logError(const char* message)
   if (outFileStream.is_open())
   {
     outFileStream << "Error: " << message << std::endl;
+    outFileStream.flush();
   }
 
 
