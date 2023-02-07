@@ -4,9 +4,9 @@
 #include "_types.h"
 #include "_config.h"
 
-#include "base/MObjectProvider.h"
-#include "base/MLogger.h"
 
+class moveOS::base::MLogger;
+class moveOS::base::MObjectProvider;
 
 namespace moveOS
 {
@@ -24,7 +24,7 @@ namespace moveOS
 
       moveOS::base::MLogger* logger;
 
-      friend class MObjectProvider;
+      friend class moveOS::base::MObjectProvider;
     };
 
   }
