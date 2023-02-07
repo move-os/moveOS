@@ -2,6 +2,7 @@
 
 #include "src/_internal_inc/macros.h"
 
+//- Logger dependencies
 #include "inc/base/MLogger.h"
 #include "inc/base/MLoggerBlank.h"
 #include "inc/base/MLoggerConsole.h"
