@@ -38,7 +38,7 @@
     <ClInclude Include="inc\base\MLogger.h" />
     <ClInclude Include="inc\base\MLoggerBlank.h" />
     <ClInclude Include="inc\base\MLoggerFileDump.h" />
-    <ClInclude Include="inc\base\MDependencyProvider.h" />
+    <ClInclude Include="inc\base\MObjectProvider.h" />
     <ClInclude Include="inc\base\MLoggerSplit.h" />
     <ClInclude Include="moveOS\Task.h" />
     <ClInclude Include="moveOS\ThreadTask.h" />
@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\base\LoggerSplit.cpp" />
-    <ClCompile Include="src\base\DependencyProvider.cpp" />
+    <ClCompile Include="src\base\ObjectProvider.cpp" />
     <ClCompile Include="src\base\LoggerFileDump.cpp" />
     <ClCompile Include="src\base\LoggerBlank.cpp" />
     <ClCompile Include="src\base\LoggerConsole.cpp" />

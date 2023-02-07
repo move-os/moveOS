@@ -102,7 +102,7 @@
     <ClInclude Include="inc\base\MLoggerFileDump.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\base\MDependencyProvider.h">
+    <ClInclude Include="inc\base\MObjectProvider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="inc\base\MLoggerSplit.h">
@@ -158,7 +158,7 @@
     <ClCompile Include="src\base\LoggerFileDump.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\base\DependencyProvider.cpp">
+    <ClCompile Include="src\base\ObjectProvider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\base\LoggerSplit.cpp">
