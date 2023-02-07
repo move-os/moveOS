@@ -3,6 +3,7 @@
 
 #include "_types.h"
 #include "_config.h"
+#include "base/MLogger.h"
 
 
 namespace moveOS
@@ -12,6 +13,9 @@ namespace moveOS
 
     class MDependencyProvider
     {
+    public:
+
+      static MLogger* getLogger();
     };
 
   }
