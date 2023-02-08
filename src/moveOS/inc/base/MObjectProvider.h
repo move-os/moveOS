@@ -4,10 +4,20 @@
 #include "_types.h"
 #include "_config.h"
 
-#include "base/MLogger.h"
 
-#include "kernel/MEventsDispatcher.h"
-#include "kernel/MExecutionManager.h"
+namespace moveOS
+{
+  namespace base
+  {
+    class MLogger;
+  }
+
+  namespace kernel
+  {
+    class MEventsDispatcher;
+    class MExecutionManager;
+  }
+}
 
 
 namespace moveOS

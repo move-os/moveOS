@@ -3,10 +3,15 @@
 #include "src/_internal_inc/macros.h"
 
 //- Loggers
+#include "inc/base/MLogger.h"
 #include "inc/base/MLoggerBlank.h"
 #include "inc/base/MLoggerConsole.h"
 #include "inc/base/MLoggerFileDump.h"
 #include "inc/base/MLoggerSplit.h"
+
+//- Kernel Objects
+#include "inc/kernel/MEventsDispatcher.h"
+#include "inc/kernel/MExecutionManager.h"
 
 
 /**************************************************************************/
