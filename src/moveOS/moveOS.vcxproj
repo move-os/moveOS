@@ -33,7 +33,7 @@
     <ClInclude Include="inc\base\MContinuousWork.h" />
     <ClInclude Include="inc\utilities\MVarsUpdater.h" />
     <ClInclude Include="inc\utilities\MCommUDP.h" />
-    <ClInclude Include="inc\utilities\MCommTCP.h" />
+    <ClInclude Include="inc\utilities\MCommTcpClient.h" />
     <ClInclude Include="inc\base\MLoggerConsole.h" />
     <ClInclude Include="inc\base\MLogger.h" />
     <ClInclude Include="inc\base\MLoggerBlank.h" />
@@ -58,7 +58,7 @@
     <ClCompile Include="src\base\LoggerBlank.cpp" />
     <ClCompile Include="src\base\LoggerConsole.cpp" />
     <ClCompile Include="src\base\Logger.cpp" />
-    <ClCompile Include="src\utilities\comm\CommTCP.cpp" />
+    <ClCompile Include="src\utilities\comm\CommTcpClient.cpp" />
     <ClCompile Include="src\utilities\comm\CommUDP.cpp" />
     <ClCompile Include="src\base\EventWorkItem.cpp" />
     <ClCompile Include="src\base\Work.cpp" />

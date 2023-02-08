@@ -12,7 +12,7 @@ namespace moveOS
     namespace comm
     {
 
-      class MCommTCP
+      class MCommTcpClient
       {
       };
 
