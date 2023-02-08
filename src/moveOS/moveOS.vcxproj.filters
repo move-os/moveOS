@@ -84,7 +84,7 @@
     <ClInclude Include="inc\_types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\utilities\MCommUDP.h">
+    <ClInclude Include="inc\utilities\MCommUdpClient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="inc\utilities\MCommTcpClient.h">
@@ -140,7 +140,7 @@
     <ClCompile Include="src\base\EventWorkItem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\utilities\comm\CommUDP.cpp">
+    <ClCompile Include="src\utilities\comm\CommUdpClient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\utilities\comm\CommTcpClient.cpp">
