@@ -7,6 +7,7 @@
 #include "base/MWork.h"
 #include "base/MContinuousWork.h"
 #include "base/MLogger.h"
+#include "base/MObjectProvider.h"
 
 #include "kernel/MEventsDispatcher.h"
 #include "kernel/MExecutionManager.h"
