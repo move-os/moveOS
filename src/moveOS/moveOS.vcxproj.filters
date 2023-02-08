@@ -108,6 +108,9 @@
     <ClInclude Include="inc\base\MLoggerSplit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="inc\utilities\MCommTcpServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\base\Work.cpp">
@@ -162,6 +165,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\base\LoggerSplit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\comm\CommTcpServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

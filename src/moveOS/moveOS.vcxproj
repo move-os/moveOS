@@ -40,6 +40,7 @@
     <ClInclude Include="inc\base\MLoggerFileDump.h" />
     <ClInclude Include="inc\base\MObjectProvider.h" />
     <ClInclude Include="inc\base\MLoggerSplit.h" />
+    <ClInclude Include="inc\utilities\MCommTcpServer.h" />
     <ClInclude Include="moveOS\Task.h" />
     <ClInclude Include="moveOS\ThreadTask.h" />
     <ClInclude Include="moveOS\Event.h" />
@@ -52,6 +53,7 @@
     <ClInclude Include="src\_internal_inc\macros.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\utilities\comm\CommTcpServer.cpp" />
     <ClCompile Include="src\base\LoggerSplit.cpp" />
     <ClCompile Include="src\base\ObjectProvider.cpp" />
     <ClCompile Include="src\base\LoggerFileDump.cpp" />
