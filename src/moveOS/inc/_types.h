@@ -37,6 +37,15 @@ typedef    uint32                            DWORD     ;
 typedef    uint64                            qword     ;
 typedef    uint64                            QWORD     ;
 
+typedef    int8                              sbyte     ;
+typedef    int8                              SBYTE     ;
+typedef    int16                             sword     ;
+typedef    int16                             SWORD     ;
+typedef    int32                             sdword    ;
+typedef    int32                             SDWORD    ;
+typedef    int64                             sqword    ;
+typedef    int64                             SQWORD    ;
+
 typedef    float                            single     ;
 typedef    single                           SINGLE     ;
 typedef    double                           DOUBLE     ;
