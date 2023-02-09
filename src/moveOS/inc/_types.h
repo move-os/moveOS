@@ -82,6 +82,13 @@ typedef enum {
   LOG_INFO
 } log_level;
 
+struct MLocalPort
+{
+  enum {
+    ANY = 0,
+  };
+};
+
 typedef struct
 {
   int numBytesReceived;
