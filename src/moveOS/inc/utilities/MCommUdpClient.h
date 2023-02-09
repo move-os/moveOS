@@ -1,8 +1,33 @@
 #ifndef _MOVE_OS_INC_UTILITIES_M_COMM_UDP_CLIENT_H_
 #define _MOVE_OS_INC_UTILITIES_M_COMM_UDP_CLIENT_H_
 
-#include "_types.h"
 #include "_config.h"
+
+
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
+
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#include <fcntl.h>
+
+#elif   TARGET_PLATFORM == PLATFORM_WINDOWS
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <winsock2.h>
+#include <fcntl.h>
+
+#else
+#endif
+
+
+#include "_types.h"
 
 
 namespace moveOS
@@ -15,9 +40,10 @@ namespace moveOS
       class MCommUdpClient
       {
       public:
-        MCommUdpClient(word localPort = MLocalPort::ANY,
+        MCommUdpClient(word localPort = MUdpPort::ANY,
                        bool enableBroadcasting = false,
                        bool isNonBlocking = false);
+
         ~MCommUdpClient();
 
         bool IsSocketCreated();
@@ -25,18 +51,17 @@ namespace moveOS
 
         void Close();
 
-        bool IsPacketAvailable(int timeoutSecond, int timeoutMicrosecond);
+        bool IsPacketAvailable(word timeoutSecond, word timeoutMicrosecond);
 
-        void SendMessage(const char* buffer, unsigned int numBytes, const char* targetIP, word targetPort);
+        void SendMessage(const byte* buffer, word numBytes,
+                         const byte* targetIP, word targetPort);
 
-        packet_info ReceiveMessage(unsigned char* buffer, unsigned int bufSize);
-
-        packet_info ReceiveEncryptedMessage(unsigned char* buffer, unsigned int bufSize);
+        packet_info ReceiveMessage(byte* buffer, word buffSize);
 
 
       private:
         int _sockFD;
-        ushort localBoundPort;
+        word localBoundPort;
         bool isSocketBound;
         bool isBroadcastingSocket;
         bool isNonBlockingSocket;

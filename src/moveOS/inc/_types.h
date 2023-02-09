@@ -18,37 +18,17 @@ typedef    unsigned long                    uint32     ;
 typedef             long long                int64     ;
 typedef    unsigned long long               uint64     ;
 
-typedef    int8                              INT8      ;
-typedef    uint8                            UINT8      ;
-typedef    int16                             INT16     ;
-typedef    uint16                           UINT16     ;
-typedef    int32                             INT32     ;
-typedef    uint32                           UINT32     ;
-typedef    int64                             INT64     ;
-typedef    uint64                           UINT64     ;
-
-typedef    uint8                             BOOL      ;
 typedef    uint8                             byte      ;
-typedef    uint8                             BYTE      ;
 typedef    uint16                            word      ;
-typedef    uint16                            WORD      ;
 typedef    uint32                            dword     ;
-typedef    uint32                            DWORD     ;
 typedef    uint64                            qword     ;
-typedef    uint64                            QWORD     ;
 
 typedef    int8                              sbyte     ;
-typedef    int8                              SBYTE     ;
 typedef    int16                             sword     ;
-typedef    int16                             SWORD     ;
 typedef    int32                             sdword    ;
-typedef    int32                             SDWORD    ;
 typedef    int64                             sqword    ;
-typedef    int64                             SQWORD    ;
 
 typedef    float                            single     ;
-typedef    single                           SINGLE     ;
-typedef    double                           DOUBLE     ;
 
 
 
@@ -130,29 +110,29 @@ typedef    byte(*integral_data_handler_func)(uint16);
 typedef    void(*nret_vptr1_func)(void*);
 typedef    void(*nret_vptr2_func)(void*, void*);
 
-typedef    INT8(*i8ret_func)();
-typedef    INT8(*i8ret_vptr1_func)(void*);
-typedef    INT8(*i8ret_vptr2_func)(void*, void*);
+typedef    int8(*i8ret_func)();
+typedef    int8(*i8ret_vptr1_func)(void*);
+typedef    int8(*i8ret_vptr2_func)(void*, void*);
 
-typedef    INT16(*i16ret_func)();
-typedef    INT16(*i16ret_vptr1_func)(void*);
-typedef    INT16(*i16ret_vptr2_func)(void*, void*);
+typedef    int16(*i16ret_func)();
+typedef    int16(*i16ret_vptr1_func)(void*);
+typedef    int16(*i16ret_vptr2_func)(void*, void*);
 
-typedef    INT32(*i32ret_func)();
-typedef    INT32(*i32ret_vptr1_func)(void*);
-typedef    INT32(*i32ret_vptr2_func)(void*, void*);
+typedef    int32(*i32ret_func)();
+typedef    int32(*i32ret_vptr1_func)(void*);
+typedef    int32(*i32ret_vptr2_func)(void*, void*);
 
-typedef    UINT8(*ui8ret_func)();
-typedef    UINT8(*ui8ret_vptr1_func)(void*);
-typedef    UINT8(*ui8ret_vptr2_func)(void*, void*);
+typedef    uint8(*ui8ret_func)();
+typedef    uint8(*ui8ret_vptr1_func)(void*);
+typedef    uint8(*ui8ret_vptr2_func)(void*, void*);
 
-typedef    UINT16(*ui16ret_func)();
-typedef    UINT16(*ui16ret_vptr1_func)(void*);
-typedef    UINT16(*ui16ret_vptr2_func)(void*, void*);
+typedef    uint16(*ui16ret_func)();
+typedef    uint16(*ui16ret_vptr1_func)(void*);
+typedef    uint16(*ui16ret_vptr2_func)(void*, void*);
 
-typedef    UINT32(*ui32ret_func)();
-typedef    UINT32(*ui32ret_vptr1_func)(void*);
-typedef    UINT32(*ui32ret_vptr2_func)(void*, void*);
+typedef    uint32(*ui32ret_func)();
+typedef    uint32(*ui32ret_vptr1_func)(void*);
+typedef    uint32(*ui32ret_vptr2_func)(void*, void*);
 
 
 
