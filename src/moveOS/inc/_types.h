@@ -92,7 +92,7 @@ struct MUdpPort
 
 typedef struct
 {
-  int numBytesReceived;
+  word numBytesReceived;
   byte* receivedFromIP;
   word receivedFromPort;
 } packet_info;
