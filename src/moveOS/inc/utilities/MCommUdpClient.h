@@ -11,6 +11,12 @@ namespace moveOS
   {
     namespace comm
     {
+      typedef struct 
+      {
+        int numBytesReceived;
+        byte* receivedFromIP;
+        word receivedFromPort;
+      } SenderInfo;
 
       class MCommUdpClient
       {
