@@ -82,10 +82,11 @@ typedef enum {
   LOG_INFO
 } log_level;
 
-struct MLocalPort
+struct MUdpPort
 {
   enum {
     ANY = 0,
+
   };
 };
 
