@@ -183,8 +183,8 @@ struct MTcpPort
     SMTP = 25,                  // Simple Mail Transfer Protocol
     TIME = 37,                  // Machine-readable time protocol
     RLP = 39,                   // Resource location protocol
-    NAMESERVER = 42,            // Name service
-    NICNAME = 43,               // WHOIS directory service
+    NAME_SERVER = 42,           // Name service
+    NIC_NAME = 43,              // WHOIS directory service
     TACACS = 49,                // Terminal access controller access control system
     RE_MAIL_CK = 50,            // Remote mail checking
     DOMAIN = 53,                // DNS name resolver
@@ -194,7 +194,7 @@ struct MTcpPort
     HTTP = 80,                  // Hypertext transfer protocol
     TORPARK = 81,               // Torpark: Onion routing (unofficial)
     KERBEROS = 88,              // Network authentication system
-    HOSTNAME = 101,             // NIC host name
+    HOST_NAME = 101,            // NIC host name
     ISO_TSAP = 102,             // ISO TSAP protocol
     CSNET_NS = 105,             // Mailbox mail server
     RTELNET = 107,              // Remote telnet
@@ -208,7 +208,7 @@ struct MTcpPort
     NETBIOS_DGM = 138,          // NETBIOS datagram service
     NETBIOS_SSN = 139,          // NETBIOS session service
     IMAP = 143,                 // Internet message access protocol for e-mail communication
-    SNMPTRAP = 162,             // Simple network management protocol trap
+    SNMP_TRAP = 162,            // Simple network management protocol trap
     XDMCP = 177,                // X display manager
     BGP = 179,                  // Border gateway protocol
     IRC = 194,                  // Internet relay chat
