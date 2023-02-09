@@ -70,7 +70,7 @@ struct MUdpPort
     RJE = 5,                    // Remote job entry
     ECHO = 7,                   // Echo service
     DISCARD = 9,                // Zero service for test purposes
-    SYSTAT = 11,                // System information
+    SYS_STAT = 11,              // System information
     DAYTIME = 13,               // Time and date
     QOTD = 17,                  // Sends quote of the day
     MSP = 18,                   // Sends text messages
@@ -80,7 +80,7 @@ struct MUdpPort
     TIME = 37,                  // Machine-readable time protocol
     RLP = 39,                   // Resource location protocol
     NAMESERVER = 42,            // Name service
-    TACACS = 49,                // Terminal access controller access control system
+    TAC_ACS = 49,               // Terminal access controller access control system
     RE_MAIL_CK = 50,            // Remote mail checking
     DOMAIN = 53,                // DNS name resolver
     BOOT_PS = 67,               // Bootstrap protocol services
@@ -97,7 +97,7 @@ struct MUdpPort
     NETBIOS_SSN = 139,          // NETBIOS session service
     IMAP = 143,                 // Internet message access protocol for e-mail communication
     SNMP = 161,                 // Simple network management protocol
-    SNMPTRAP = 162,             // Simple network management protocol trap
+    SNMP_TRAP = 162,            // Simple network management protocol trap
     XDMCP = 177,                // X display manager
     IRC = 194,                  // Internet relay chat
     SMUX = 199,                 // SNMP UNIX multiplexer
@@ -106,10 +106,10 @@ struct MUdpPort
     Z39_PT_50 = 210,            // Bibliographic information system
     IPX = 213,                  // Internetwork packet exchange
     IMAP3 = 220,                // IMAP v3 for e-mail communication
-    RPC2PORTMAP = 369,          // Coda file system port mapper
+    RPC_2_PORTMAP = 369,        // Coda file system port mapper
     CODA_AUTH2 = 370,           // Coda file system authentication service
     LDAP = 389,                 // Lightweight directory access protocol
-    SVRLOC = 427,               // Service location protocol
+    SVR_LOC = 427,              // Service location protocol
     SNPP = 444,                 // Simple network paging protocol
     KPASSWD = 464,              // Kerberos password change
     ISAKMP = 500,               // Security protocol
@@ -171,7 +171,7 @@ struct MTcpPort
     RJE = 5,                    // Remote job entry
     ECHO = 7,                   // Echo service
     DISCARD = 9,                // Zero service for test purposes
-    SYSTAT = 11,                // System information
+    SYS_STAT = 11,              // System information
     DAYTIME = 13,               // Time and date
     QOTD = 17,                  // Sends quote of the day
     MSP = 18,                   // Sends text messages
