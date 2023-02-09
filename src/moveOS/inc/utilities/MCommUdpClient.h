@@ -23,6 +23,8 @@
 #include <winsock2.h>
 #include <fcntl.h>
 
+#pragma comment(lib, "ws2_32.lib")
+
 #else
 #endif
 
