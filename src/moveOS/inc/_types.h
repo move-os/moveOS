@@ -82,6 +82,13 @@ typedef enum {
   LOG_INFO
 } log_level;
 
+typedef struct
+{
+  int numBytesReceived;
+  byte* receivedFromIP;
+  word receivedFromPort;
+} PacketSenderInfo;
+
 
 
 
