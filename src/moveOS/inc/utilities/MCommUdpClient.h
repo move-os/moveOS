@@ -6,9 +6,6 @@
 
 #if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
 
-
-
-
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <stdio.h>
@@ -25,9 +22,6 @@
 
 #elif   TARGET_PLATFORM == PLATFORM_WINDOWS
 
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <winsock2.h>
@@ -39,9 +33,6 @@
 
 
 #else
-
-
-
 
 //- 
 
