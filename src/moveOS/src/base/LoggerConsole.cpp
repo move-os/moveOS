@@ -3,6 +3,8 @@
 #include "src/_internal_inc/macros.h"
 
 #include <stdarg.h>
+#include <string.h>
+#include <stdio.h>
 
 
 
