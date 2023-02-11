@@ -135,7 +135,7 @@ struct MUdpPort
     KERBEROS_ADM = 749,         // Kerberos v5 administration
     KERBEROS_IV = 750,          // Kerberos v4 services
     TELNETS = 992,              // Telnet over SSL/TLS
-    MS_SQL_M = 1434,            // Microsoft SQL monitor
+    MICROSOFT_SQL_M = 1434,     // Microsoft SQL monitor
     WINS = 1512,                // Windows internet name service
     INGRES_LOCK = 1524,         // Ingres DBMS
     L2TP = 1701,                // Layer 2 tunneling protocol/Layer 2 forwarding
@@ -255,8 +255,8 @@ struct MTcpPort
     IMAPS = 993,                // IMAP over SSL/TLS
     POP3S = 995,                // POP3 over SSL/TLS
     SOCKS = 1080,               // SOCKS proxy
-    MS_SQL_S = 1433,            // Microsoft SQL server
-    MS_SQL_M = 1434,            // Microsoft SQL monitor
+    MICROSOFT_SQL_S = 1433,     // Microsoft SQL server
+    MICROSOFT_SQL_M = 1434,     // Microsoft SQL monitor
     ICA = 1494,                 // Citrix ICA client
     WINS = 1512,                // Windows internet name service
     INGRES_LOCK = 1524,         // Ingres DBMS
