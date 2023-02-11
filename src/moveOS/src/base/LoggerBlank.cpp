@@ -22,3 +22,19 @@ void moveOS::base::MLoggerBlank::logWarning(const char* message, ...)
 void moveOS::base::MLoggerBlank::logError(const char* message, ...)
 {
 }
+
+void moveOS::base::MLoggerBlank::logNoEndline(log_level, const char* message)
+{
+}
+
+void moveOS::base::MLoggerBlank::logInfoNoEndline(const char* message, ...)
+{
+}
+
+void moveOS::base::MLoggerBlank::logWarningNoEndline(const char* message, ...)
+{
+}
+
+void moveOS::base::MLoggerBlank::logErrorNoEndline(const char* message, ...)
+{
+}
