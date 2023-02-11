@@ -18,9 +18,9 @@ namespace moveOS
       MLoggerConsole(log_level minimumLogLevel);
 
       void log(log_level, const char* message) override;
-      void logInfo(const char* message) override;
-      void logWarning(const char* message) override;
-      void logError(const char* message) override;
+      void logInfo(const char* message, ...) override;
+      void logWarning(const char* message, ...) override;
+      void logError(const char* message, ...) override;
     };
 
   }
