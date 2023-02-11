@@ -16,14 +16,14 @@ namespace moveOS
       void setMinimumLogLevel(log_level);
 
       virtual void log(log_level, const char* message) = 0;
-      virtual void logInfo(const char* message, ...) = 0;
-      virtual void logWarning(const char* message, ...) = 0;
-      virtual void logError(const char* message, ...) = 0;
+      virtual void logInfo(const char* format_str, ...) = 0;
+      virtual void logWarning(const char* format_str, ...) = 0;
+      virtual void logError(const char* format_str, ...) = 0;
 
       virtual void logNoEndline(log_level, const char* message) = 0;
-      virtual void logInfoNoEndline(const char* message, ...) = 0;
-      virtual void logWarningNoEndline(const char* message, ...) = 0;
-      virtual void logErrorNoEndline(const char* message, ...) = 0;
+      virtual void logInfoNoEndline(const char* format_str, ...) = 0;
+      virtual void logWarningNoEndline(const char* format_str, ...) = 0;
+      virtual void logErrorNoEndline(const char* format_str, ...) = 0;
 
     protected:
       MLogger();
