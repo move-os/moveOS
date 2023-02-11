@@ -63,7 +63,7 @@ moveOS::utilities::comm::MCommUdpClient::MCommUdpClient(
 
     if (bind(_sockFD, (struct sockaddr*)&localSockAddr, sizeof(localSockAddr)) < 0)
     {
-      this->logger->logError("Socket Binding error @" << (int)localBoundPort << endl;
+      this->logger->logError("Socket Binding error @%d", (int)localBoundPort);
       this->isSocketBound = false;
     }
     else
@@ -74,7 +74,21 @@ moveOS::utilities::comm::MCommUdpClient::MCommUdpClient(
 
   if (isNonBlocking)
   {
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
     fcntl(_sockFD, F_SETFL, O_NONBLOCK);
+    
+#elif   TARGET_PLATFORM == PLATFORM_WINDOWS
+    u_long mode = 1;
+    int nonBlockingModeResult = ioctlsocket(_sockFD, FIONBIO, &mode);
+
+    if (nonBlockingModeResult == SOCKET_ERROR)
+    {
+      this->logger->logError("Setting socket @%d to non-blocking mode failed", (int)localBoundPort);
+    }
+
+#else
+#error "Cannot set socket to non-blocking for selected platform"
+#endif
   }
 
   isNonBlockingSocket = isNonBlocking;
