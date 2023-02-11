@@ -18,14 +18,14 @@ namespace moveOS
       MLoggerConsole(log_level minimumLogLevel);
 
       void log(log_level, const char* message) override;
-      void logInfo(const char* message, ...) override;
-      void logWarning(const char* message, ...) override;
-      void logError(const char* message, ...) override;
+      void logInfo(const char* format_str, ...) override;
+      void logWarning(const char* format_str, ...) override;
+      void logError(const char* format_str, ...) override;
 
       void logNoEndline(log_level, const char* message) override;
-      void logInfoNoEndline(const char* message, ...) override;
-      void logWarningNoEndline(const char* message, ...) override;
-      void logErrorNoEndline(const char* message, ...) override;
+      void logInfoNoEndline(const char* format_str, ...) override;
+      void logWarningNoEndline(const char* format_str, ...) override;
+      void logErrorNoEndline(const char* format_str, ...) override;
     };
 
   }
