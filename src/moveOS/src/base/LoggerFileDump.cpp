@@ -62,7 +62,7 @@ void moveOS::base::MLoggerFileDump::logInfo(const char* format_str, ...)
 
   if (minimumLogLevel == LOG_INFO && outFileStream.is_open())
   {
-		FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+		FORMAT_STR_TO_MESSAGE_VARIABLE();
     outFileStream << message << std::endl;
     outFileStream.flush();
   }
@@ -78,7 +78,7 @@ void moveOS::base::MLoggerFileDump::logWarning(const char* format_str, ...)
 
   if (minimumLogLevel != LOG_ERROR && outFileStream.is_open())
   {
-		FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+		FORMAT_STR_TO_MESSAGE_VARIABLE();
     outFileStream << "Warning: " << message << std::endl;
     outFileStream.flush();
   }
@@ -94,7 +94,7 @@ void moveOS::base::MLoggerFileDump::logError(const char* format_str, ...)
 
   if (outFileStream.is_open())
   {
-		FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+		FORMAT_STR_TO_MESSAGE_VARIABLE();
     outFileStream << "Error: " << message << std::endl;
     outFileStream.flush();
   }
@@ -129,7 +129,7 @@ void moveOS::base::MLoggerFileDump::logInfoNoEndline(const char* format_str, ...
 
 	if (minimumLogLevel == LOG_INFO && outFileStream.is_open())
 	{
-		FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+		FORMAT_STR_TO_MESSAGE_VARIABLE();
 		outFileStream << message;
 		outFileStream.flush();
 	}
@@ -145,7 +145,7 @@ void moveOS::base::MLoggerFileDump::logWarningNoEndline(const char* format_str, 
 
 	if (minimumLogLevel != LOG_ERROR && outFileStream.is_open())
 	{
-		FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+		FORMAT_STR_TO_MESSAGE_VARIABLE();
 		outFileStream << "Warning: " << message;
 		outFileStream.flush();
 	}
@@ -161,7 +161,7 @@ void moveOS::base::MLoggerFileDump::logErrorNoEndline(const char* format_str, ..
 
 	if (outFileStream.is_open())
 	{
-    FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+    FORMAT_STR_TO_MESSAGE_VARIABLE();
 		outFileStream << "Error: " << message;
 		outFileStream.flush();
 	}

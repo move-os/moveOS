@@ -122,7 +122,7 @@ void moveOS::base::MLoggerConsole::logInfo(const char* format_str, ...)
 {
   if (minimumLogLevel == LOG_INFO)
   {
-		FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+		FORMAT_STR_TO_MESSAGE_VARIABLE();
     __PRINT_INFO(message);
   }
 }
@@ -131,14 +131,14 @@ void moveOS::base::MLoggerConsole::logWarning(const char* format_str, ...)
 {
   if (minimumLogLevel != LOG_ERROR)
   {
-		FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+		FORMAT_STR_TO_MESSAGE_VARIABLE();
     __PRINT_WARNING(message);
   }
 }
 
 void moveOS::base::MLoggerConsole::logError(const char* format_str, ...)
 {
-	FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+	FORMAT_STR_TO_MESSAGE_VARIABLE();
   __PRINT_ERROR(message);
 }
 
@@ -164,7 +164,7 @@ void moveOS::base::MLoggerConsole::logInfoNoEndline(const char* format_str, ...)
 {
 	if (minimumLogLevel == LOG_INFO)
 	{
-		FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+		FORMAT_STR_TO_MESSAGE_VARIABLE();
 		__PRINT_INFO_NO_ENDLINE(message);
 	}
 }
@@ -173,13 +173,13 @@ void moveOS::base::MLoggerConsole::logWarningNoEndline(const char* format_str, .
 {
 	if (minimumLogLevel != LOG_ERROR)
 	{
-		FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+		FORMAT_STR_TO_MESSAGE_VARIABLE();
 		__PRINT_WARNING_NO_ENDLINE(message);
 	}
 }
 
 void moveOS::base::MLoggerConsole::logErrorNoEndline(const char* format_str, ...)
 {
-  FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
+  FORMAT_STR_TO_MESSAGE_VARIABLE();
 	__PRINT_ERROR_NO_ENDLINE(message);
 }
