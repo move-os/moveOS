@@ -50,24 +50,38 @@
   #define __COLOR_BG_CYAN              "\033[46m"
   #define __COLOR_BG_WHITE             "\033[47m"
 
-  #define __PRINT_ERROR(msg)     cout << __COLOR_FG_RED_BOLD       \
-                                      << "Error: "                 \
-                                      << __COLOR_FG_CYAN           \
-                                      << msg                       \
-                                      << __COLOR_FG_WHITE          \
-                                      << endl;
+  #define __PRINT_ERROR(msg)                cout << __COLOR_FG_RED_BOLD       \
+                                                 << "Error: "                 \
+                                                 << __COLOR_FG_CYAN           \
+                                                 << msg                       \
+                                                 << __COLOR_FG_WHITE          \
+                                                 << endl;
 
-  #define __PRINT_WARNING(msg)   cout << __COLOR_FG_YELLOW_BOLD    \
-                                      << "Warning: "               \
-                                       << __COLOR_FG_CYAN          \
-                                      << msg                       \
-                                      << __COLOR_FG_WHITE          \
-                                      << endl;
+  #define __PRINT_WARNING(msg)              cout << __COLOR_FG_YELLOW_BOLD    \
+                                                 << "Warning: "               \
+                                                 << __COLOR_FG_CYAN           \
+                                                 << msg                       \
+                                                 << __COLOR_FG_WHITE          \
+                                                 << endl;
 
-  #define __PRINT_INFO(msg)      cout << __COLOR_FG_WHITE          \
-                                      << msg                       \
-                                      << endl;
+  #define __PRINT_INFO(msg)                 cout << __COLOR_FG_WHITE          \
+                                                 << msg                       \
+                                                 << endl;
 
+  #define __PRINT_ERROR_NO_ENDLINE(msg)     cout << __COLOR_FG_RED_BOLD       \
+                                                 << "Error: "                 \
+                                                 << __COLOR_FG_CYAN           \
+                                                 << msg                       \
+                                                 << __COLOR_FG_WHITE;
+
+  #define __PRINT_WARNING_NO_ENDLINE(msg)   cout << __COLOR_FG_YELLOW_BOLD    \
+                                                 << "Warning: "               \
+                                                 << __COLOR_FG_CYAN           \
+                                                 << msg                       \
+                                                 << __COLOR_FG_WHITE;
+
+  #define __PRINT_INFO_NO_ENDLINE(msg)      cout << __COLOR_FG_WHITE          \
+                                                 << msg;
 
 #else
 
