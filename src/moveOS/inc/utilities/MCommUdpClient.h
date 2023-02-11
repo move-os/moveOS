@@ -15,6 +15,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <string.h>
 
 #elif   TARGET_PLATFORM == PLATFORM_WINDOWS
 
