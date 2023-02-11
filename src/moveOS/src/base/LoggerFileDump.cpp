@@ -2,6 +2,8 @@
 
 #include "src/_internal_inc/macros.h"
 
+#include <stdarg.h>
+
 
 moveOS::base::MLoggerFileDump::MLoggerFileDump(const char* filename)
   : MLogger()
