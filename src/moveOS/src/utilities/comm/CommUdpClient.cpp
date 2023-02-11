@@ -4,9 +4,9 @@
 
 
 moveOS::utilities::comm::MCommUdpClient::MCommUdpClient(
-  word localPort = MUdpPort::ANY,
-  bool enableBroadcasting = false,
-  bool isNonBlocking = false)
+  word localPort,
+  bool enableBroadcasting,
+  bool isNonBlocking)
 {
 
 }
