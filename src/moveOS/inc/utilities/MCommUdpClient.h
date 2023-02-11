@@ -47,6 +47,15 @@
 
 namespace moveOS
 {
+  namespace base
+  {
+    class MLogger;
+  }
+}
+
+
+namespace moveOS
+{
   namespace utilities
   {
     namespace comm
@@ -55,7 +64,8 @@ namespace moveOS
       class MCommUdpClient
       {
       public:
-        MCommUdpClient(word localPort = MUdpPort::ANY,
+        MCommUdpClient(moveOS::base::MLogger* logger,
+                       word localPort = MUdpPort::ANY,
                        bool enableBroadcasting = false,
                        bool isNonBlocking = false);
 
@@ -75,6 +85,8 @@ namespace moveOS
 
 
       private:
+        moveOS::base::MLogger* logger;
+
         int _sockFD;
         word localBoundPort;
         bool isSocketBound;

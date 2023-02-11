@@ -2,12 +2,16 @@
 
 #include "src/_internal_inc/macros.h"
 
+#include "inc/base/MLogger.h"
+
 
 moveOS::utilities::comm::MCommUdpClient::MCommUdpClient(
+  moveOS::base::MLogger* logger,
   word localPort,
   bool enableBroadcasting,
   bool isNonBlocking)
 {
+  this->logger = logger;
   this->_sockFD = -1;
   this->localBoundPort = localPort;
   this->isSocketBound = false;
