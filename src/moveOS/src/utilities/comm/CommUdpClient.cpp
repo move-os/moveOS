@@ -8,7 +8,13 @@ moveOS::utilities::comm::MCommUdpClient::MCommUdpClient(
   bool enableBroadcasting,
   bool isNonBlocking)
 {
-
+  this->_sockFD = -1;
+  this->localBoundPort = localPort;
+  this->isSocketBound = false;
+  this->isBroadcastingSocket = enableBroadcasting;
+  this->isNonBlockingSocket = isNonBlocking;
+  memset(&this->localSockAddr, 0, sizeof(this->localSockAddr));
+  memset(&this->targetSockAddr, 0, sizeof(this->targetSockAddr));
 }
 
 moveOS::utilities::comm::MCommUdpClient::~MCommUdpClient()
