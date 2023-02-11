@@ -19,156 +19,156 @@
 
 #define FORMAT_STR_TO_MESSAGE_VARIABLE(fmt_var, msg_var)           char msg_var[LOGGER_MESSAGE_STRING_BUFFER_SIZE];                                                           \
                                                                                                                                                                               \
-                                                                   for (int __i = 0; __i < LOGGER_MESSAGE_STRING_BUFFER_SIZE; __i++) { msg_var[__i] = 0; }                    \
+                                                                   for (int __i__ = 0; __i__ < LOGGER_MESSAGE_STRING_BUFFER_SIZE; __i__++) { msg_var[__i__] = 0; }            \
                                                                                                                                                                               \
-                                                                   va_list __va_args;                                                                                         \
-                                                                   va_start(__va_args, format_str);                                                                           \
+                                                                   va_list __va_args__;                                                                                       \
+                                                                   va_start(__va_args__, format_str);                                                                         \
                                                                                                                                                                               \
-                                                                   int __msg_var_index = 0;                                                                                   \
-                                                                   char __identifier_char;                                                                                    \
-                                                                   char __identifier_modifier;                                                                                \
+                                                                   int __msg_var_index__ = 0;                                                                                 \
+                                                                   char __identifier_char__;                                                                                  \
+                                                                   char __identifier_modifier__;                                                                              \
                                                                                                                                                                               \
-                                                                   int __temp_index;                                                                                          \
-                                                                   int __temp_count;                                                                                          \
-                                                                   char __temp_char;                                                                                          \
-                                                                   unsigned int __temp_uint;                                                                                  \
+                                                                   int __temp_index__;                                                                                        \
+                                                                   int __temp_count__;                                                                                        \
+                                                                   char __temp_char__;                                                                                        \
+                                                                   unsigned int __temp_uint__;                                                                                \
                                                                                                                                                                               \
                                                                    for (int __format_str_index = 0; __format_str_index < strlen(format_str); __format_str_index++) {          \
                                                                                                                                                                               \
-                                                                     __identifier_char = format_str[__format_str_index + 1];                                                  \
-                                                                     __identifier_modifier = -1;                                                                              \
+                                                                     __identifier_char__ = format_str[__format_str_index + 1];                                                \
+                                                                     __identifier_modifier__ = -1;                                                                            \
                                                                                                                                                                               \
-                                                                   	  if ((__identifier_char == '0' ||                                                                        \
-                                                                   		     __identifier_char == '1' ||                                                                        \
-                                                                   		     __identifier_char == '2' ||                                                                        \
-                                                                   		     __identifier_char == '3' ||                                                                        \
-                                                                   		     __identifier_char == '4') && (__format_str_index + 1 < strlen(format_str))) {                      \
+                                                                   	  if ((__identifier_char__ == '0' ||                                                                      \
+                                                                   		     __identifier_char__ == '1' ||                                                                      \
+                                                                   		     __identifier_char__ == '2' ||                                                                      \
+                                                                   		     __identifier_char__ == '3' ||                                                                      \
+                                                                   		     __identifier_char__ == '4') && (__format_str_index + 1 < strlen(format_str))) {                    \
                                                                                                                                                                               \
-                                                                   		  __identifier_modifier = format_str[__format_str_index + 2];                                           \
+                                                                   		  __identifier_modifier__ = format_str[__format_str_index + 2];                                         \
                                                                                                                                                                               \
-                                                                   		  if (__identifier_modifier == 'b' || __identifier_modifier == 'B') {                                   \
-                                                                   		  	__temp_char = __identifier_modifier;                                                                \
-                                                                   		  	__identifier_modifier = __identifier_char - 48;                                                     \
-                                                                   		  	__identifier_char = __temp_char;                                                                    \
+                                                                   		  if (__identifier_modifier__ == 'b' || __identifier_modifier__ == 'B') {                               \
+                                                                   		  	__temp_char__ = __identifier_modifier__;                                                            \
+                                                                   		  	__identifier_modifier__ = __identifier_char__ - 48;                                                 \
+                                                                   		  	__identifier_char__ = __temp_char__;                                                                \
                                                                    		  }                                                                                                     \
                                                                    		  else {                                                                                                \
-                                                                   		  	__identifier_modifier = -1;                                                                         \
+                                                                   		  	__identifier_modifier__ = -1;                                                                       \
                                                                    		  }                                                                                                     \
                                                                    	  }                                                                                                       \
                                                                                                                                                                               \
                                                                    	  if (format_str[__format_str_index] != '%') {                                                            \
                                                                                                                                                                               \
-                                                                   		  msg_var[__msg_var_index++] = format_str[__format_str_index];                                          \
+                                                                   		  msg_var[__msg_var_index__++] = format_str[__format_str_index];                                        \
                                                                                                                                                                               \
                                                                    	  }                                                                                                       \
                                                                    	  else {                                                                                                  \
                                                                                                                                                                               \
-                                                                   		  switch (__identifier_char) {                                                                          \
+                                                                   		  switch (__identifier_char__) {                                                                        \
                                                                                                                                                                               \
                                                                    		  case 'b':                                                                                             \
                                                                    		  case 'B':                                                                                             \
-                                                                   		  	__temp_uint = va_arg(__va_args, unsigned int);                                                      \
-                                                                   		  	__temp_index = __msg_var_index;                                                                     \
-                                                                   		  	__temp_count = 0;                                                                                   \
+                                                                   		  	__temp_uint__ = va_arg(__va_args__, unsigned int);                                                  \
+                                                                   		  	__temp_index__ = __msg_var_index__;                                                                 \
+                                                                   		  	__temp_count__ = 0;                                                                                 \
                                                                                                                                                                               \
-                                                                   		  	while (__temp_uint) {                                                                               \
-                                                                   		  		msg_var[__temp_index++] = 48 + (__temp_uint % 2);                                                 \
-                                                                   		  		msg_var[__temp_index] = 0;                                                                        \
+                                                                   		  	while (__temp_uint__) {                                                                             \
+                                                                   		  		msg_var[__temp_index__++] = 48 + (__temp_uint__ % 2);                                             \
+                                                                   		  		msg_var[__temp_index__] = 0;                                                                      \
                                                                                                                                                                               \
-                                                                   		  		__temp_uint /= 2;                                                                                 \
-                                                                   		  		__temp_count++;                                                                                   \
+                                                                   		  		__temp_uint__ /= 2;                                                                               \
+                                                                   		  		__temp_count__++;                                                                                 \
                                                                    		  	}                                                                                                   \
                                                                                                                                                                               \
-                                                                   		  	if (__temp_index == __msg_var_index) {                                                              \
+                                                                   		  	if (__temp_index__ == __msg_var_index__) {                                                          \
                                                                                                                                                                               \
                                                                    		  		/* Value is zero */                                                                               \
-                                                                   		  		switch (__identifier_modifier) {                                                                  \
+                                                                   		  		switch (__identifier_modifier__) {                                                                \
                                                                    		  		case 0:                                                                                           \
-                                                                   		  		case 1:  sprintf(&msg_var[__msg_var_index], "00000000");                         break;           \
-                                                                   		  		case 2:  sprintf(&msg_var[__msg_var_index], "0000000000000000");                 break;           \
-                                                                   		  		case 3:	 sprintf(&msg_var[__msg_var_index], "000000000000000000000000");         break;           \
-                                                                   		  		case 4:  sprintf(&msg_var[__msg_var_index], "00000000000000000000000000000000"); break;           \
-                                                                   		  		default: sprintf(&msg_var[__msg_var_index], "0"); break;                                          \
+                                                                   		  		case 1:  sprintf(&msg_var[__msg_var_index__], "00000000");                         break;         \
+                                                                   		  		case 2:  sprintf(&msg_var[__msg_var_index__], "0000000000000000");                 break;         \
+                                                                   		  		case 3:	 sprintf(&msg_var[__msg_var_index__], "000000000000000000000000");         break;         \
+                                                                   		  		case 4:  sprintf(&msg_var[__msg_var_index__], "00000000000000000000000000000000"); break;         \
+                                                                   		  		default: sprintf(&msg_var[__msg_var_index__], "0"); break;                                        \
                                                                    		  		}                                                                                                 \
                                                                                                                                                                               \
                                                                    		  	}                                                                                                   \
                                                                    		  	else {                                                                                              \
                                                                                                                                                                               \
                                                                    		  		/* Fill zeros if required */                                                                      \
-                                                                   		  		if (__identifier_modifier >= 0 && __identifier_modifier <= 4) {                                   \
-                                                                   		  			if (__identifier_modifier == 0) {                                                               \
-                                                                   		  				while (__identifier_modifier * 8 < __temp_count) __identifier_modifier++;                     \
+                                                                   		  		if (__identifier_modifier__ >= 0 && __identifier_modifier__ <= 4) {                               \
+                                                                   		  			if (__identifier_modifier__ == 0) {                                                             \
+                                                                   		  				while (__identifier_modifier__ * 8 < __temp_count__) __identifier_modifier__++;               \
                                                                    		  			}                                                                                               \
                                                                                                                                                                               \
-                                                                   		  			while (__temp_count < __identifier_modifier * 8) {                                              \
-                                                                   		  				msg_var[__temp_index++] = 48;                                                                 \
-                                                                   		  				msg_var[__temp_index] = 0;                                                                    \
+                                                                   		  			while (__temp_count__ < __identifier_modifier__ * 8) {                                          \
+                                                                   		  				msg_var[__temp_index__++] = 48;                                                               \
+                                                                   		  				msg_var[__temp_index__] = 0;                                                                  \
                                                                                                                                                                               \
-                                                                   		  				__temp_count++;                                                                               \
+                                                                   		  				__temp_count__++;                                                                             \
                                                                    		  			}                                                                                               \
                                                                    		  		}                                                                                                 \
                                                                                                                                                                               \
                                                                    		  		/* Reverse the order */                                                                           \
-                                                                   		  		__temp_index--;                                                                                   \
-                                                                   		  		while (__temp_index > __msg_var_index) {                                                          \
-                                                                   		  			__temp_char = msg_var[__msg_var_index];                                                         \
-                                                                   		  			msg_var[__msg_var_index] = msg_var[__temp_index];                                               \
-                                                                   		  			msg_var[__temp_index] = __temp_char;                                                            \
+                                                                   		  		__temp_index__--;                                                                                 \
+                                                                   		  		while (__temp_index__ > __msg_var_index__) {                                                      \
+                                                                   		  			__temp_char__ = msg_var[__msg_var_index__];                                                     \
+                                                                   		  			msg_var[__msg_var_index__] = msg_var[__temp_index__];                                           \
+                                                                   		  			msg_var[__temp_index__] = __temp_char__;                                                        \
                                                                                                                                                                               \
-                                                                   		  			__msg_var_index++;                                                                              \
-                                                                   		  			__temp_index--;                                                                                 \
+                                                                   		  			__msg_var_index__++;                                                                            \
+                                                                   		  			__temp_index__--;                                                                               \
                                                                    		  		}                                                                                                 \
                                                                    		  	}                                                                                                   \
                                                                                                                                                                               \
-                                                                   		  	if (__identifier_modifier >= 0 && __identifier_modifier <= 4) {                                     \
+                                                                   		  	if (__identifier_modifier__ >= 0 && __identifier_modifier__ <= 4) {                                 \
                                                                    		  		__format_str_index++; /* Extra addition */                                                        \
                                                                    		  	}                                                                                                   \
                                                                                                                                                                               \
-                                                                   		  	__msg_var_index = strlen(msg_var);                                                                  \
+                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  case 'c':                                                                                             \
                                                                    		  case 'C':                                                                                             \
-                                                                   		  	sprintf(&msg_var[__msg_var_index], "%c", va_arg(__va_args, int));                                   \
-                                                                   		  	__msg_var_index = strlen(msg_var);                                                                  \
+                                                                   		  	sprintf(&msg_var[__msg_var_index__], "%c", va_arg(__va_args__, int));                               \
+                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  case 'd':                                                                                             \
                                                                    		  case 'D':                                                                                             \
-                                                                   		  	sprintf(&msg_var[__msg_var_index], "%d", va_arg(__va_args, int));                                   \
-                                                                   		  	__msg_var_index = strlen(msg_var);                                                                  \
+                                                                   		  	sprintf(&msg_var[__msg_var_index__], "%d", va_arg(__va_args__, int));                               \
+                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  case 'u':                                                                                             \
                                                                    		  case 'U':                                                                                             \
-                                                                   		  	sprintf(&msg_var[__msg_var_index], "%u", va_arg(__va_args, unsigned int));                          \
-                                                                   		  	__msg_var_index = strlen(msg_var);                                                                  \
+                                                                   		  	sprintf(&msg_var[__msg_var_index__], "%u", va_arg(__va_args__, unsigned int));                      \
+                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  case 'x':                                                                                             \
-                                                                   		  	sprintf(&msg_var[__msg_var_index], "%x", va_arg(__va_args, unsigned int));                          \
-                                                                   		  	__msg_var_index = strlen(msg_var);                                                                  \
+                                                                   		  	sprintf(&msg_var[__msg_var_index__], "%x", va_arg(__va_args__, unsigned int));                      \
+                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  case 'X':                                                                                             \
-                                                                   		  	sprintf(&msg_var[__msg_var_index], "%X", va_arg(__va_args, unsigned int));                          \
-                                                                   		  	__msg_var_index = strlen(msg_var);                                                                  \
+                                                                   		  	sprintf(&msg_var[__msg_var_index__], "%X", va_arg(__va_args__, unsigned int));                      \
+                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  default:                                                                                              \
-                                                                   		  	msg_var[__msg_var_index++] = format_str[__format_str_index];                                        \
+                                                                   		  	msg_var[__msg_var_index__++] = format_str[__format_str_index];                                      \
                                                                    		  	break;                                                                                              \
                                                                    		  }                                                                                                     \
                                                                    	  }                                                                                                       \
                                                                    }                                                                                                          \
                                                                                                                                                                               \
-                                                                   va_end(__va_args);
+                                                                   va_end(__va_args__);
 
 
 
