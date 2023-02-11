@@ -20,6 +20,11 @@ namespace moveOS
       virtual void logWarning(const char* message) = 0;
       virtual void logError(const char* message) = 0;
 
+      virtual void logNoEndline(log_level, const char* message) = 0;
+      virtual void logInfoNoEndline(const char* message) = 0;
+      virtual void logWarningNoEndline(const char* message) = 0;
+      virtual void logErrorNoEndline(const char* message) = 0;
+
     protected:
       MLogger();
       MLogger(log_level);
