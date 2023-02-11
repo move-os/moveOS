@@ -4,12 +4,20 @@
 #include "_types.h"
 #include "_config.h"
 
+#include <stdarg.h>
+#include <string.h>
+#include <stdio.h>
+
+
+
+
 
 #define STR_RTRIM(x) {uint16 __inr_=0;while(x[__inr_]!=' ' && x[__inr_]!='\0')__inr_++;x[__inr_]='\0';}
 #define STR_LTRIM(x) {uint16 __nsl_=0,__inl_=0;while(x[__nsl_]==' ')__nsl_++;while(x[__nsl_]!='\0'){x[__inl_]=x[__nsl_];__inl_++;__nsl_++;}x[__inl_]='\0';}
 #define STR_TRIM(x) STR_LTRIM(x) STR_RTRIM(x)
 
-#define __FORMAT_STR_TO_MESSAGE_CONVERSION(fmt_var, msg_var)       char msg_var[LOGGER_MESSAGE_STRING_BUFFER_SIZE];                                               \
+
+#define FORMAT_STR_TO_MESSAGE_VARIABLE(fmt_var, msg_var)           char msg_var[LOGGER_MESSAGE_STRING_BUFFER_SIZE];                                               \
                                                                                                                                                                   \
                                                                    for (int _i = 0; _i < LOGGER_MESSAGE_STRING_BUFFER_SIZE; _i++) { msg_var[_i] = 0; }            \
                                                                                                                                                                   \

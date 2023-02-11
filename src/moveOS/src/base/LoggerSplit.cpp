@@ -46,7 +46,7 @@ void moveOS::base::MLoggerSplit::log(log_level logLevel, const char* message)
 
 void moveOS::base::MLoggerSplit::logInfo(const char* format_str, ...)
 {
-	__FORMAT_STR_TO_MESSAGE_CONVERSION(format_str, message);
+	FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
 
   if (logger_01 != nullptr) logger_01->logInfo(message);
   if (logger_02 != nullptr) logger_02->logInfo(message);
@@ -56,7 +56,7 @@ void moveOS::base::MLoggerSplit::logInfo(const char* format_str, ...)
 
 void moveOS::base::MLoggerSplit::logWarning(const char* format_str, ...)
 {
-	__FORMAT_STR_TO_MESSAGE_CONVERSION(format_str, message);
+	FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
 
   if (logger_01 != nullptr) logger_01->logWarning(message);
   if (logger_02 != nullptr) logger_02->logWarning(message);
@@ -66,7 +66,7 @@ void moveOS::base::MLoggerSplit::logWarning(const char* format_str, ...)
 
 void moveOS::base::MLoggerSplit::logError(const char* format_str, ...)
 {
-	__FORMAT_STR_TO_MESSAGE_CONVERSION(format_str, message);
+	FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
 
   if (logger_01 != nullptr) logger_01->logError(message);
   if (logger_02 != nullptr) logger_02->logError(message);
@@ -84,7 +84,7 @@ void moveOS::base::MLoggerSplit::logNoEndline(log_level logLevel, const char* me
 
 void moveOS::base::MLoggerSplit::logInfoNoEndline(const char* format_str, ...)
 {
-	__FORMAT_STR_TO_MESSAGE_CONVERSION(format_str, message);
+	FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
 
 	if (logger_01 != nullptr) logger_01->logInfoNoEndline(message);
 	if (logger_02 != nullptr) logger_02->logInfoNoEndline(message);
@@ -94,7 +94,7 @@ void moveOS::base::MLoggerSplit::logInfoNoEndline(const char* format_str, ...)
 
 void moveOS::base::MLoggerSplit::logWarningNoEndline(const char* format_str, ...)
 {
-	__FORMAT_STR_TO_MESSAGE_CONVERSION(format_str, message);
+	FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
 
 	if (logger_01 != nullptr) logger_01->logWarningNoEndline(message);
 	if (logger_02 != nullptr) logger_02->logWarningNoEndline(message);
@@ -104,7 +104,7 @@ void moveOS::base::MLoggerSplit::logWarningNoEndline(const char* format_str, ...
 
 void moveOS::base::MLoggerSplit::logErrorNoEndline(const char* format_str, ...)
 {
-  __FORMAT_STR_TO_MESSAGE_CONVERSION(format_str, message);
+  FORMAT_STR_TO_MESSAGE_VARIABLE(format_str, message);
 
 	if (logger_01 != nullptr) logger_01->logErrorNoEndline(message);
 	if (logger_02 != nullptr) logger_02->logErrorNoEndline(message);
