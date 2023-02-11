@@ -17,14 +17,52 @@
 #define STR_TRIM(x) STR_LTRIM(x) STR_RTRIM(x)
 
 
-#define FORMAT_STR_TO_MESSAGE_VARIABLE(fmt_var, msg_var)           char msg_var[LOGGER_MESSAGE_STRING_BUFFER_SIZE];                                                           \
+
+
+
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX  ||  \
+      TARGET_PLATFORM == PLATFORM_WINDOWS
+
+#define     __SPRINTF_REPLACEMENT_001__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "00000000");
+#define     __SPRINTF_REPLACEMENT_002__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "0000000000000000");
+#define     __SPRINTF_REPLACEMENT_003__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "000000000000000000000000");
+#define     __SPRINTF_REPLACEMENT_004__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "00000000000000000000000000000000");
+#define     __SPRINTF_REPLACEMENT_005__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "0");
+#define     __SPRINTF_REPLACEMENT_006__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "%c", va_arg(__va_args__, int));
+#define     __SPRINTF_REPLACEMENT_007__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "%d", va_arg(__va_args__, int));
+#define     __SPRINTF_REPLACEMENT_008__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "%u", va_arg(__va_args__, unsigned int));
+#define     __SPRINTF_REPLACEMENT_009__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "%x", va_arg(__va_args__, unsigned int));
+#define     __SPRINTF_REPLACEMENT_010__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "%X", va_arg(__va_args__, unsigned int));
+
+
+
+
+#else
+
+#define     __SPRINTF_REPLACEMENT_001__     sprintf(&message[__message_index__], "00000000");
+#define     __SPRINTF_REPLACEMENT_002__     sprintf(&message[__message_index__], "0000000000000000");
+#define     __SPRINTF_REPLACEMENT_003__     sprintf(&message[__message_index__], "000000000000000000000000");
+#define     __SPRINTF_REPLACEMENT_004__     sprintf(&message[__message_index__], "00000000000000000000000000000000");
+#define     __SPRINTF_REPLACEMENT_005__     sprintf(&message[__message_index__], "0");
+#define     __SPRINTF_REPLACEMENT_006__     sprintf(&message[__message_index__], "%c", va_arg(__va_args__, int));
+#define     __SPRINTF_REPLACEMENT_007__     sprintf(&message[__message_index__], "%d", va_arg(__va_args__, int));
+#define     __SPRINTF_REPLACEMENT_008__     sprintf(&message[__message_index__], "%u", va_arg(__va_args__, unsigned int));
+#define     __SPRINTF_REPLACEMENT_009__     sprintf(&message[__message_index__], "%x", va_arg(__va_args__, unsigned int));
+#define     __SPRINTF_REPLACEMENT_010__     sprintf(&message[__message_index__], "%X", va_arg(__va_args__, unsigned int));
+
+
+
+
+#endif
+
+#define FORMAT_STR_TO_MESSAGE_VARIABLE()                           char message[LOGGER_MESSAGE_STRING_BUFFER_SIZE];                                                           \
                                                                                                                                                                               \
-                                                                   for (int __i__ = 0; __i__ < LOGGER_MESSAGE_STRING_BUFFER_SIZE; __i__++) { msg_var[__i__] = 0; }            \
+                                                                   for (int __i__ = 0; __i__ < LOGGER_MESSAGE_STRING_BUFFER_SIZE; __i__++) { message[__i__] = 0; }            \
                                                                                                                                                                               \
                                                                    va_list __va_args__;                                                                                       \
                                                                    va_start(__va_args__, format_str);                                                                         \
                                                                                                                                                                               \
-                                                                   int __msg_var_index__ = 0;                                                                                 \
+                                                                   int __message_index__ = 0;                                                                                 \
                                                                    char __identifier_char__;                                                                                  \
                                                                    char __identifier_modifier__;                                                                              \
                                                                                                                                                                               \
@@ -58,7 +96,7 @@
                                                                                                                                                                               \
                                                                    	  if (format_str[__format_str_index] != '%') {                                                            \
                                                                                                                                                                               \
-                                                                   		  msg_var[__msg_var_index__++] = format_str[__format_str_index];                                        \
+                                                                   		  message[__message_index__++] = format_str[__format_str_index];                                        \
                                                                                                                                                                               \
                                                                    	  }                                                                                                       \
                                                                    	  else {                                                                                                  \
@@ -68,27 +106,27 @@
                                                                    		  case 'b':                                                                                             \
                                                                    		  case 'B':                                                                                             \
                                                                    		  	__temp_uint__ = va_arg(__va_args__, unsigned int);                                                  \
-                                                                   		  	__temp_index__ = __msg_var_index__;                                                                 \
+                                                                   		  	__temp_index__ = __message_index__;                                                                 \
                                                                    		  	__temp_count__ = 0;                                                                                 \
                                                                                                                                                                               \
                                                                    		  	while (__temp_uint__) {                                                                             \
-                                                                   		  		msg_var[__temp_index__++] = 48 + (__temp_uint__ % 2);                                             \
-                                                                   		  		msg_var[__temp_index__] = 0;                                                                      \
+                                                                   		  		message[__temp_index__++] = 48 + (__temp_uint__ % 2);                                             \
+                                                                   		  		message[__temp_index__] = 0;                                                                      \
                                                                                                                                                                               \
                                                                    		  		__temp_uint__ /= 2;                                                                               \
                                                                    		  		__temp_count__++;                                                                                 \
                                                                    		  	}                                                                                                   \
                                                                                                                                                                               \
-                                                                   		  	if (__temp_index__ == __msg_var_index__) {                                                          \
+                                                                   		  	if (__temp_index__ == __message_index__) {                                                          \
                                                                                                                                                                               \
                                                                    		  		/* Value is zero */                                                                               \
                                                                    		  		switch (__identifier_modifier__) {                                                                \
                                                                    		  		case 0:                                                                                           \
-                                                                   		  		case 1:  sprintf(&msg_var[__msg_var_index__], "00000000");                         break;         \
-                                                                   		  		case 2:  sprintf(&msg_var[__msg_var_index__], "0000000000000000");                 break;         \
-                                                                   		  		case 3:	 sprintf(&msg_var[__msg_var_index__], "000000000000000000000000");         break;         \
-                                                                   		  		case 4:  sprintf(&msg_var[__msg_var_index__], "00000000000000000000000000000000"); break;         \
-                                                                   		  		default: sprintf(&msg_var[__msg_var_index__], "0"); break;                                        \
+                                                                   		  		case 1:    __SPRINTF_REPLACEMENT_001__   break;                                                   \
+                                                                   		  		case 2:    __SPRINTF_REPLACEMENT_002__   break;                                                   \
+                                                                   		  		case 3:	   __SPRINTF_REPLACEMENT_003__   break;                                                   \
+                                                                   		  		case 4:    __SPRINTF_REPLACEMENT_004__   break;                                                   \
+                                                                   		  		default:   __SPRINTF_REPLACEMENT_005__   break;                                                   \
                                                                    		  		}                                                                                                 \
                                                                                                                                                                               \
                                                                    		  	}                                                                                                   \
@@ -101,8 +139,8 @@
                                                                    		  			}                                                                                               \
                                                                                                                                                                               \
                                                                    		  			while (__temp_count__ < __identifier_modifier__ * 8) {                                          \
-                                                                   		  				msg_var[__temp_index__++] = 48;                                                               \
-                                                                   		  				msg_var[__temp_index__] = 0;                                                                  \
+                                                                   		  				message[__temp_index__++] = 48;                                                               \
+                                                                   		  				message[__temp_index__] = 0;                                                                  \
                                                                                                                                                                               \
                                                                    		  				__temp_count__++;                                                                             \
                                                                    		  			}                                                                                               \
@@ -110,12 +148,12 @@
                                                                                                                                                                               \
                                                                    		  		/* Reverse the order */                                                                           \
                                                                    		  		__temp_index__--;                                                                                 \
-                                                                   		  		while (__temp_index__ > __msg_var_index__) {                                                      \
-                                                                   		  			__temp_char__ = msg_var[__msg_var_index__];                                                     \
-                                                                   		  			msg_var[__msg_var_index__] = msg_var[__temp_index__];                                           \
-                                                                   		  			msg_var[__temp_index__] = __temp_char__;                                                        \
+                                                                   		  		while (__temp_index__ > __message_index__) {                                                      \
+                                                                   		  			__temp_char__ = message[__message_index__];                                                     \
+                                                                   		  			message[__message_index__] = message[__temp_index__];                                           \
+                                                                   		  			message[__temp_index__] = __temp_char__;                                                        \
                                                                                                                                                                               \
-                                                                   		  			__msg_var_index__++;                                                                            \
+                                                                   		  			__message_index__++;                                                                            \
                                                                    		  			__temp_index__--;                                                                               \
                                                                    		  		}                                                                                                 \
                                                                    		  	}                                                                                                   \
@@ -124,45 +162,45 @@
                                                                    		  		__format_str_index++; /* Extra addition */                                                        \
                                                                    		  	}                                                                                                   \
                                                                                                                                                                               \
-                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
+                                                                   		  	__message_index__ = strlen(message);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  case 'c':                                                                                             \
                                                                    		  case 'C':                                                                                             \
-                                                                   		  	sprintf(&msg_var[__msg_var_index__], "%c", va_arg(__va_args__, int));                               \
-                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
+                                                                   		  	__SPRINTF_REPLACEMENT_006__                                                                         \
+                                                                   		  	__message_index__ = strlen(message);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  case 'd':                                                                                             \
                                                                    		  case 'D':                                                                                             \
-                                                                   		  	sprintf(&msg_var[__msg_var_index__], "%d", va_arg(__va_args__, int));                               \
-                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
+                                                                   		  	__SPRINTF_REPLACEMENT_007__                                                                         \
+                                                                   		  	__message_index__ = strlen(message);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  case 'u':                                                                                             \
                                                                    		  case 'U':                                                                                             \
-                                                                   		  	sprintf(&msg_var[__msg_var_index__], "%u", va_arg(__va_args__, unsigned int));                      \
-                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
+                                                                   		  	__SPRINTF_REPLACEMENT_008__                                                                         \
+                                                                   		  	__message_index__ = strlen(message);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  case 'x':                                                                                             \
-                                                                   		  	sprintf(&msg_var[__msg_var_index__], "%x", va_arg(__va_args__, unsigned int));                      \
-                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
+                                                                   		  	__SPRINTF_REPLACEMENT_009__                                                                         \
+                                                                   		  	__message_index__ = strlen(message);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  case 'X':                                                                                             \
-                                                                   		  	sprintf(&msg_var[__msg_var_index__], "%X", va_arg(__va_args__, unsigned int));                      \
-                                                                   		  	__msg_var_index__ = strlen(msg_var);                                                                \
+                                                                   		  	__SPRINTF_REPLACEMENT_010__                                                                         \
+                                                                   		  	__message_index__ = strlen(message);                                                                \
                                                                    		  	__format_str_index++;                                                                               \
                                                                    		  	break;                                                                                              \
                                                                                                                                                                               \
                                                                    		  default:                                                                                              \
-                                                                   		  	msg_var[__msg_var_index__++] = format_str[__format_str_index];                                      \
+                                                                   		  	message[__message_index__++] = format_str[__format_str_index];                                      \
                                                                    		  	break;                                                                                              \
                                                                    		  }                                                                                                     \
                                                                    	  }                                                                                                       \
