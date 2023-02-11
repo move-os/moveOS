@@ -20,8 +20,7 @@
 
 
 
-#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX  ||  \
-      TARGET_PLATFORM == PLATFORM_WINDOWS
+#if   TARGET_PLATFORM == PLATFORM_WINDOWS
 
 #define     __SPRINTF_REPLACEMENT_001__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "00000000");
 #define     __SPRINTF_REPLACEMENT_002__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "0000000000000000");
