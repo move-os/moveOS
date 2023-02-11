@@ -15,10 +15,69 @@ moveOS::utilities::comm::MCommUdpClient::MCommUdpClient(
   this->_sockFD = -1;
   this->localBoundPort = localPort;
   this->isSocketBound = false;
-  this->isBroadcastingSocket = enableBroadcasting;
+  this->isBroadcastingSocket = false;
   this->isNonBlockingSocket = isNonBlocking;
   memset(&this->localSockAddr, 0, sizeof(this->localSockAddr));
   memset(&this->targetSockAddr, 0, sizeof(this->targetSockAddr));
+
+  this->_sockFD = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);
+
+  if (this->_sockFD < 0)
+  {
+    this->logger->logError("UDP socket creation failed");
+    return;
+  }
+
+  if (enableBroadcasting)
+  {
+    int broadcastPermission = 1;
+    int socketOptionsResult = setsockopt(_sockFD,
+                                         SOL_SOCKET,
+                                         SO_BROADCAST,
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
+                                         (void*)&broadcastPermission,
+#elif   TARGET_PLATFORM == PLATFORM_WINDOWS
+                                         (const char*)&broadcastPermission,
+#else
+#error "Cannot set socket options for selected platform"
+#endif
+                                         sizeof(broadcastPermission));
+    
+    if (socketOptionsResult < 0)
+    {
+      this->logger->logError("Setting UDP socket for broadcasting failed");
+      this->isBroadcastingSocket = false;
+    }
+    else
+    {
+      this->logger->logInfo("Successfully setting UDP socket for broadcasting");
+      this->isBroadcastingSocket = true;
+    }
+  }
+
+  if (localPort != MUdpPort::ANY)
+  {
+    localSockAddr.sin_family = AF_INET;
+    localSockAddr.sin_addr.s_addr = htonl(isBroadcastingSocket ? INADDR_BROADCAST : INADDR_ANY);
+    localSockAddr.sin_port = htons(localBoundPort);
+
+    if (bind(_sockFD, (struct sockaddr*)&localSockAddr, sizeof(localSockAddr)) < 0)
+    {
+      this->logger->logError("Socket Binding error @" << (int)localBoundPort << endl;
+      this->isSocketBound = false;
+    }
+    else
+    {
+      this->isSocketBound = true;
+    }
+  }
+
+  if (isNonBlocking)
+  {
+    fcntl(_sockFD, F_SETFL, O_NONBLOCK);
+  }
+
+  isNonBlockingSocket = isNonBlocking;
 }
 
 moveOS::utilities::comm::MCommUdpClient::~MCommUdpClient()

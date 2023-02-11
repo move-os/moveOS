@@ -104,7 +104,7 @@ void moveOS::base::MLoggerConsole::log(log_level logLevel, const char* message)
   }
 }
 
-void moveOS::base::MLoggerConsole::logInfo(const char* message, ...)
+void moveOS::base::MLoggerConsole::logInfo(const char* format_str, ...)
 {
   if (minimumLogLevel == LOG_INFO)
   {
@@ -112,7 +112,7 @@ void moveOS::base::MLoggerConsole::logInfo(const char* message, ...)
   }
 }
 
-void moveOS::base::MLoggerConsole::logWarning(const char* message, ...)
+void moveOS::base::MLoggerConsole::logWarning(const char* format_str, ...)
 {
   if (minimumLogLevel != LOG_ERROR)
   {
@@ -120,7 +120,7 @@ void moveOS::base::MLoggerConsole::logWarning(const char* message, ...)
   }
 }
 
-void moveOS::base::MLoggerConsole::logError(const char* message, ...)
+void moveOS::base::MLoggerConsole::logError(const char* format_str, ...)
 {
   __PRINT_ERROR(message);
 }

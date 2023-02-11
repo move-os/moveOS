@@ -54,6 +54,30 @@
 
 
 
+/*----------------------------------------------------------------------------*/
+/*                                                                            */
+/* Buffer sizes                                                               */
+/*                                                                            */
+/*----------------------------------------------------------------------------*/
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX  ||  \
+      TARGET_PLATFORM == PLATFORM_WINDOWS
+
+      #define LOGGER_MESSAGE_STRING_BUFFER_SIZE      1000
+
+
+
+
+#else
+      #define LOGGER_MESSAGE_STRING_BUFFER_SIZE      500
+
+
+
+
+#endif
+
+
+
+
 
 
 
