@@ -87,7 +87,7 @@ namespace moveOS
       private:
         moveOS::base::MLogger* logger;
 
-        int _sockFD;
+        socket_desc_t _sockFD;
         word localBoundPort;
         bool isSocketBound;
         bool isBroadcastingSocket;
