@@ -105,6 +105,11 @@ bool moveOS::utilities::comm::MCommUdpClient::IsSocketCreated()
 
 bool moveOS::utilities::comm::MCommUdpClient::IsSocketBound()
 {
+  return isSocketBound;
+}
+
+bool moveOS::utilities::comm::MCommUdpClient::IsSocketBroadcasting()
+{
   return false;
 }
 

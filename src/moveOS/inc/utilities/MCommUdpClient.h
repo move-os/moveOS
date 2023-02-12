@@ -73,6 +73,7 @@ namespace moveOS
 
         bool IsSocketCreated();
         bool IsSocketBound();
+        bool IsSocketBroadcasting();
 
         void Close();
 
