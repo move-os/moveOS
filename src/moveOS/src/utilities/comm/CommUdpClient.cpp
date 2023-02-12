@@ -100,7 +100,7 @@ moveOS::utilities::comm::MCommUdpClient::~MCommUdpClient()
 
 bool moveOS::utilities::comm::MCommUdpClient::IsSocketCreated()
 {
-  return false;
+  return _sockFD > 0;
 }
 
 bool moveOS::utilities::comm::MCommUdpClient::IsSocketBound()
@@ -110,7 +110,7 @@ bool moveOS::utilities::comm::MCommUdpClient::IsSocketBound()
 
 bool moveOS::utilities::comm::MCommUdpClient::IsSocketBroadcasting()
 {
-  return false;
+  return isBroadcastingSocket;
 }
 
 void moveOS::utilities::comm::MCommUdpClient::Close()
