@@ -115,6 +115,24 @@ bool moveOS::utilities::comm::MCommUdpClient::IsSocketBroadcasting()
 
 void moveOS::utilities::comm::MCommUdpClient::Close()
 {
+  if (IsSocketCreated())
+  {
+    
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
+    close(_sockFD);
+
+#elif   TARGET_PLATFORM == PLATFORM_WINDOWS
+    closesocket(_sockFD);
+
+#else
+#error "Cannot close socket for selected platform"
+
+#endif
+
+    _sockFD = -1;
+    isSocketBound = false;
+    isBroadcastingSocket = false;
+  }
 }
 
 bool moveOS::utilities::comm::MCommUdpClient::IsPacketAvailable(word timeoutSecond, word timeoutMicrosecond)
