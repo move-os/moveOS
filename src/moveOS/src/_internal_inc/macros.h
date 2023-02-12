@@ -77,8 +77,8 @@
                 char __temp_char__;                                                          \
                 unsigned int __temp_uint__;                                                  \
                                                                                              \
-                for (unsigned int __format_str_index__ = 0;                                  \
-                     __format_str_index__ < strlen(format_str);                              \
+                for (int __format_str_index__ = 0;                                           \
+                     __format_str_index__ < (int)strlen(format_str);                         \
                      __format_str_index__++) {                                               \
                                                                                              \
                   __identifier_char__ = format_str[__format_str_index__ + 1];                \
@@ -89,7 +89,7 @@
                        __identifier_char__ == '2' ||                                         \
                        __identifier_char__ == '3' ||                                         \
                        __identifier_char__ == '4') &&                                        \
-                       (__format_str_index__ + 1 < strlen(format_str))) {                    \
+                       (__format_str_index__ + 1 < (int)strlen(format_str))) {               \
                                                                                              \
                     __identifier_modifier__ = format_str[__format_str_index__ + 2];          \
                                                                                              \
@@ -135,7 +135,7 @@
                         case 0:                                                              \
                         case 1:    __SPRINTF_REPLACEMENT_001__   break;                      \
                         case 2:    __SPRINTF_REPLACEMENT_002__   break;                      \
-                        case 3:     __SPRINTF_REPLACEMENT_003__   break;                     \
+                        case 3:    __SPRINTF_REPLACEMENT_003__   break;                      \
                         case 4:    __SPRINTF_REPLACEMENT_004__   break;                      \
                         default:   __SPRINTF_REPLACEMENT_005__   break;                      \
                         }                                                                    \
@@ -174,44 +174,44 @@
                       }                                                                      \
                                                                                              \
                       if (__identifier_modifier__ >= 0 &&                                    \
-                           __identifier_modifier__ <= 4) {                                   \
+                          __identifier_modifier__ <= 4) {                                    \
                         __format_str_index__++; /* Extra addition */                         \
                       }                                                                      \
                                                                                              \
-                      __message_index__ = strlen(message);                                   \
+                      __message_index__ = (int)strlen(message);                              \
                       __format_str_index__++;                                                \
                       break;                                                                 \
                                                                                              \
                     case 'c':                                                                \
                     case 'C':                                                                \
                       __SPRINTF_REPLACEMENT_006__                                            \
-                      __message_index__ = strlen(message);                                   \
+                      __message_index__ = (int)strlen(message);                              \
                       __format_str_index__++;                                                \
                       break;                                                                 \
                                                                                              \
                     case 'd':                                                                \
                     case 'D':                                                                \
                       __SPRINTF_REPLACEMENT_007__                                            \
-                      __message_index__ = strlen(message);                                   \
+                      __message_index__ = (int)strlen(message);                              \
                       __format_str_index__++;                                                \
                       break;                                                                 \
                                                                                              \
                     case 'u':                                                                \
                     case 'U':                                                                \
                       __SPRINTF_REPLACEMENT_008__                                            \
-                      __message_index__ = strlen(message);                                   \
+                      __message_index__ = (int)strlen(message);                              \
                       __format_str_index__++;                                                \
                       break;                                                                 \
                                                                                              \
                     case 'x':                                                                \
                       __SPRINTF_REPLACEMENT_009__                                            \
-                      __message_index__ = strlen(message);                                   \
+                      __message_index__ = (int)strlen(message);                              \
                       __format_str_index__++;                                                \
                       break;                                                                 \
                                                                                              \
                     case 'X':                                                                \
                       __SPRINTF_REPLACEMENT_010__                                            \
-                      __message_index__ = strlen(message);                                   \
+                      __message_index__ = (int)strlen(message);                              \
                       __format_str_index__++;                                                \
                       break;                                                                 \
                                                                                              \
