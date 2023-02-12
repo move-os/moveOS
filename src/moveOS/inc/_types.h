@@ -1,6 +1,8 @@
 #ifndef _MOVE_OS_INC_TYPES_H_
 #define _MOVE_OS_INC_TYPES_H_
 
+#include "_config.h"
+
 
 
 /*----------------------------------------------------------------------------*/
