@@ -12,8 +12,9 @@
 #include "kernel/MEventsDispatcher.h"
 #include "kernel/MExecutionManager.h"
 
-#include "utilities/MCommTCP.h"
-#include "utilities/MCommUDP.h"
+#include "utilities/MCommTcpClient.h"
+#include "utilities/MCommTcpServer.h"
+#include "utilities/MCommUdpClient.h"
 #include "utilities/MConfigurationProvider.h"
 #include "utilities/MState.h"
 #include "utilities/MStateMachine.h"
