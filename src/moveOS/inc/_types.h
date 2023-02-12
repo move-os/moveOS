@@ -36,6 +36,37 @@ typedef    float                            single     ;
 
 
 
+/*----------------------------------------------------------------------------*/
+/*                                                                            */
+/* Platform dependant datatypes                                               */
+/*                                                                            */
+/*----------------------------------------------------------------------------*/
+
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
+
+  #define     SOCKET_DESC_T     int
+
+
+
+
+#elif TARGET_PLATFORM == PLATFORM_WINDOWS
+
+  #define     SOCKET_DESC_T     SOCKET
+
+
+
+
+#else
+
+  #define     SOCKET_DESC_T     int
+
+
+
+
+#endif
+
+
+
 
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
