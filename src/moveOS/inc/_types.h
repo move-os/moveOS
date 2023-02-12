@@ -44,21 +44,21 @@ typedef    float                            single     ;
 
 #if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
 
-  #define     SOCKET_DESC_T     int
+  #define     socket_desc_t     int
 
 
 
 
 #elif TARGET_PLATFORM == PLATFORM_WINDOWS
 
-  #define     SOCKET_DESC_T     SOCKET
+  #define     socket_desc_t     SOCKET
 
 
 
 
 #else
 
-  #define     SOCKET_DESC_T     int
+  #define     socket_desc_t     int
 
 
 
