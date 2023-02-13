@@ -221,7 +221,7 @@ struct MTcpPort
     NIC_NAME = 43,                     // WHOIS directory service
     TACACS = 49,                       // Terminal access controller access control system
     RE_MAIL_CK = 50,                   // Remote mail checking
-    DOMAIN = 53,                       // DNS name resolver
+    DNS = 53,                          // DNS name resolver
     GOPHER = 70,                       // Document search
     GENIUS = 71,                       // Genius protocol
     FINGER = 79,                       // Delivers user contact information
