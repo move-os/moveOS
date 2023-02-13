@@ -116,7 +116,7 @@ struct MUdpPort
     NAMESERVER = 42,                   // Name service
     TAC_ACS = 49,                      // Terminal access controller access control system
     RE_MAIL_CK = 50,                   // Remote mail checking
-    DOMAIN = 53,                       // DNS name resolver
+    DNS = 53,                          // DNS name resolver
     BOOT_PS = 67,                      // Bootstrap protocol services
     BOOT_PC = 68,                      // Bootstrap client
     TFTP = 69,                         // Trivial file transfer protocol
