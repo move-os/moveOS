@@ -21,6 +21,20 @@ moveOS::utilities::comm::MCommTcpClient::MCommTcpClient(moveOS::base::MLogger* l
   this->socketFileDescriptor = -1;
 
   memset(&this->targetSocketAddress, 0, sizeof(this->targetSocketAddress));
+
+#if   TARGET_PLATFORM == PLATFORM_WINDOWS
+
+
+  WSADATA wsaData;
+  int windowsStartupResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
+  if (windowsStartupResult != 0)
+  {
+    this->logger->logError("WSAStartup failed with return code: %d", windowsStartupResult);
+    return;
+  }
+
+
+#endif
 }
 
 moveOS::utilities::comm::MCommTcpClient::~MCommTcpClient()
