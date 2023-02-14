@@ -326,7 +326,7 @@ struct MTcpPort
 typedef struct
 {
   word numBytesReceived;
-  byte* receivedFromIP;
+  byte receivedFromIP[20];
   word receivedFromPort;
 } packet_info;
 
