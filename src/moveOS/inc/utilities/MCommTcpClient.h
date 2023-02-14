@@ -73,6 +73,8 @@ namespace moveOS
         bool Connect();
         bool IsConnected();
 
+        void Close();
+
         bool IsPacketAvailable(word timeoutSecond, word timeoutMicrosecond);
 
         word SendMessage(const byte* buffer, word numBytes);   // RETURN: Number of bytes sent
