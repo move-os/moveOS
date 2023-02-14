@@ -167,6 +167,15 @@ bool moveOS::utilities::comm::MCommUdpClient::IsPacketAvailable(word timeoutSeco
 
 void moveOS::utilities::comm::MCommUdpClient::SendMessage(const byte* buffer, word numBytes, const byte* targetIP, word targetPort)
 {
+  if (!IsSocketCreated()) return;
+
+  memset(&targetSockAddr, 0, sizeof(targetSockAddr));
+
+  targetSockAddr.sin_family = AF_INET;
+  targetSockAddr.sin_addr.s_addr = inet_addr((const char*)targetIP);
+  targetSockAddr.sin_port = htons(targetPort);
+
+  sendto(_sockFD, (const char*)buffer, numBytes, 0, (struct sockaddr*)&targetSockAddr, sizeof(targetSockAddr));
 }
 
 packet_info moveOS::utilities::comm::MCommUdpClient::ReceiveMessage(byte* buffer, word buffSize)
