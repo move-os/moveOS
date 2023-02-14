@@ -139,7 +139,31 @@ void moveOS::utilities::comm::MCommTcpClient::Close()
 
 bool moveOS::utilities::comm::MCommTcpClient::IsPacketAvailable(word timeoutSecond, word timeoutMicrosecond)
 {
-  return false;
+  if (isNonBlocking)
+  {
+    timeval tv;
+    fd_set readfds;
+
+    tv.tv_sec = timeoutSecond;
+    tv.tv_usec = timeoutMicrosecond;
+
+    FD_ZERO(&readfds);
+    FD_SET(socketFileDescriptor, &readfds);
+
+    // don't care about write and exception descriptors
+    select(socketFileDescriptor + 1, &readfds, NULL, NULL, &tv);
+
+    if (FD_ISSET(socketFileDescriptor, &readfds))
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 word moveOS::utilities::comm::MCommTcpClient::SendMessage(const byte* buffer, word numBytes)
