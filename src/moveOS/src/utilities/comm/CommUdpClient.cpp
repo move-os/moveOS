@@ -138,7 +138,31 @@ void moveOS::utilities::comm::MCommUdpClient::Close()
 
 bool moveOS::utilities::comm::MCommUdpClient::IsPacketAvailable(word timeoutSecond, word timeoutMicrosecond)
 {
-  return false;
+  if (isNonBlockingSocket)
+  {
+    timeval tv;
+    fd_set readfds;
+
+    tv.tv_sec = timeoutSecond;
+    tv.tv_usec = timeoutMicrosecond;
+
+    FD_ZERO(&readfds);
+    FD_SET(_sockFD, &readfds);
+
+    // don't care about write and exception descriptors
+    select(_sockFD + 1, &readfds, NULL, NULL, &tv);
+
+    if (FD_ISSET(_sockFD, &readfds))
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 void moveOS::utilities::comm::MCommUdpClient::SendMessage(const byte* buffer, word numBytes, const byte* targetIP, word targetPort)
