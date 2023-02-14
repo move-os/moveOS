@@ -63,7 +63,7 @@ moveOS::utilities::comm::MCommUdpClient::MCommUdpClient(
 
     if (bind(_sockFD, (struct sockaddr*)&localSockAddr, sizeof(localSockAddr)) < 0)
     {
-      this->logger->logError("Socket Binding error @%d", (int)localBoundPort);
+      this->logger->logError("Socket binding error @%d", (int)localBoundPort);
       this->isSocketBound = false;
     }
     else
