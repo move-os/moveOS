@@ -20,6 +20,24 @@ moveOS::utilities::comm::MCommUdpClient::MCommUdpClient(
   memset(&this->localSockAddr, 0, sizeof(this->localSockAddr));
   memset(&this->targetSockAddr, 0, sizeof(this->targetSockAddr));
 
+
+
+#if   TARGET_PLATFORM == PLATFORM_WINDOWS
+
+
+  WSADATA wsaData;
+  int windowsStartupResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
+  if (windowsStartupResult != 0)
+  {
+    this->logger->logError("WSAStartup failed with return code: %d", windowsStartupResult);
+    return;
+  }
+
+
+#endif
+
+
+
   this->_sockFD = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);
 
   if (this->_sockFD < 0)
