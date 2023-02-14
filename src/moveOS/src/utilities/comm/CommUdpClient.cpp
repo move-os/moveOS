@@ -196,7 +196,7 @@ packet_info moveOS::utilities::comm::MCommUdpClient::ReceiveMessage(byte* buffer
 
   if (info.numBytesReceived < 0)
   {
-    info.receivedFromIP = (byte*)"";
+    info.receivedFromIP[0] = 0;
     info.receivedFromPort = 0;
     return info;
   }
