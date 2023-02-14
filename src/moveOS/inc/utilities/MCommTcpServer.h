@@ -66,7 +66,7 @@ namespace moveOS
       private:
         moveOS::base::MLogger* logger;
 
-        socket_desc_t _sockFD;
+        socket_desc_t socketFileDescriptor;
       };
 
     }
