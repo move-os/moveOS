@@ -34,7 +34,7 @@ bool moveOS::utilities::comm::MCommTcpClient::Connect()
 
 bool moveOS::utilities::comm::MCommTcpClient::IsConnected()
 {
-  return false;
+  return isConnected;
 }
 
 void moveOS::utilities::comm::MCommTcpClient::Close()
