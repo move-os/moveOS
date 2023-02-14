@@ -63,10 +63,33 @@ namespace moveOS
 
       class MCommTcpClient
       {
+      public:
+        MCommTcpClient(moveOS::base::MLogger* logger,
+                       byte* targetIpAddress, word targetPort,
+                       bool isNonBlocking = true);
+
+        ~MCommTcpClient();
+
+        bool Connect();
+        bool IsConnected();
+
+        bool IsPacketAvailable(word timeoutSecond, word timeoutMicrosecond);
+
+        word SendMessage(const byte* buffer, word numBytes);   // RETURN: Number of bytes sent
+        word ReceiveMessage(byte* buffer, word buffSize);      // RETURN: Number of bytes received
+
+
       private:
         moveOS::base::MLogger* logger;
 
         socket_desc_t socketFileDescriptor;
+        
+        byte* targetIpAddress;
+        word targetPort;
+        sockaddr_in targetSocketAddress;
+
+        bool isNonBlocking;
+        bool isConnected;
       };
 
     }
