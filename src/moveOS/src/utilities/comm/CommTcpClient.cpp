@@ -43,14 +43,13 @@ bool moveOS::utilities::comm::MCommTcpClient::Connect()
       }
     }
 
+
+
 #if   TARGET_PLATFORM == PLATFORM_WINDOWS
+
+
     uint32 _temp;
     if (inet_pton(AF_INET, (const char*)targetIpAddress, &_temp) != 1)
-#elif TARGET_PLATFORM == PLATFORM_GNU_LINUX
-    if (inet_addr((const char*)targetIpAddress) == -1)
-#else
-#error "No conversion of IP address defined for selected platform"
-#endif
     {
       struct hostent* he;
       struct in_addr** addr_list;
@@ -71,14 +70,42 @@ bool moveOS::utilities::comm::MCommTcpClient::Connect()
     }
     else
     {
-#if   TARGET_PLATFORM == PLATFORM_WINDOWS
       inet_pton(AF_INET, (const char*)targetIpAddress, &targetSocketAddress.sin_addr.s_addr);
+    }
+
+
+#elif TARGET_PLATFORM == PLATFORM_GNU_LINUX
+
+
+    if (inet_addr((const char*)targetIpAddress) == -1)
+    {
+      struct hostent* he;
+      struct in_addr** addr_list;
+
+      if ((he = gethostbyname((const char*)targetIpAddress)) == NULL)
+      {
+        logger->logError("Failed to resolve the hostname: %s", targetIpAddress);
+        return false;
+      }
+
+      addr_list = (struct in_addr**)he->h_addr_list;
+
+      for (int i = 0; addr_list[i] != NULL; i++)
+      {
+        targetSocketAddress.sin_addr = *addr_list[i];
+        break;
+      }
+    }
+    else
+    {
+      targetSocketAddress.sin_addr.s_addr = inet_addr((const char*)targetIpAddress);
+    }
+
 
 #else
-      targetSocketAddress.sin_addr.s_addr = inet_addr((const char*)targetIpAddress);
-
+#error "No conversion of IP address defined for selected platform"
 #endif
-    }
+    
 
     targetSocketAddress.sin_family = AF_INET;
     targetSocketAddress.sin_port = htons(targetPort);
