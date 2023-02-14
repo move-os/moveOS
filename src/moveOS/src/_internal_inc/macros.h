@@ -218,6 +218,7 @@
                       break;                                                                 \
                                                                                              \
                     case 's':                                                                \
+                    case 'S':                                                                \
                       __SPRINTF_REPLACEMENT_011__                                            \
                       __message_index__ = (int)strlen(message);                              \
                       __format_str_index__++;                                                \
