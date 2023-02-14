@@ -41,7 +41,14 @@ bool moveOS::utilities::comm::MCommTcpClient::Connect()
       }
     }
 
+#if   TARGET_PLATFORM == PLATFORM_WINDOWS
+    uint32 _temp;
+    if (inet_pton(AF_INET, (const char*)targetIpAddress, &_temp) != 1)
+#elif TARGET_PLATFORM == PLATFORM_GNU_LINUX
     if (inet_addr((const char*)targetIpAddress) == -1)
+#else
+#error "No conversion of IP address defined for selected platform"
+#endif
     {
       struct hostent* he;
       struct in_addr** addr_list;
