@@ -172,7 +172,15 @@ void moveOS::utilities::comm::MCommUdpClient::SendMessage(const byte* buffer, wo
   memset(&targetSockAddr, 0, sizeof(targetSockAddr));
 
   targetSockAddr.sin_family = AF_INET;
+
+#if   TARGET_PLATFORM == PLATFORM_WINDOWS
+  inet_pton(AF_INET, (const char*)targetIP, &targetSockAddr.sin_addr.s_addr);
+
+#else
   targetSockAddr.sin_addr.s_addr = inet_addr((const char*)targetIP);
+
+#endif
+
   targetSockAddr.sin_port = htons(targetPort);
 
   sendto(_sockFD, (const char*)buffer, numBytes, 0, (struct sockaddr*)&targetSockAddr, sizeof(targetSockAddr));
