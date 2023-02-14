@@ -64,6 +64,10 @@ namespace moveOS
 
       class MCommTcpServer
       {
+      public:
+        MCommTcpServer(moveOS::base::MLogger* logger);
+
+
       private:
         moveOS::base::MLogger* logger;
 
