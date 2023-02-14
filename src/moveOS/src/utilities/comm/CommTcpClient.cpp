@@ -26,7 +26,11 @@ moveOS::utilities::comm::MCommTcpClient::~MCommTcpClient()
 
 bool moveOS::utilities::comm::MCommTcpClient::Connect()
 {
-  return false;
+  if (isConnected == false)
+  {
+  }
+
+  return isConnected;
 }
 
 bool moveOS::utilities::comm::MCommTcpClient::IsConnected()
