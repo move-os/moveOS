@@ -50,7 +50,7 @@ void moveOS::utilities::comm::MCommTcpClient::Close()
     closesocket(socketFileDescriptor);
 
 #else
-#error "Cannot close socket for selected platform"
+#error "Cannot close socket on selected platform"
 
 #endif
 
