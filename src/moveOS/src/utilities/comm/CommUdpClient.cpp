@@ -180,5 +180,21 @@ void moveOS::utilities::comm::MCommUdpClient::SendMessage(const byte* buffer, wo
 
 packet_info moveOS::utilities::comm::MCommUdpClient::ReceiveMessage(byte* buffer, word buffSize)
 {
-  return packet_info();
+  packet_info info;
+  int slen = (int)sizeof(targetSockAddr);
+
+  info.numBytesReceived =
+    recvfrom(_sockFD, (char*)buffer, buffSize, 0, (struct sockaddr*)&targetSockAddr, &slen);
+
+  if (info.numBytesReceived < 0)
+  {
+    info.receivedFromIP = (byte*)"";
+    info.receivedFromPort = 0;
+    return info;
+  }
+
+  info.receivedFromIP = (byte*)inet_ntoa(targetSockAddr.sin_addr);
+  info.receivedFromPort = ntohs(targetSockAddr.sin_port);
+
+  return info;
 }
