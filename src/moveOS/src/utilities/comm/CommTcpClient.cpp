@@ -21,6 +21,10 @@ moveOS::utilities::comm::MCommTcpClient::MCommTcpClient(moveOS::base::MLogger* l
 
 moveOS::utilities::comm::MCommTcpClient::~MCommTcpClient()
 {
+  if (isConnected)
+  {
+    Close();
+  }
 }
 
 bool moveOS::utilities::comm::MCommTcpClient::Connect()
