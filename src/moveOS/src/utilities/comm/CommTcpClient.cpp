@@ -18,3 +18,36 @@ moveOS::utilities::comm::MCommTcpClient::MCommTcpClient(moveOS::base::MLogger* l
 
   this->socketFileDescriptor = -1;
 }
+
+moveOS::utilities::comm::MCommTcpClient::~MCommTcpClient()
+{
+}
+
+bool moveOS::utilities::comm::MCommTcpClient::Connect()
+{
+  return false;
+}
+
+bool moveOS::utilities::comm::MCommTcpClient::IsConnected()
+{
+  return false;
+}
+
+void moveOS::utilities::comm::MCommTcpClient::Close()
+{
+}
+
+bool moveOS::utilities::comm::MCommTcpClient::IsPacketAvailable(word timeoutSecond, word timeoutMicrosecond)
+{
+  return false;
+}
+
+word moveOS::utilities::comm::MCommTcpClient::SendMessage(const byte* buffer, word numBytes)
+{
+  return word();
+}
+
+word moveOS::utilities::comm::MCommTcpClient::ReceiveMessage(byte* buffer, word buffSize)
+{
+  return word();
+}
