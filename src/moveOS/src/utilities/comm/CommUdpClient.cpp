@@ -150,7 +150,7 @@ bool moveOS::utilities::comm::MCommUdpClient::IsPacketAvailable(word timeoutSeco
     FD_SET(_sockFD, &readfds);
 
     // don't care about write and exception descriptors
-    select(_sockFD + 1, &readfds, NULL, NULL, &tv);
+    select((int)_sockFD + 1, &readfds, NULL, NULL, &tv);
 
     if (FD_ISSET(_sockFD, &readfds))
     {
