@@ -39,6 +39,23 @@ bool moveOS::utilities::comm::MCommTcpClient::IsConnected()
 
 void moveOS::utilities::comm::MCommTcpClient::Close()
 {
+  if (IsConnected())
+  {
+
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
+    close(_sockFD);
+
+#elif   TARGET_PLATFORM == PLATFORM_WINDOWS
+    closesocket(socketFileDescriptor);
+
+#else
+#error "Cannot close socket for selected platform"
+
+#endif
+
+    socketFileDescriptor = -1;
+    isConnected = false;
+  }
 }
 
 bool moveOS::utilities::comm::MCommTcpClient::IsPacketAvailable(word timeoutSecond, word timeoutMicrosecond)
