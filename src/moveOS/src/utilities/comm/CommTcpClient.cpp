@@ -2,6 +2,8 @@
 
 #include "src/_internal_inc/macros.h"
 
+#include "inc/base/MLogger.h"
+
 
 moveOS::utilities::comm::MCommTcpClient::MCommTcpClient(moveOS::base::MLogger* logger,
                                                         byte* targetIpAddress, word targetPort,
