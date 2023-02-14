@@ -65,20 +65,25 @@ bool moveOS::utilities::comm::MCommTcpClient::Connect()
     uint32 _temp;
     if (inet_pton(AF_INET, (const char*)targetIpAddress, &_temp) != 1)
     {
-      struct hostent* he;
-      struct in_addr** addr_list;
+      struct addrinfo* result = NULL, hints;
 
-      if ((he = gethostbyname((const char*)targetIpAddress)) == NULL)
+      ZeroMemory(&hints, sizeof(hints));
+      hints.ai_family = AF_UNSPEC;
+      hints.ai_socktype = SOCK_STREAM;
+      hints.ai_protocol = IPPROTO_TCP;
+
+      char _target_port_str[7];
+      sprintf_s(_target_port_str, "%d", targetPort);
+
+      if (getaddrinfo((const char*)targetIpAddress, _target_port_str, &hints, &result) != 0)
       {
         logger->logError("Failed to resolve the hostname: %s", targetIpAddress);
         return false;
       }
 
-      addr_list = (struct in_addr**)he->h_addr_list;
-
-      for (int i = 0; addr_list[i] != NULL; i++)
+      for (struct addrinfo* ptr = result; ptr != NULL; ptr = ptr->ai_next)
       {
-        targetSocketAddress.sin_addr = *addr_list[i];
+        targetSocketAddress = *(struct sockaddr_in*)ptr->ai_addr;
         break;
       }
     }
