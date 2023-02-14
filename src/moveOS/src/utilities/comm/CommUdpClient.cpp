@@ -96,6 +96,7 @@ moveOS::utilities::comm::MCommUdpClient::MCommUdpClient(
 
 moveOS::utilities::comm::MCommUdpClient::~MCommUdpClient()
 {
+  Close();
 }
 
 bool moveOS::utilities::comm::MCommUdpClient::IsSocketCreated()
