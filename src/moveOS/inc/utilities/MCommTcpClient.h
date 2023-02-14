@@ -47,6 +47,15 @@
 
 namespace moveOS
 {
+  namespace base
+  {
+    class MLogger;
+  }
+}
+
+
+namespace moveOS
+{
   namespace utilities
   {
     namespace comm
