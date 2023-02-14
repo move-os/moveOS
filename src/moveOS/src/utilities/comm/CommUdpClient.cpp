@@ -201,7 +201,17 @@ packet_info moveOS::utilities::comm::MCommUdpClient::ReceiveMessage(byte* buffer
     return info;
   }
 
-  info.receivedFromIP = (byte*)inet_ntoa(targetSockAddr.sin_addr);
+#if   TARGET_PLATFORM == PLATFORM_WINDOWS
+  inet_ntop(AF_INET, &targetSockAddr.sin_addr, (char*)info.receivedFromIP, sizeof(info.receivedFromIP));
+
+#elif TARGET_PLATFORM == PLATFORM_GNU_LINUX
+  strcpy((char*)info.receivedFromIP, (const char*)inet_ntoa(targetSockAddr.sin_addr));
+
+#else
+#error "No conversion of IP address defined for selected platform"
+
+#endif
+
   info.receivedFromPort = ntohs(targetSockAddr.sin_port);
 
   return info;
