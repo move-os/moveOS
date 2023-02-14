@@ -7,7 +7,7 @@
 
 moveOS::utilities::comm::MCommTcpClient::MCommTcpClient(moveOS::base::MLogger* logger,
                                                         byte* targetIpAddress, word targetPort,
-                                                        bool isNonBlocking = true)
+                                                        bool isNonBlocking)
 {
   this->logger = logger;
 
