@@ -62,7 +62,13 @@ bool moveOS::utilities::comm::MCommTcpClient::Connect()
     }
     else
     {
+#if   TARGET_PLATFORM == PLATFORM_WINDOWS
+      inet_pton(AF_INET, (const char*)targetIpAddress, &targetSocketAddress.sin_addr.s_addr);
+
+#else
       targetSocketAddress.sin_addr.s_addr = inet_addr((const char*)targetIpAddress);
+
+#endif
     }
 
     targetSocketAddress.sin_family = AF_INET;
