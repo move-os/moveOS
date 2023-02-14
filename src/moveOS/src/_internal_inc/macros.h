@@ -32,6 +32,7 @@
 #define     __SPRINTF_REPLACEMENT_008__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "%u", va_arg(__va_args__, unsigned int));
 #define     __SPRINTF_REPLACEMENT_009__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "%x", va_arg(__va_args__, unsigned int));
 #define     __SPRINTF_REPLACEMENT_010__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "%X", va_arg(__va_args__, unsigned int));
+#define     __SPRINTF_REPLACEMENT_011__     sprintf_s(&message[__message_index__], LOGGER_MESSAGE_STRING_BUFFER_SIZE - __message_index__, "%s", va_arg(__va_args__, char*));
 
 
 
@@ -48,6 +49,7 @@
 #define     __SPRINTF_REPLACEMENT_008__     sprintf(&message[__message_index__], "%u", va_arg(__va_args__, unsigned int));
 #define     __SPRINTF_REPLACEMENT_009__     sprintf(&message[__message_index__], "%x", va_arg(__va_args__, unsigned int));
 #define     __SPRINTF_REPLACEMENT_010__     sprintf(&message[__message_index__], "%X", va_arg(__va_args__, unsigned int));
+#define     __SPRINTF_REPLACEMENT_011__     sprintf(&message[__message_index__], "%s", va_arg(__va_args__, char*));
 
 
 
@@ -211,6 +213,12 @@
                                                                                              \
                     case 'X':                                                                \
                       __SPRINTF_REPLACEMENT_010__                                            \
+                      __message_index__ = (int)strlen(message);                              \
+                      __format_str_index__++;                                                \
+                      break;                                                                 \
+                                                                                             \
+                    case 's':                                                                \
+                      __SPRINTF_REPLACEMENT_011__                                            \
                       __message_index__ = (int)strlen(message);                              \
                       __format_str_index__++;                                                \
                       break;                                                                 \
