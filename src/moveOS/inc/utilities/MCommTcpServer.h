@@ -63,6 +63,10 @@ namespace moveOS
 
       class MCommTcpServer
       {
+      private:
+        moveOS::base::MLogger* logger;
+
+        socket_desc_t _sockFD;
       };
 
     }
