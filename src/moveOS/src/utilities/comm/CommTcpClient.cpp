@@ -19,6 +19,8 @@ moveOS::utilities::comm::MCommTcpClient::MCommTcpClient(moveOS::base::MLogger* l
   this->isConnected = false;
 
   this->socketFileDescriptor = -1;
+
+  memset(&this->targetSocketAddress, 0, sizeof(this->targetSocketAddress));
 }
 
 moveOS::utilities::comm::MCommTcpClient::~MCommTcpClient()
