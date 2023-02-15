@@ -185,7 +185,7 @@ void moveOS::utilities::comm::MCommTcpClient::Close()
   {
 
 #if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
-    close(_sockFD);
+    close(socketFileDescriptor);
 
 #elif   TARGET_PLATFORM == PLATFORM_WINDOWS
     closesocket(socketFileDescriptor);
