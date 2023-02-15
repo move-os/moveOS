@@ -4,6 +4,8 @@
 
 #include "inc/base/MLogger.h"
 
+#include <exception>
+
 
 moveOS::utilities::comm::MCommTcpClient::MCommTcpClient(moveOS::base::MLogger* logger,
                                                         byte* targetIpAddress, word targetPort,
@@ -229,7 +231,22 @@ bool moveOS::utilities::comm::MCommTcpClient::IsPacketAvailable(word timeoutSeco
 
 word moveOS::utilities::comm::MCommTcpClient::SendMessage(const byte* buffer, word numBytes)
 {
-  return word();
+  if (IsConnected() && numBytes > 0)
+  {
+    try
+    {
+      send(socketFileDescriptor, (const char*)buffer, numBytes, 0);
+    }
+    catch (std::exception ex)
+    {
+      logger->logError("FD=[%d] Socket exception caught while sending packet: %s", socketFileDescriptor, ex.what());
+      return 0;
+    }
+
+    return numBytes;
+  }
+
+  return 0;
 }
 
 word moveOS::utilities::comm::MCommTcpClient::ReceiveMessage(byte* buffer, word buffSize)
