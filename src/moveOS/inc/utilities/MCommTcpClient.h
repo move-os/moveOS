@@ -10,6 +10,7 @@
 #include <netinet/in.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <netdb.h>
 #include <sys/time.h>
 #include <sys/types.h>
 #include <sys/socket.h>
