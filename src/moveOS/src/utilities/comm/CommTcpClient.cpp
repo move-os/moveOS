@@ -251,5 +251,35 @@ word moveOS::utilities::comm::MCommTcpClient::SendMessage(const byte* buffer, wo
 
 word moveOS::utilities::comm::MCommTcpClient::ReceiveMessage(byte* buffer, word buffSize)
 {
-  return word();
+  int numBytesReceived = 0;
+
+  if (IsConnected())
+  {
+    try
+    {
+      if ((numBytesReceived = recv(socketFileDescriptor, (char*)buffer, buffSize, 0)) <= 0)
+      {
+        if (numBytesReceived == 0)
+        {
+          logger->logError("FD=[%d] connection closed by server [%s:%d]", socketFileDescriptor, targetIpAddress, targetPort);
+        }
+        else
+        {
+          logger->logError("FD=[%d] connection ERROR with server [%s:%d]", socketFileDescriptor, targetIpAddress, targetPort);
+        }
+
+        Close();
+
+        return 0;
+      }
+
+      return (unsigned int)numBytesReceived;
+    }
+    catch (std::exception ex)
+    {
+      logger->logError("FD=[%d] Exception in Sockets area: %s", socketFileDescriptor, ex.what());
+    }
+  }
+
+  return 0;
 }
