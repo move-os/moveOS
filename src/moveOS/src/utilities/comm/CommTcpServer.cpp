@@ -4,6 +4,8 @@
 
 #include "inc/base/MLogger.h"
 
+#include <exception>
+
 
 moveOS::utilities::comm::MCommTcpServer::MCommTcpServer(moveOS::base::MLogger* logger)
 {
