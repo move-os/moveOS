@@ -66,13 +66,19 @@ namespace moveOS
       class MCommTcpServer
       {
       public:
-        MCommTcpServer(moveOS::base::MLogger* logger);
+        MCommTcpServer(moveOS::base::MLogger* logger,
+                       word listeningPort,
+                       moveOS::base::MTcpDataEventWorkItem* packetHandlersChain,
+                       tcp_server_conn_close_handler_func connectionCloseHandler);
 
 
       private:
         moveOS::base::MLogger* logger;
 
         socket_desc_t socketFileDescriptor;
+        word listeningPort;
+        moveOS::base::MTcpDataEventWorkItem* packetHandlersChain;
+        tcp_server_conn_close_handler_func connectionCloseHandler;
       };
 
     }
