@@ -51,6 +51,7 @@ namespace moveOS
   namespace base
   {
     class MLogger;
+    class MTcpDataEventWorkItem;
   }
 }
 
