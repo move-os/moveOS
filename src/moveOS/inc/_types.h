@@ -333,7 +333,7 @@ typedef struct
 typedef bool (*tcp_server_packet_handler_func)(
   const unsigned char* rcvBuff, const unsigned int rcvBuffSize,
   unsigned char* txnBuff, const unsigned int txnBuffSize, unsigned int& txnBuffTotalBytesWritten,
-  const packet_info receivedFrom);
+  const packet_info* receivedFrom);
 
 
 
