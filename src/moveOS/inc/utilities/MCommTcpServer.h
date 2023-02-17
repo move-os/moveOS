@@ -71,12 +71,20 @@ namespace moveOS
                        moveOS::base::MTcpDataEventWorkItem* packetHandlersChain,
                        tcp_server_conn_close_handler_func connectionCloseHandler);
 
+        ~MCommTcpServer();
+
+        int RunServer();
+
 
       private:
         moveOS::base::MLogger* logger;
 
         socket_desc_t socketFileDescriptor;
         word listeningPort;
+        bool isServerRunning;
+        bool isSocketOpen;
+        bool isSocketBound;
+        sockaddr_in localSockAddr;
         moveOS::base::MTcpDataEventWorkItem* packetHandlersChain;
         tcp_server_conn_close_handler_func connectionCloseHandler;
       };
