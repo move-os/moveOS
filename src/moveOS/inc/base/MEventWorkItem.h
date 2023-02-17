@@ -117,6 +117,29 @@ namespace moveOS
 
 
 
+    class MTcpDataEventWorkItem
+    {
+    public:
+      MTcpDataEventWorkItem(tcp_server_packet_handler_func workFunc);
+      void executeSelf(const unsigned char* rcvBuff, const unsigned int rcvBuffSize,
+        unsigned char* txnBuff, const unsigned int txnBuffSize, unsigned int& txnBuffTotalBytesWritten,
+        const packet_info* receivedFrom);
+      void executeChain(const unsigned char* rcvBuff, const unsigned int rcvBuffSize,
+        unsigned char* txnBuff, const unsigned int txnBuffSize, unsigned int& txnBuffTotalBytesWritten,
+        const packet_info* receivedFrom);
+
+
+    protected:
+      tcp_server_packet_handler_func workFunc;
+      MTcpDataEventWorkItem* nextWorkItem;
+
+      friend class Event;
+    };
+
+
+
+
+
     class MIntegralDataEventWorkItem
     {
     public:
