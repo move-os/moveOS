@@ -341,6 +341,7 @@ typedef bool (*tcp_server_packet_handler_func)(
   unsigned char* txnBuff, const unsigned int txnBuffSize, unsigned int& txnBuffTotalBytesWritten,
   const packet_info* receivedFrom);
 
+typedef bool (*tcp_server_new_connection_handler_func)(const client_info* connectionFrom);
 typedef bool (*tcp_server_conn_close_handler_func)(const client_info* connectionFrom);
 
 
