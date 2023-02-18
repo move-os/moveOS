@@ -59,6 +59,8 @@ int moveOS::utilities::comm::MCommTcpServer::RunServer()
 
 int moveOS::utilities::comm::MCommTcpServer::StopServer()
 {
+  logger->logInfo("Stopping TCP Server from port %d", listeningPort);
+
   return MTcpServerStatus::STOPPED;
 }
 
