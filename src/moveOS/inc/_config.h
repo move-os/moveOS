@@ -64,6 +64,7 @@
 
       #define LOGGER_MESSAGE_STRING_BUFFER_SIZE      1000
 
+      #define TCP_SERVER_MAX_CONNECTIONS             100
       #define TCP_SERVER_RECEIVE_BUFFER_SIZE         1000
       #define TCP_SERVER_TRANSMIT_BUFFER_SIZE        1000
 
@@ -73,6 +74,7 @@
 #else
       #define LOGGER_MESSAGE_STRING_BUFFER_SIZE      500
 
+      #define TCP_SERVER_MAX_CONNECTIONS             1
       #define TCP_SERVER_RECEIVE_BUFFER_SIZE         500
       #define TCP_SERVER_TRANSMIT_BUFFER_SIZE        500
 
