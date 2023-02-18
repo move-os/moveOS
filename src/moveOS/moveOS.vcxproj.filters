@@ -63,7 +63,7 @@
     <ClInclude Include="inc\utilities\MStateMachine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\base\MWork.h">
+    <ClInclude Include="inc\base\MWorkOnce.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="inc\base\MWorkContinuous.h">
@@ -113,7 +113,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\base\Work.cpp">
+    <ClCompile Include="src\base\WorkOnce.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\base\WorkContinuous.cpp">

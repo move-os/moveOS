@@ -29,7 +29,7 @@
     <ClInclude Include="inc\_config.h" />
     <ClInclude Include="inc\utilities\MState.h" />
     <ClInclude Include="inc\utilities\MStateMachine.h" />
-    <ClInclude Include="inc\base\MWork.h" />
+    <ClInclude Include="inc\base\MWorkOnce.h" />
     <ClInclude Include="inc\base\MWorkContinuous.h" />
     <ClInclude Include="inc\utilities\MVarsUpdater.h" />
     <ClInclude Include="inc\utilities\MCommUdpClient.h" />
@@ -63,7 +63,7 @@
     <ClCompile Include="src\utilities\comm\CommTcpClient.cpp" />
     <ClCompile Include="src\utilities\comm\CommUdpClient.cpp" />
     <ClCompile Include="src\base\EventWorkItem.cpp" />
-    <ClCompile Include="src\base\Work.cpp" />
+    <ClCompile Include="src\base\WorkOnce.cpp" />
     <ClCompile Include="src\base\WorkContinuous.cpp" />
     <ClCompile Include="src\base\Event.cpp" />
     <ClCompile Include="src\utilities\config\ConfigurationProvider.cpp" />
