@@ -345,7 +345,7 @@ typedef struct
   word clientPort;
 } client_info;
 
-typedef bool (*tcp_server_packet_handler_func)(
+typedef byte(*tcp_server_packet_handler_func)(
   const unsigned char* rcvBuff, const unsigned int rcvBuffSize,
   unsigned char* txnBuff, const unsigned int txnBuffSize, unsigned int& txnBuffTotalBytesWritten,
   const packet_info* receivedFrom);
