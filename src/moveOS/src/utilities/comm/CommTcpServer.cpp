@@ -52,3 +52,8 @@ int moveOS::utilities::comm::MCommTcpServer::RunServer()
   return 0;
 }
 
+int moveOS::utilities::comm::MCommTcpServer::StopServer()
+{
+  return 0;
+}
+
