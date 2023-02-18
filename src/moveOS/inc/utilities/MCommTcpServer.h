@@ -69,6 +69,7 @@ namespace moveOS
         MCommTcpServer(moveOS::base::MLogger* logger,
                        word listeningPort,
                        moveOS::base::MTcpDataEventWorkItem* packetHandlersChain,
+                       tcp_server_new_connection_handler_func newConnectionHandler,
                        tcp_server_conn_close_handler_func connectionCloseHandler);
 
         ~MCommTcpServer();
@@ -86,6 +87,7 @@ namespace moveOS
         bool isSocketBound;
         sockaddr_in localSockAddr;
         moveOS::base::MTcpDataEventWorkItem* packetHandlersChain;
+        tcp_server_new_connection_handler_func newConnectionHandler;
         tcp_server_conn_close_handler_func connectionCloseHandler;
 
         byte receiveBuffer[TCP_SERVER_MAX_CONNECTIONS][TCP_SERVER_RECEIVE_BUFFER_SIZE_PER_CONNECTION];
