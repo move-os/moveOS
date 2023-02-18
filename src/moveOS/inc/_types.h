@@ -323,6 +323,15 @@ struct MTcpPort
   };
 };
 
+struct MTcpServerStatus
+{
+  enum
+  {
+    STOPPED,
+    RUNNING
+  };
+};
+
 typedef struct
 {
   word numBytesReceived;
