@@ -88,8 +88,8 @@ namespace moveOS
         moveOS::base::MTcpDataEventWorkItem* packetHandlersChain;
         tcp_server_conn_close_handler_func connectionCloseHandler;
 
-        byte receiveBuffer[TCP_SERVER_MAX_CONNECTIONS][TCP_SERVER_RECEIVE_BUFFER_SIZE];
-        byte transmitBuffer[TCP_SERVER_MAX_CONNECTIONS][TCP_SERVER_TRANSMIT_BUFFER_SIZE];
+        byte receiveBuffer[TCP_SERVER_MAX_CONNECTIONS][TCP_SERVER_RECEIVE_BUFFER_SIZE_PER_CONNECTION];
+        byte transmitBuffer[TCP_SERVER_MAX_CONNECTIONS][TCP_SERVER_TRANSMIT_BUFFER_SIZE_PER_CONNECTION];
       };
 
     }
