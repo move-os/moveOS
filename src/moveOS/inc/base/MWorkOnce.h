@@ -10,7 +10,7 @@ namespace moveOS
   namespace base
   {
 
-    class MWork
+    class MWorkOnce
     {
     };
 
