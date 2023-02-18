@@ -83,11 +83,14 @@ namespace moveOS
 
         socket_desc_t socketFileDescriptor;
         word listeningPort;
+        sockaddr_in localSockAddr;
+
         bool isServerRunning;
         bool isSocketOpen;
         bool isSocketBound;
-        sockaddr_in localSockAddr;
+
         moveOS::base::MTcpDataEventWorkItem* packetHandlersChain;
+        
         tcp_server_new_connection_handler_func newConnectionHandler;
         tcp_server_conn_close_handler_func connectionCloseHandler;
 
