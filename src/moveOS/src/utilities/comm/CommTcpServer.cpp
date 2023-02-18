@@ -45,6 +45,9 @@ moveOS::utilities::comm::MCommTcpServer::MCommTcpServer(moveOS::base::MLogger* l
 
 moveOS::utilities::comm::MCommTcpServer::~MCommTcpServer()
 {
+  logger->logInfo("TCP Server at port %d being cleaned-up", listeningPort);
+
+  StopServer();
 }
 
 int moveOS::utilities::comm::MCommTcpServer::RunServer()
