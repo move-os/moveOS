@@ -69,8 +69,8 @@ namespace moveOS
         MCommTcpServer(moveOS::base::MLogger* logger,
                        word listeningPort,
                        moveOS::base::MTcpDataEventWorkItem* packetHandlersChain,
-                       tcp_server_new_connection_handler_func newConnectionHandler,
-                       tcp_server_conn_close_handler_func connectionCloseHandler);
+                       tcp_server_new_connection_handler_func newConnectionHandler = nullptr,
+                       tcp_server_conn_close_handler_func connectionCloseHandler = nullptr);
 
         ~MCommTcpServer();
 
