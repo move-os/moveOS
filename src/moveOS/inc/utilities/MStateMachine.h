@@ -3,7 +3,7 @@
 
 #include "_types.h"
 #include "_config.h"
-#include "base/MWork.h"
+#include "base/MWorkOnce.h"
 
 
 namespace moveOS
@@ -13,7 +13,7 @@ namespace moveOS
     namespace statemachine
     {
 
-      class MStateMachine : public moveOS::base::MWork
+      class MStateMachine : public moveOS::base::MWorkOnce
       {
       };
 
