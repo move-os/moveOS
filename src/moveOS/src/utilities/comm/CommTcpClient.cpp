@@ -237,7 +237,7 @@ word moveOS::utilities::comm::MCommTcpClient::SendMessage(const byte* buffer, wo
     {
       send(socketFileDescriptor, (const char*)buffer, numBytes, 0);
     }
-    catch (std::exception ex)
+    catch (std::exception& ex)
     {
       logger->logError("FD=[%d] Socket exception caught while sending packet: %s", socketFileDescriptor, ex.what());
       return 0;
@@ -275,7 +275,7 @@ word moveOS::utilities::comm::MCommTcpClient::ReceiveMessage(byte* buffer, word 
 
       return (unsigned int)numBytesReceived;
     }
-    catch (std::exception ex)
+    catch (std::exception& ex)
     {
       logger->logError("FD=[%d] Exception in Sockets area: %s", socketFileDescriptor, ex.what());
     }
