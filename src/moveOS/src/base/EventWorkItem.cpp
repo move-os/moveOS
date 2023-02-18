@@ -130,6 +130,45 @@ void moveOS::base::MDataEventWorkItem::executeChain(byte* data, uint16 length)
 
 
 
+moveOS::base::MTcpDataEventWorkItem::MTcpDataEventWorkItem(tcp_server_packet_handler_func workFunc)
+{
+  this->workFunc = workFunc;
+  this->nextWorkItem = nullptr;
+}
+
+void moveOS::base::MTcpDataEventWorkItem::executeSelf(
+  const unsigned char* rcvBuff, const unsigned int rcvBuffSize,
+  unsigned char* txnBuff, const unsigned int txnBuffSize, unsigned int& txnBuffTotalBytesWritten,
+  const packet_info* receivedFrom)
+{
+  if (this->workFunc != nullptr)
+  {
+    this->workFunc(rcvBuff, rcvBuffSize, txnBuff, txnBuffSize, txnBuffTotalBytesWritten, receivedFrom);
+  }
+}
+
+void moveOS::base::MTcpDataEventWorkItem::executeChain(
+  const unsigned char* rcvBuff, const unsigned int rcvBuffSize,
+  unsigned char* txnBuff, const unsigned int txnBuffSize, unsigned int& txnBuffTotalBytesWritten,
+  const packet_info* receivedFrom)
+{
+  if (this->workFunc != nullptr)
+  {
+    if (this->workFunc(rcvBuff, rcvBuffSize, txnBuff, txnBuffSize, txnBuffTotalBytesWritten, receivedFrom)
+                  == MEventWorkItemResult::KEEP_CHAINING)
+    {
+      if (this->nextWorkItem != nullptr)
+      {
+        this->nextWorkItem->executeChain(rcvBuff, rcvBuffSize, txnBuff, txnBuffSize, txnBuffTotalBytesWritten, receivedFrom);
+      }
+    }
+  }
+}
+
+
+
+
+
 moveOS::base::MIntegralDataEventWorkItem::MIntegralDataEventWorkItem(integral_data_handler_func workFunc)
 {
   this->workFunc = workFunc;
