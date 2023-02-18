@@ -43,3 +43,12 @@ moveOS::utilities::comm::MCommTcpServer::MCommTcpServer(moveOS::base::MLogger* l
 #endif
 }
 
+moveOS::utilities::comm::MCommTcpServer::~MCommTcpServer()
+{
+}
+
+int moveOS::utilities::comm::MCommTcpServer::RunServer()
+{
+  return 0;
+}
+

@@ -75,6 +75,7 @@ namespace moveOS
         ~MCommTcpServer();
 
         int RunServer();
+        int StopServer();
 
 
       private:
