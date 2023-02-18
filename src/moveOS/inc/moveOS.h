@@ -4,8 +4,8 @@
 
 
 #include "base/MEvent.h"
-#include "base/MWork.h"
-#include "base/MContinuousWork.h"
+#include "base/MWorkOnce.h"
+#include "base/MWorkContinuous.h"
 #include "base/MLogger.h"
 #include "base/MObjectProvider.h"
 
