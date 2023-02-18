@@ -49,11 +49,11 @@ moveOS::utilities::comm::MCommTcpServer::~MCommTcpServer()
 
 int moveOS::utilities::comm::MCommTcpServer::RunServer()
 {
-  return 0;
+  return MTcpServerStatus::STOPPED;
 }
 
 int moveOS::utilities::comm::MCommTcpServer::StopServer()
 {
-  return 0;
+  return MTcpServerStatus::STOPPED;
 }
 
