@@ -10,11 +10,13 @@
 moveOS::utilities::comm::MCommTcpServer::MCommTcpServer(moveOS::base::MLogger* logger,
                                                         word listeningPort,
                                                         moveOS::base::MTcpDataEventWorkItem* packetHandlersChain,
+                                                        tcp_server_new_connection_handler_func newConnectionHandler,
                                                         tcp_server_conn_close_handler_func connectionCloseHandler)
 {
   this->logger = logger;
 
   this->packetHandlersChain = packetHandlersChain;
+  this->newConnectionHandler = newConnectionHandler;
   this->connectionCloseHandler = connectionCloseHandler;
 
   this->socketFileDescriptor = -1;
