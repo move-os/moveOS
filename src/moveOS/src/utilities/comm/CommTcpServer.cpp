@@ -52,6 +52,8 @@ moveOS::utilities::comm::MCommTcpServer::~MCommTcpServer()
 
 int moveOS::utilities::comm::MCommTcpServer::RunServer()
 {
+  logger->logInfo("Starting-up TCP Server at port %d", listeningPort);
+
   return MTcpServerStatus::STOPPED;
 }
 
