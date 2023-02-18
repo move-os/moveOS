@@ -30,7 +30,7 @@
     <ClInclude Include="inc\utilities\MState.h" />
     <ClInclude Include="inc\utilities\MStateMachine.h" />
     <ClInclude Include="inc\base\MWork.h" />
-    <ClInclude Include="inc\base\MContinuousWork.h" />
+    <ClInclude Include="inc\base\MWorkContinuous.h" />
     <ClInclude Include="inc\utilities\MVarsUpdater.h" />
     <ClInclude Include="inc\utilities\MCommUdpClient.h" />
     <ClInclude Include="inc\utilities\MCommTcpClient.h" />
@@ -64,7 +64,7 @@
     <ClCompile Include="src\utilities\comm\CommUdpClient.cpp" />
     <ClCompile Include="src\base\EventWorkItem.cpp" />
     <ClCompile Include="src\base\Work.cpp" />
-    <ClCompile Include="src\base\ContinuousWork.cpp" />
+    <ClCompile Include="src\base\WorkContinuous.cpp" />
     <ClCompile Include="src\base\Event.cpp" />
     <ClCompile Include="src\utilities\config\ConfigurationProvider.cpp" />
     <ClCompile Include="src\kernel\EventsDispatcher.cpp" />
