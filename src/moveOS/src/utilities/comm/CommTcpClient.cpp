@@ -98,7 +98,7 @@ bool moveOS::utilities::comm::MCommTcpClient::Connect()
 #elif TARGET_PLATFORM == PLATFORM_GNU_LINUX
 
 
-    if (inet_addr((const char*)targetIpAddress) == -1)
+    if (inet_addr((const char*)targetIpAddress) == INADDR_NONE)
     {
       struct hostent* he;
       struct in_addr** addr_list;
