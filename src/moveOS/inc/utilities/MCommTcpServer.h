@@ -87,6 +87,9 @@ namespace moveOS
         sockaddr_in localSockAddr;
         moveOS::base::MTcpDataEventWorkItem* packetHandlersChain;
         tcp_server_conn_close_handler_func connectionCloseHandler;
+
+        byte receiveBuffer[TCP_SERVER_RECEIVE_BUFFER_SIZE];
+        byte transmitBuffer[TCP_SERVER_TRANSMIT_BUFFER_SIZE];
       };
 
     }
