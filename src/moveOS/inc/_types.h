@@ -74,6 +74,35 @@ typedef    float                            single     ;
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
 
+struct MWorkPriority
+{
+  enum {
+    AUTO,
+    TOPMOST,
+    PRIORITY_01,
+    PRIORITY_02,
+    PRIORITY_03,
+    PRIORITY_04,
+    PRIORITY_05,
+    PRIORITY_06,
+    PRIORITY_07,
+    PRIORITY_08,
+    PRIORITY_09,
+    PRIORITY_10,
+    PRIORITY_11,
+    PRIORITY_12,
+    PRIORITY_13,
+    PRIORITY_14,
+    PRIORITY_15,
+    PRIORITY_16,
+    PRIORITY_17,
+    PRIORITY_18,
+    PRIORITY_19,
+    PRIORITY_20,
+    LOWEST
+  };
+};
+
 struct MEventPollResult
 {
   enum {
