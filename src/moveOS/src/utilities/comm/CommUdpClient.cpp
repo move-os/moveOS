@@ -207,7 +207,12 @@ void moveOS::utilities::comm::MCommUdpClient::SendMessage(const byte* buffer, wo
 packet_info moveOS::utilities::comm::MCommUdpClient::ReceiveMessage(byte* buffer, word buffSize)
 {
   packet_info info;
+
+#if   TARGET_PLATFORM == PLATFORM_WINDOWS
+  int slen = (int)sizeof(targetSockAddr);
+#else
   unsigned int slen = (unsigned int)sizeof(targetSockAddr);
+#endif
 
   info.numBytesReceived =
     recvfrom(_sockFD, (char*)buffer, buffSize, 0, (struct sockaddr*)&targetSockAddr, &slen);
