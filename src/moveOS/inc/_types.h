@@ -330,12 +330,18 @@ typedef struct
   word receivedFromPort;
 } packet_info;
 
+typedef struct
+{
+  byte clientIP[20];
+  word clientPort;
+} client_info;
+
 typedef bool (*tcp_server_packet_handler_func)(
   const unsigned char* rcvBuff, const unsigned int rcvBuffSize,
   unsigned char* txnBuff, const unsigned int txnBuffSize, unsigned int& txnBuffTotalBytesWritten,
   const packet_info* receivedFrom);
 
-typedef bool (*tcp_server_conn_close_handler_func)(const packet_info* connectionFrom);
+typedef bool (*tcp_server_conn_close_handler_func)(const client_info* connectionFrom);
 
 
 
