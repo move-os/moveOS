@@ -203,6 +203,10 @@ void moveOS::utilities::comm::MCommTcpClient::Close()
 
 bool moveOS::utilities::comm::MCommTcpClient::IsPacketAvailable(word timeoutSecond, word timeoutMicrosecond)
 {
+
+#if   TARGET_PLATFORM == PLATFORM_GNU_LINUX
+
+
   if (isNonBlocking)
   {
     timeval tv;
@@ -228,6 +232,45 @@ bool moveOS::utilities::comm::MCommTcpClient::IsPacketAvailable(word timeoutSeco
   }
 
   return true;
+
+
+#elif TARGET_PLATFORM == PLATFORM_WINDOWS
+
+
+  if (isNonBlocking)
+  {
+    timeval tv;
+    fd_set readfds;
+
+    tv.tv_sec = timeoutSecond;
+    tv.tv_usec = timeoutMicrosecond;
+
+    FD_ZERO(&readfds);
+    FD_SET(socketFileDescriptor, &readfds);
+
+    select((int)socketFileDescriptor + 1, &readfds, NULL, NULL, &tv);
+
+    if (FD_ISSET(socketFileDescriptor, &readfds))
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+
+  return true;
+
+
+#else
+
+
+#error "Cannot check packet availability on selected platform"
+
+
+#endif
+  
 }
 
 word moveOS::utilities::comm::MCommTcpClient::SendMessage(const byte* buffer, word numBytes)
