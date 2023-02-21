@@ -65,6 +65,7 @@ bool moveOS::utilities::comm::MCommTcpClient::Connect()
 
 
     uint32 _temp;
+
     if (inet_pton(AF_INET, (const char*)targetIpAddress, &_temp) != 1)
     {
       struct addrinfo* result = NULL, hints;
