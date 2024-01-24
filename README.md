@@ -32,7 +32,15 @@ The ***moveOS*** comprises of a *lightweight Kernel* with supporting libraries t
 
 ## Run-time Environments
 
-From the beginning, the ***moveOS*** is intended to be deployed on bare-metal devices, Windows and Linux distributions; though, its behavior can change depending on deployed environments and underlying hardware features.
+From the beginning, the ***moveOS*** is intended to be deployed on bare-metal devices, Windows and Linux distributions; though, its behavior can change depending on deployed environments and underlying hardware features. The requisite workflow is envisioned as:
+
+```mermaid
+graph TD;
+  A(Model Implementation) --> B(Host Execution at Windows / Linux)
+  B --> A
+  A --> C(Stable Design)
+  C --> D(Device Deployment)
+```
 
 
 
