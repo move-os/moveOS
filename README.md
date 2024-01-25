@@ -36,7 +36,7 @@ From the beginning, the ***moveOS*** is intended to be deployed on bare-metal de
 
 ```mermaid
 graph TD;
-  A(Implementation) --> B(Hosted Execution at Windows / Linux Distribution)
+  A(Design/Logic Implementation) --> B(Hosted Execution at Windows / Linux Distribution)
   B --> A
   A -.-> C{Stable Design}
   C -.-> |Yes|D(Deployment to Device)
