@@ -38,9 +38,9 @@ From the beginning, the ***moveOS*** is intended to be deployed on bare-metal de
 graph TD;
   A(Implementation) --> B(Hosted Execution at Windows / Linux Distribution)
   B --> A
-  A --> C{Stable Design}
-  C --> |Yes|D(Deployment to Device)
-  C --> |No|B
+  A -.-> C{Stable Design}
+  C -.-> |Yes|D(Deployment to Device)
+  C -.-> |No|B
 ```
 
 
