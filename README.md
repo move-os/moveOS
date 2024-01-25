@@ -39,7 +39,8 @@ graph TD;
   A(Implementation) --> B(Hosted Execution at Windows / Linux Distribution)
   B --> A
   A --> C{Stable Design}
-  C --> D(Deployment to Device)
+  C --> |Yes|D(Deployment to Device)
+  C --> |No|B
 ```
 
 
