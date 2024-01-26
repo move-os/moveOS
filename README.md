@@ -64,13 +64,13 @@ Documentation is kept in docs folder.
 
 For using the OS and libraries:
 
-  * Defining the [tasks](./docs/usage/Tasks.md)
-  * Defining the [State Machines](./docs/usage/StateMachine.md)
+  * Defining [tasks](./docs/usage/Tasks.md)
+  * Defining [State Machines](./docs/usage/StateMachine.md)
 
 
 &nbsp;
 
 How it is arranged?
 
-  * Overall [Architecture](./docs/contrib/Architecture.md)
+  * [Architectural Overview](./docs/contrib/Architecture.md)
   * Conditional Compilation [Definitions](./docs/contrib/Defines.md)
