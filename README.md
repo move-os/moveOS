@@ -1,6 +1,6 @@
 # moveOS
 
-***moveOS*** comprises a *lightweight Kernel* with supporting libraries that greatly help in developing and deploying *movable* and *immovable* smart-objects covering a variety of domains. The main, desirable features:
+***moveOS*** comprises of a *lightweight Kernel* and supporting libraries that greatly help in developing and deploying *movable* and *immovable* ***smart***-objects covering a variety of domains. The main, desirable features:
 
 &nbsp; &nbsp; <sup>:star:</sup> &nbsp; *Ease of use*
 
