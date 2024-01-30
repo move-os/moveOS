@@ -30,7 +30,7 @@
 
 &nbsp;
 
-## Run-time Environments
+## Run-time Environment
 
 From the beginning, the ***moveOS*** is intended to be deployed on bare-metal devices, Windows and Linux distributions; though, its behavior can change depending on deployed environments and underlying hardware features. The requisite workflow is envisioned as:
 
